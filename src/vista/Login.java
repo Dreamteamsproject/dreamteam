@@ -157,8 +157,6 @@ public class Login extends javax.swing.JFrame {
 
     private void loginBotonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBotonIngresarActionPerformed
        LoginC.ConsultarUsuario();
-       loginUsuario.setText("Ingresar Usuario");
-       loginPassword.setText("IngresarContraseña");
     }//GEN-LAST:event_loginBotonIngresarActionPerformed
 
     private void loginBotonSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBotonSalirMouseEntered
@@ -194,17 +192,17 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginPasswordMouseExited
 
     private void loginUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginUsuarioKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();loginUsuario.setText("Ingresar Usuario");loginPassword.setText("IngresarContraseña");}
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();}
         if(loginUsuario.getText().equals("Ingresar Usuario")){loginUsuario.setText("");loginUsuario.setForeground(Color.black);}
     }//GEN-LAST:event_loginUsuarioKeyPressed
 
     private void loginPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginPasswordKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();loginUsuario.setText("Ingresar Usuario");loginPassword.setText("IngresarContraseña");}
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();}
         if(loginPassword.getText().equals("IngresarContraseña")){loginPassword.setText("");loginPassword.setForeground(Color.black);}
     }//GEN-LAST:event_loginPasswordKeyPressed
 
     private void loginBotonIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginBotonIngresarKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();loginUsuario.setText("Ingresar Usuario");loginPassword.setText("IngresarContraseña");}
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();}
     }//GEN-LAST:event_loginBotonIngresarKeyPressed
 
     /**
@@ -245,6 +243,14 @@ public class Login extends javax.swing.JFrame {
 
     public JTextField getLoginUsuario() {
         return loginUsuario;
+    }
+
+    public void setLoginPasswordSetText(String loginPassword) {
+        this.loginPassword.setText(loginPassword);
+    }
+
+    public void setLoginUsuarioSetText(String loginUsuario) {
+        this.loginUsuario.setText(loginUsuario);
     }
 
     

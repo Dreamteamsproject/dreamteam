@@ -29,7 +29,9 @@ public  class LoginC {
                                     DreamGiftC dreamgift = new DreamGiftC();
                                     dreamgift.DreamGiftVisible();}
         else{JOptionPane.showMessageDialog(null, "La contraseña que ingresaste es incorrecta");}
-     
+        
+       login.setLoginUsuarioSetText("Ingresar Usuario");
+       login.setLoginPasswordSetText("IngresarContraseña");
         
         
     
