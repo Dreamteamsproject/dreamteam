@@ -7,6 +7,7 @@ package vista;
 
 import controlador.LoginC;
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -90,6 +91,11 @@ public class Login extends javax.swing.JFrame {
         loginBotonIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginBotonIngresarActionPerformed(evt);
+            }
+        });
+        loginBotonIngresar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                loginBotonIngresarKeyPressed(evt);
             }
         });
         jPanel1.add(loginBotonIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 430, 120, 40));
@@ -188,12 +194,18 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginPasswordMouseExited
 
     private void loginUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginUsuarioKeyPressed
-         if(loginUsuario.getText().equals("Ingresar Usuario")){loginUsuario.setText("");loginUsuario.setForeground(Color.black);}
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();loginUsuario.setText("Ingresar Usuario");loginPassword.setText("IngresarContraseña");}
+        if(loginUsuario.getText().equals("Ingresar Usuario")){loginUsuario.setText("");loginUsuario.setForeground(Color.black);}
     }//GEN-LAST:event_loginUsuarioKeyPressed
 
     private void loginPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginPasswordKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();loginUsuario.setText("Ingresar Usuario");loginPassword.setText("IngresarContraseña");}
         if(loginPassword.getText().equals("IngresarContraseña")){loginPassword.setText("");loginPassword.setForeground(Color.black);}
     }//GEN-LAST:event_loginPasswordKeyPressed
+
+    private void loginBotonIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginBotonIngresarKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();loginUsuario.setText("Ingresar Usuario");loginPassword.setText("IngresarContraseña");}
+    }//GEN-LAST:event_loginBotonIngresarKeyPressed
 
     /**
      * @param args the command line arguments

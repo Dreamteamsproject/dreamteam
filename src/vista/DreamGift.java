@@ -168,7 +168,6 @@ public class DreamGift extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        dreamgiftPestañas.setBackground(new java.awt.Color(102, 102, 255));
         dreamgiftPestañas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         dreamgiftPestañas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
