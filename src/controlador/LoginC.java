@@ -2,7 +2,7 @@ package controlador;
 import javax.swing.JOptionPane;
 import modelo.ConsultaBoleana;
 import vista.Login;
-
+/*------------*/
 
 public  class LoginC {
     
