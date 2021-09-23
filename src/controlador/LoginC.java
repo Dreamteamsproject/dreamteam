@@ -1,13 +1,13 @@
 package controlador;
 import javax.swing.JOptionPane;
-import modelo.ConsultaBoleana;
+import modelo.Consultas;
 import vista.Login;
 /*------------*/
 
 public  class LoginC {
     
     public static Login login = new Login();
-    public static ConsultaBoleana consulta = new ConsultaBoleana();
+    public static Consultas consulta = new Consultas();
     
     
     public static void LoginVisible(){
@@ -24,7 +24,7 @@ public  class LoginC {
         String password = login.getLoginPassword().getText();
         var SQL = "SELECT usuario_nombre, usuario_clave from usuarios where(usuario_nombre='"+usuario+"' && usuario_clave='"+password+"')";
         
-        if(consulta.consultas(SQL)){JOptionPane.showMessageDialog(null, "Bienvenido "+usuario);
+        if(consulta.consultaBooleana(SQL)){JOptionPane.showMessageDialog(null, "Bienvenido "+usuario);
                                     login.dispose();
                                     DreamGiftC dreamgift = new DreamGiftC();
                                     dreamgift.DreamGiftVisible();}

@@ -3,14 +3,14 @@ package modelo;
 import java.sql.SQLException;
 
 
-public class ConsultaBoleana {
+public class Consultas {
     
     private final Conexion cc = new Conexion("jdbc:mysql://50.62.141.188/dg?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","deamgifttest","rooot");
     private final java.sql.Connection   conexionSQL   = cc.connect();
     
-    public ConsultaBoleana(){}
+    public Consultas(){}
     
-    public boolean consultas(String SQL){
+    public boolean consultaBooleana(String SQL){
         
         boolean validacion = false;
         
