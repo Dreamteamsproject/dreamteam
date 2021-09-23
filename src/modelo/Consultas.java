@@ -1,6 +1,6 @@
 package modelo;
 
-import java.sql.SQLException;
+import java.sql.*;
 
 
 public class Consultas {
@@ -14,20 +14,35 @@ public class Consultas {
         
         boolean validacion = false;
         
-     try{
+        try{
             
             var st = conexionSQL.createStatement();
             var rs = st.executeQuery(SQL);
             validacion = rs.next();
-            if(rs.next()){System.out.println("consulta confirmada");}
+            if(rs.next())
+                System.out.println("consulta confirmada");
             
             
-        }catch(SQLException e){
+        } catch(SQLException e) {
             System.out.println("error: "+ e);
         
         }
         
-    return validacion;
+        return validacion;
+    }
+    
+    public ResultSet doQuery(String SQL) {
+        try {
+            var st = conexionSQL.createStatement(); // Statement Object
+            var rs = st.executeQuery(SQL); // ResultSet Object
+            
+            return rs;
+            
+        } catch (SQLException e) {
+            System.out.println("Error: " +  e.getLocalizedMessage());
+        }
+        
+        return null;
     }
         
-    }
+}
