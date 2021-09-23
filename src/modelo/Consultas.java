@@ -31,7 +31,8 @@ public class Consultas {
         return validacion;
     }
     
-    public ResultSet doQuery(String SQL) {
+    // Select Queries
+    public ResultSet doQueryGet(String SQL) {
         try {
             var st = conexionSQL.createStatement(); // Statement Object
             var rs = st.executeQuery(SQL); // ResultSet Object
@@ -43,6 +44,18 @@ public class Consultas {
         }
         
         return null;
+    }
+    
+    //Insert & Update Queries
+    public boolean doQueryPost(String SQL) {
+        try {
+            var statement = conexionSQL.createStatement();
+            statement.executeUpdate(SQL);
+       } catch (SQLException e) {
+            System.out.println("Error: " +  e.getLocalizedMessage());
+        }
+        
+        return true;
     }
         
 }
