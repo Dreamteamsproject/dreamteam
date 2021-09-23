@@ -7,7 +7,6 @@ package vista;
 
 import controlador.LoginC;
 import java.awt.Color;
-import java.awt.event.KeyEvent;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -152,7 +151,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginBotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBotonSalirActionPerformed
-        System.exit(0);
+        LoginC.Salir();
     }//GEN-LAST:event_loginBotonSalirActionPerformed
 
     private void loginBotonIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBotonIngresarActionPerformed
@@ -176,38 +175,42 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginBotonIngresarMouseExited
 
     private void loginUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginUsuarioMouseEntered
-         if(loginUsuario.getText().equals("Ingresar Usuario")){loginUsuario.setText(""); loginUsuario.setForeground(Color.black);}
+         LoginC.CheckUserText();
+         LoginC.CheckUserText();
     }//GEN-LAST:event_loginUsuarioMouseEntered
 
     private void loginPasswordMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginPasswordMouseEntered
-        if(loginPassword.getText().equals("IngresarContraseña")){loginPassword.setText(""); loginPassword.setForeground(Color.black);}
+        LoginC.CheckPasswordText();
+        LoginC.CheckPasswordText();
     }//GEN-LAST:event_loginPasswordMouseEntered
 
     private void loginUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginUsuarioMouseExited
-        if(loginUsuario.getText().equals("")){loginUsuario.setText("Ingresar Usuario"); loginUsuario.setForeground(Color.gray);}
+        LoginC.CheckUserTextVacio();
     }//GEN-LAST:event_loginUsuarioMouseExited
 
     private void loginPasswordMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginPasswordMouseExited
-       if(loginPassword.getText().equals("")){loginPassword.setText("IngresarContraseña"); loginPassword.setForeground(Color.gray);}
+       LoginC.CheckPasswordText();
+       LoginC.CheckPasswordTextVacio();
     }//GEN-LAST:event_loginPasswordMouseExited
 
     private void loginUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginUsuarioKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();}
-        if(loginUsuario.getText().equals("Ingresar Usuario")){loginUsuario.setText("");loginUsuario.setForeground(Color.black);}
+        LoginC.CheckKeyPress(evt);
+        LoginC.CheckUserText();
     }//GEN-LAST:event_loginUsuarioKeyPressed
 
     private void loginPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginPasswordKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();}
-        if(loginPassword.getText().equals("IngresarContraseña")){loginPassword.setText("");loginPassword.setForeground(Color.black);}
+        LoginC.CheckKeyPress(evt);
+        LoginC.CheckPasswordText();
     }//GEN-LAST:event_loginPasswordKeyPressed
 
     private void loginBotonIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginBotonIngresarKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER){LoginC.ConsultarUsuario();}
+        LoginC.CheckKeyPress(evt);
     }//GEN-LAST:event_loginBotonIngresarKeyPressed
 
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -237,6 +240,7 @@ public class Login extends javax.swing.JFrame {
         
     }
 
+
     public JPasswordField getLoginPassword() {
         return loginPassword;
     }
@@ -253,6 +257,13 @@ public class Login extends javax.swing.JFrame {
         this.loginUsuario.setText(loginUsuario);
     }
 
+    public void setLoginPasswordSetTextSetColor(java.awt.Color color) {
+        this.loginPassword.setForeground(color);
+    }
+    
+    public void setLoginUsuarioSetTextSetColor(java.awt.Color color) {
+        this.loginUsuario.setForeground(color);
+    }
     
     
     
