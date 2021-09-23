@@ -1287,10 +1287,6 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioNombreUserActionPerformed
 
-    private void usuariosResetPassBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosResetPassBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usuariosResetPassBtnActionPerformed
-
     private void usuariosAgregarUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosAgregarUserBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usuariosAgregarUserBtnActionPerformed
@@ -1306,10 +1302,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private void ProveeBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeBuscarBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProveeBuscarBtnActionPerformed
-
-    private void usuariosBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosBusquedaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usuariosBusquedaActionPerformed
 
     private void usuariosModifUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosModifUserBtnActionPerformed
         // TODO add your handling code here:
@@ -1354,6 +1346,14 @@ public class SuperAdm extends javax.swing.JFrame {
     private void jTextFieldDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDireccionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDireccionActionPerformed
+
+    private void usuariosBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosBusquedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usuariosBusquedaActionPerformed
+
+    private void usuariosResetPassBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosResetPassBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usuariosResetPassBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1556,12 +1556,12 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTabbedPane superAdmPestañas;
     public javax.swing.JTextField usuarioNombreUser;
     public javax.swing.JButton usuariosAgregarUserBtn;
-    public javax.swing.JComboBox<String> usuariosBusqueda;
+    private javax.swing.JComboBox<String> usuariosBusqueda;
     private javax.swing.JPasswordField usuariosContraseña;
     public javax.swing.JComboBox<String> usuariosEstado;
     public javax.swing.JButton usuariosGuardarBtn;
     public javax.swing.JButton usuariosModifUserBtn;
-    public javax.swing.JButton usuariosResetPassBtn;
+    private javax.swing.JButton usuariosResetPassBtn;
     public javax.swing.JTable usuariosTabla;
     // End of variables declaration//GEN-END:variables
 }

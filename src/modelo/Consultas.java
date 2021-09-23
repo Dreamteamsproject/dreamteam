@@ -19,16 +19,16 @@ public class Consultas {
             var st = conexionSQL.createStatement();
             var rs = st.executeQuery(SQL);
             validacion = rs.next();
-            if(rs.next())
-                System.out.println("consulta confirmada");
-            
+            if(validacion)
+                {System.out.println("consulta confirmada");
+                   return true; }
             
         } catch(SQLException e) {
             System.out.println("error: "+ e);
         
         }
         
-        return validacion;
+        return false;
     }
     
     // Select Queries
@@ -46,14 +46,25 @@ public class Consultas {
         return null;
     }
     
+    
+    
+    
     //Insert & Update Queries
-    public boolean doQueryPost(String SQL) {
-        try {
-            var statement = conexionSQL.createStatement();
-            statement.executeUpdate(SQL);
-       } catch (SQLException e) {
-            System.out.println("Error: " +  e.getLocalizedMessage());
-        }
+    public boolean doQueryPost(String SQL, String SQL2) {
+        
+        
+            try {
+            
+            
+                var statement = conexionSQL.createStatement();
+                statement.executeUpdate(SQL);
+                if(consultaBooleana(SQL2)){}
+            
+            
+                }catch (SQLException e) {
+                System.out.println("Error: " +  e.getLocalizedMessage());
+            }
+        
         
         return true;
     }
