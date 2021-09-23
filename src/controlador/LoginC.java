@@ -1,4 +1,6 @@
 package controlador;
+import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import modelo.ConsultaBoleana;
 import vista.Login;
@@ -26,15 +28,50 @@ public  class LoginC {
         
         if(consulta.consultas(SQL)){JOptionPane.showMessageDialog(null, "Bienvenido "+usuario);
                                     login.dispose();
-                                    DreamGiftC dreamgift = new DreamGiftC();
-                                    dreamgift.DreamGiftVisible();}
+                                    DreamGiftC.DreamGiftVisible();}
         else{JOptionPane.showMessageDialog(null, "La contraseña que ingresaste es incorrecta");}
         
+        
+        
        login.setLoginUsuarioSetText("Ingresar Usuario");
+       login.setLoginUsuarioSetTextSetColor(Color.gray);
        login.setLoginPasswordSetText("IngresarContraseña");
-        
-        
+       login.setLoginPasswordSetTextSetColor(Color.gray);
+
     
     }
+    
+    public static void CheckKeyPress(java.awt.event.KeyEvent evt){
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){ConsultarUsuario();}
+    }
+    
+    public static void CheckPasswordText(){
+    
+        if(login.getLoginPassword().getText().equals("IngresarContraseña")){login.setLoginPasswordSetText("");login.setLoginPasswordSetTextSetColor(Color.black);}
+        
+    }
+   
+     public static void CheckPasswordTextVacio(){
+    
+        if(login.getLoginPassword().getText().equals("")){login.setLoginPasswordSetText("IngresarContraseña");login.setLoginPasswordSetTextSetColor(Color.gray);}
+        
+    }
+    
+    public static void CheckUserText(){
+    
+        if(login.getLoginUsuario().getText().equals("Ingresar Usuario")){login.setLoginUsuarioSetText("");login.setLoginUsuarioSetTextSetColor(Color.black);}
+        
+    }
+    
+    public static void CheckUserTextVacio(){
+    
+        if(login.getLoginUsuario().getText().equals("")){login.setLoginUsuarioSetText("Ingresar Usuario");login.setLoginUsuarioSetTextSetColor(Color.gray);}
+    }
+    
+    public static void Salir(){
+        System.exit(0);
+    }
+    
+   
 }
 

@@ -19,7 +19,7 @@ public class ConsultaBoleana {
             var st = conexionSQL.createStatement();
             var rs = st.executeQuery(SQL);
             validacion = rs.next();
-            if(rs.next()){System.out.println("consulta confirmada");}
+            if(validacion){System.out.println("consulta confirmada");}
             
             
         }catch(SQLException e){
