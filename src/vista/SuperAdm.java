@@ -177,6 +177,7 @@ public class SuperAdm extends javax.swing.JFrame {
         clientesBuscarBtn = new javax.swing.JButton();
         jDesktopPane3 = new javax.swing.JDesktopPane();
         superAdmRrss = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         superAdmPacks = new javax.swing.JPanel();
         superAdmArticulos = new javax.swing.JPanel();
         jPanelComunas = new javax.swing.JPanel();
@@ -1068,15 +1069,32 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmPestañas.addTab("Clientes", superAdmlClientes);
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout superAdmRrssLayout = new javax.swing.GroupLayout(superAdmRrss);
         superAdmRrss.setLayout(superAdmRrssLayout);
         superAdmRrssLayout.setHorizontalGroup(
             superAdmRrssLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 725, Short.MAX_VALUE)
+            .addGroup(superAdmRrssLayout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(514, Short.MAX_VALUE))
         );
         superAdmRrssLayout.setVerticalGroup(
             superAdmRrssLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(superAdmRrssLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(445, Short.MAX_VALUE))
         );
 
         superAdmPestañas.addTab("Rrss", superAdmRrss);
@@ -1499,6 +1517,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelComunas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
