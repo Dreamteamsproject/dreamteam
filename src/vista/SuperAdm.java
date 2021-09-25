@@ -5,6 +5,11 @@
  */
 package vista;
 
+import controlador.SAUsuariosC;
+import java.awt.Color;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author usuario
@@ -117,14 +122,13 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         superAdmUsuarios = new javax.swing.JPanel();
         usuarioBuscarUser = new javax.swing.JTextField();
-        usuariosGuardarBtn = new javax.swing.JButton();
         jLabel59 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
-        usuariosContraseña = new javax.swing.JPasswordField();
-        usuariosAgregarUserBtn = new javax.swing.JButton();
+        SAContraseñaNueva = new javax.swing.JPasswordField();
+        SACrearUser = new javax.swing.JButton();
         usuariosBuscarUserBtn = new javax.swing.JButton();
-        usuarioNombreUser1 = new javax.swing.JTextField();
+        SAUsuarioNuevo = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
         usuarioLista = new javax.swing.JList<>();
         usuariosModifUserBtn1 = new javax.swing.JButton();
@@ -534,7 +538,7 @@ public class SuperAdm extends javax.swing.JFrame {
         superAdmIngresoVenta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
-        superAdmIngresoVenta.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
+        superAdmIngresoVenta.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         superAdmPestañas.addTab("Ingreso Venta", superAdmIngresoVenta);
 
@@ -713,10 +717,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmUsuarios.add(usuarioBuscarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 162, -1));
 
-        usuariosGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        usuariosGuardarBtn.setText("Guardar");
-        superAdmUsuarios.add(usuariosGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 120, -1));
-
         jLabel59.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel59.setForeground(new java.awt.Color(255, 255, 255));
         jLabel59.setText("Administracion Usuarios");
@@ -730,19 +730,42 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel64.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel64.setForeground(new java.awt.Color(255, 255, 255));
         jLabel64.setText("Contraseña");
-        superAdmUsuarios.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, -1, -1));
+        superAdmUsuarios.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
 
-        usuariosContraseña.setText("jPasswordField1");
-        superAdmUsuarios.add(usuariosContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 160, -1));
-
-        usuariosAgregarUserBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        usuariosAgregarUserBtn.setText("Agregar");
-        usuariosAgregarUserBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usuariosAgregarUserBtnActionPerformed(evt);
+        SAContraseñaNueva.setForeground(new java.awt.Color(153, 153, 153));
+        SAContraseñaNueva.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        SAContraseñaNueva.setText("Añadirunpass");
+        SAContraseñaNueva.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SAContraseñaNuevaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SAContraseñaNuevaMouseExited(evt);
             }
         });
-        superAdmUsuarios.add(usuariosAgregarUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 104, 30));
+        SAContraseñaNueva.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                SAContraseñaNuevaKeyPressed(evt);
+            }
+        });
+        superAdmUsuarios.add(SAContraseñaNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 160, -1));
+
+        SACrearUser.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        SACrearUser.setText("Agregar");
+        SACrearUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SACrearUserMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SACrearUserMouseExited(evt);
+            }
+        });
+        SACrearUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SACrearUserActionPerformed(evt);
+            }
+        });
+        superAdmUsuarios.add(SACrearUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 104, 30));
 
         usuariosBuscarUserBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         usuariosBuscarUserBtn.setText("Buscar");
@@ -753,12 +776,28 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmUsuarios.add(usuariosBuscarUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 80, 20));
 
-        usuarioNombreUser1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usuarioNombreUser1ActionPerformed(evt);
+        SAUsuarioNuevo.setForeground(new java.awt.Color(153, 153, 153));
+        SAUsuarioNuevo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        SAUsuarioNuevo.setText("Añadir un usuario");
+        SAUsuarioNuevo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SAUsuarioNuevoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SAUsuarioNuevoMouseExited(evt);
             }
         });
-        superAdmUsuarios.add(usuarioNombreUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 162, -1));
+        SAUsuarioNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SAUsuarioNuevoActionPerformed(evt);
+            }
+        });
+        SAUsuarioNuevo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                SAUsuarioNuevoKeyPressed(evt);
+            }
+        });
+        superAdmUsuarios.add(SAUsuarioNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 162, -1));
 
         usuarioLista.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
@@ -777,7 +816,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 usuariosModifUserBtn1ActionPerformed(evt);
             }
         });
-        superAdmUsuarios.add(usuariosModifUserBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, 120, 30));
+        superAdmUsuarios.add(usuariosModifUserBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 120, 30));
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
@@ -1138,7 +1177,7 @@ public class SuperAdm extends javax.swing.JFrame {
         superAdmArticulos.setLayout(superAdmArticulosLayout);
         superAdmArticulosLayout.setHorizontalGroup(
             superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
+            .addGap(0, 723, Short.MAX_VALUE)
         );
         superAdmArticulosLayout.setVerticalGroup(
             superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1153,7 +1192,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jPanelComunas.setLayout(jPanelComunasLayout);
         jPanelComunasLayout.setHorizontalGroup(
             jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 711, Short.MAX_VALUE)
+            .addGap(0, 719, Short.MAX_VALUE)
         );
         jPanelComunasLayout.setVerticalGroup(
             jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1166,7 +1205,7 @@ public class SuperAdm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(superAdmPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 724, Short.MAX_VALUE)
+            .addComponent(superAdmPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 732, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1184,17 +1223,17 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuariosModifUserBtn1ActionPerformed
 
-    private void usuarioNombreUser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioNombreUser1ActionPerformed
+    private void SAUsuarioNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SAUsuarioNuevoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usuarioNombreUser1ActionPerformed
+    }//GEN-LAST:event_SAUsuarioNuevoActionPerformed
 
     private void usuariosBuscarUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosBuscarUserBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usuariosBuscarUserBtnActionPerformed
 
-    private void usuariosAgregarUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosAgregarUserBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usuariosAgregarUserBtnActionPerformed
+    private void SACrearUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SACrearUserActionPerformed
+        SAUsuariosC.AgregarUsuario();
+    }//GEN-LAST:event_SACrearUserActionPerformed
 
     private void usuarioBuscarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioBuscarUserActionPerformed
         // TODO add your handling code here:
@@ -1396,6 +1435,38 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rrssDescripcionActionPerformed
 
+    private void SAContraseñaNuevaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SAContraseñaNuevaMouseEntered
+        SAUsuariosC.CheckpassText();
+    }//GEN-LAST:event_SAContraseñaNuevaMouseEntered
+
+    private void SACrearUserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SACrearUserMouseEntered
+        SACrearUser.setBackground(Color.green);
+    }//GEN-LAST:event_SACrearUserMouseEntered
+
+    private void SACrearUserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SACrearUserMouseExited
+        SACrearUser.setBackground(Color.white);
+    }//GEN-LAST:event_SACrearUserMouseExited
+
+    private void SAUsuarioNuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SAUsuarioNuevoMouseEntered
+        SAUsuariosC.CheckUserText();
+    }//GEN-LAST:event_SAUsuarioNuevoMouseEntered
+
+    private void SAUsuarioNuevoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SAUsuarioNuevoMouseExited
+       SAUsuariosC.CheckUserTextVacio();
+    }//GEN-LAST:event_SAUsuarioNuevoMouseExited
+
+    private void SAContraseñaNuevaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SAContraseñaNuevaMouseExited
+        SAUsuariosC.CheckpassTextVacio();
+    }//GEN-LAST:event_SAContraseñaNuevaMouseExited
+
+    private void SAUsuarioNuevoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SAUsuarioNuevoKeyPressed
+        SAUsuariosC.CheckUserText();
+    }//GEN-LAST:event_SAUsuarioNuevoKeyPressed
+
+    private void SAContraseñaNuevaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SAContraseñaNuevaKeyPressed
+       SAUsuariosC.CheckpassText();
+    }//GEN-LAST:event_SAContraseñaNuevaKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -1438,6 +1509,49 @@ public class SuperAdm extends javax.swing.JFrame {
         });
     }
 
+    public String getSAContraseñaNuevaGetText() {
+        return SAContraseñaNueva.getText();
+    }
+
+    public String getSAUsuarioNuevoGetText() {
+        return SAUsuarioNuevo.getText();
+    }
+
+    public void setSAUsuarioNuevosSetText(String SAUsuarioNuevo) {
+        this.SAUsuarioNuevo.setText(SAUsuarioNuevo);
+    }
+    
+    public void setSAUsuarioNuevosSetColor(Color color) {
+        this.SAUsuarioNuevo.setForeground(color);
+    }
+    
+    
+    public void setSAContraseñaNuevaSetText(String SAContraseña) {
+        this.SAContraseñaNueva.setText(SAContraseña);
+    }
+
+    public void setSAContraseñaNuevaSetColor(Color color) {
+        this.SAContraseñaNueva.setForeground(color);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public java.awt.TextField ProveeBuscar;
     public javax.swing.JButton ProveeBuscarBtn;
@@ -1452,6 +1566,9 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField ProveeRazonSoc;
     public javax.swing.JTextField ProveeRut;
     public javax.swing.JTextField ProveeTelefono;
+    private javax.swing.JPasswordField SAContraseñaNueva;
+    public javax.swing.JButton SACrearUser;
+    private javax.swing.JTextField SAUsuarioNuevo;
     public javax.swing.JButton bcoAgregarBcoBtn;
     public javax.swing.JButton bcoAgregarBcoBtn1;
     public javax.swing.JTextField bcoBuscar;
@@ -1601,11 +1718,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JPanel superAdmlClientes;
     public javax.swing.JTextField usuarioBuscarUser;
     public javax.swing.JList<String> usuarioLista;
-    public javax.swing.JTextField usuarioNombreUser1;
-    public javax.swing.JButton usuariosAgregarUserBtn;
     public javax.swing.JButton usuariosBuscarUserBtn;
-    private javax.swing.JPasswordField usuariosContraseña;
-    public javax.swing.JButton usuariosGuardarBtn;
     public javax.swing.JButton usuariosModifUserBtn1;
     // End of variables declaration//GEN-END:variables
 }

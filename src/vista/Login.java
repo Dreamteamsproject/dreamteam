@@ -176,11 +176,9 @@ public class Login extends javax.swing.JFrame {
 
     private void loginUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginUsuarioMouseEntered
          LoginC.CheckUserText();
-         LoginC.CheckUserText();
     }//GEN-LAST:event_loginUsuarioMouseEntered
 
     private void loginPasswordMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginPasswordMouseEntered
-        LoginC.CheckPasswordText();
         LoginC.CheckPasswordText();
     }//GEN-LAST:event_loginPasswordMouseEntered
 

@@ -8,7 +8,15 @@ public class Consultas {
     private final Conexion cc = new Conexion("jdbc:mysql://50.62.141.188/dg?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","deamgifttest","rooot");
     private final java.sql.Connection   conexionSQL   = cc.connect();
     
+    
+    
+    
     public Consultas(){}
+    
+    
+    
+    
+    
     
     public boolean consultaBooleana(String SQL){
         boolean validacion = false;
@@ -30,13 +38,18 @@ public class Consultas {
         return false;
     }
     
+    
+    
+    
+    
+    
     // Select Queries
     public ResultSet doQueryGet(String SQL) {
         try {
-            var statement = conexionSQL.createStatement(); // Statement Object
-            var response = statement.executeQuery(SQL); // ResultSet Object
+            var st = conexionSQL.createStatement(); // Statement Object
+            var rs = st.executeQuery(SQL); // ResultSet Object
             
-            return response;
+            return rs;
             
         } catch (SQLException e) {
             System.out.println("Error: " +  e.getLocalizedMessage());
@@ -46,11 +59,14 @@ public class Consultas {
     }
     
     
+    
+    
+    
     //Insert & Update Queries
     public boolean doQueryPost(String SQL) {
         try {
-            var statement = conexionSQL.createStatement();
-            statement.executeUpdate(SQL);
+            var st = conexionSQL.createStatement();
+                st.executeUpdate(SQL);
                 
             } catch (SQLException e) {
                 System.out.println("Error: " +  e.getLocalizedMessage());
