@@ -7,8 +7,6 @@ package vista;
 
 import controlador.SAUsuariosC;
 import java.awt.Color;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 
 /**
  *
@@ -21,6 +19,7 @@ public class SuperAdm extends javax.swing.JFrame {
      */
     public SuperAdm() {
         initComponents();
+        SAUsuariosC.IniciarClase();
         this.setLocationRelativeTo(null);
     }
 
@@ -804,7 +803,9 @@ public class SuperAdm extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        usuarioLista.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         usuarioLista.setToolTipText("");
+        usuarioLista.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane5.setViewportView(usuarioLista);
 
         superAdmUsuarios.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
@@ -1177,7 +1178,7 @@ public class SuperAdm extends javax.swing.JFrame {
         superAdmArticulos.setLayout(superAdmArticulosLayout);
         superAdmArticulosLayout.setHorizontalGroup(
             superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 723, Short.MAX_VALUE)
+            .addGap(0, 730, Short.MAX_VALUE)
         );
         superAdmArticulosLayout.setVerticalGroup(
             superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1192,7 +1193,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jPanelComunas.setLayout(jPanelComunasLayout);
         jPanelComunasLayout.setHorizontalGroup(
             jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 719, Short.MAX_VALUE)
+            .addGap(0, 726, Short.MAX_VALUE)
         );
         jPanelComunasLayout.setVerticalGroup(
             jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

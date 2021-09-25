@@ -8,7 +8,7 @@ import modelo.Consultas;
 public class SAUsuariosC {
     private static Consultas consultaSQL = new Consultas();
     
-    
+    public static void IniciarClase(){}
     
     
     public static void AgregarUsuario(){
