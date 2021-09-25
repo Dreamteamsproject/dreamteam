@@ -39,7 +39,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        dreamgiftTelefono = new java.awt.TextField();
+        iVentaTelefono = new java.awt.TextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -55,37 +55,37 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        dreamgiftTotal = new java.awt.TextField();
-        dreamgiftNumeroPedido = new java.awt.TextField();
-        dreamgiftBusquedaRut = new java.awt.TextField();
-        dreamgiftRut = new java.awt.TextField();
-        dreamgiftDireccion = new java.awt.TextField();
-        dreamgiftMail = new java.awt.TextField();
+        iVentaTotal = new java.awt.TextField();
+        iVentaNumeroPedido = new java.awt.TextField();
+        iVentaBusquedaRut = new java.awt.TextField();
+        iVentaRut = new java.awt.TextField();
+        iVentaDireccion = new java.awt.TextField();
+        iVentaMail = new java.awt.TextField();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        dreamgiftventasPend = new javax.swing.JList<>();
+        iVentaventasPendList = new javax.swing.JList<>();
         jLabel33 = new javax.swing.JLabel();
-        dreamgiftNombre = new java.awt.TextField();
-        dreamgiftRrss = new java.awt.TextField();
-        dreamgiftFechaNac = new java.awt.TextField();
-        dreamgiftDestinat = new java.awt.TextField();
-        dreamgiftFechaEntrega = new java.awt.TextField();
-        dreamgiftHoraEnt = new java.awt.TextField();
-        dreamgiftDireccionEnt = new java.awt.TextField();
-        dreamgiftSaludo = new java.awt.TextField();
-        dreamgiftApellido = new java.awt.TextField();
-        dreamgiftComunaEnt = new java.awt.TextField();
-        dreamgiftModificar = new javax.swing.JButton();
-        dreamgiftBuscar = new javax.swing.JButton();
-        dreamgiftPacks = new javax.swing.JComboBox<>();
+        iVentaNombre = new java.awt.TextField();
+        iVentaRrss = new java.awt.TextField();
+        iVentaFechaNac = new java.awt.TextField();
+        iVentaDestinat = new java.awt.TextField();
+        iVentaFechaEntrega = new java.awt.TextField();
+        iVentaHoraEnt = new java.awt.TextField();
+        iVentaDireccionEnt = new java.awt.TextField();
+        iVentaSaludo = new java.awt.TextField();
+        iVentaApellido = new java.awt.TextField();
+        iVentaComunaEnt = new java.awt.TextField();
+        iVentaModificar = new javax.swing.JButton();
+        iVentaBuscarBtn = new javax.swing.JButton();
+        iVentaPacks = new javax.swing.JComboBox<>();
         jLabel34 = new javax.swing.JLabel();
-        dreamgiftTelefonoDest1 = new java.awt.TextField();
-        dreamgiftComuna = new javax.swing.JComboBox<>();
-        dreamgiftBanco = new javax.swing.JComboBox<>();
-        dreamgiftCelular1 = new java.awt.TextField();
-        dreamgiftIngresar1 = new javax.swing.JButton();
+        iVentaTelefonoDest = new java.awt.TextField();
+        iVentaComuna = new javax.swing.JComboBox<>();
+        iVentaBanco = new javax.swing.JComboBox<>();
+        iVentaCelular = new java.awt.TextField();
+        iVentaIngresar = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
-        jDesktopPane4 = new javax.swing.JDesktopPane();
+        jLabel9 = new javax.swing.JLabel();
         superAdmProveedores = new javax.swing.JPanel();
         ProveeEstado = new javax.swing.JComboBox<>();
         ProveeRazonSoc = new javax.swing.JTextField();
@@ -114,7 +114,7 @@ public class SuperAdm extends javax.swing.JFrame {
         ProveeIdProv = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         proveeTabla1 = new javax.swing.JTable();
-        jDesktopPane2 = new javax.swing.JDesktopPane();
+        jLabel49 = new javax.swing.JLabel();
         superAdmUsuarios = new javax.swing.JPanel();
         usuarioBuscarUser = new javax.swing.JTextField();
         usuariosGuardarBtn = new javax.swing.JButton();
@@ -126,10 +126,10 @@ public class SuperAdm extends javax.swing.JFrame {
         usuariosBuscarUserBtn = new javax.swing.JButton();
         usuarioNombreUser1 = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
-        dreamgiftventasPend1 = new javax.swing.JList<>();
+        usuarioLista = new javax.swing.JList<>();
         usuariosModifUserBtn1 = new javax.swing.JButton();
         jLabel55 = new javax.swing.JLabel();
-        jDesktopPane6 = new javax.swing.JDesktopPane();
+        jLabel52 = new javax.swing.JLabel();
         superAdmBancos = new javax.swing.JPanel();
         bcoBuscar = new javax.swing.JTextField();
         bcoGuardarBtn = new javax.swing.JButton();
@@ -144,7 +144,7 @@ public class SuperAdm extends javax.swing.JFrame {
         bcoModifBtn = new javax.swing.JButton();
         jLabel56 = new javax.swing.JLabel();
         bcoDescripcion1 = new javax.swing.JTextField();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jLabel58 = new javax.swing.JLabel();
         superAdmlClientes = new javax.swing.JPanel();
         clientesEstado = new javax.swing.JComboBox<>();
         clientesNombre = new javax.swing.JTextField();
@@ -175,10 +175,25 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         clientesBuscarBtn = new javax.swing.JButton();
-        jDesktopPane3 = new javax.swing.JDesktopPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        clienteListado = new javax.swing.JList<>();
+        bcoAgregarBcoBtn1 = new javax.swing.JButton();
+        jLabel68 = new javax.swing.JLabel();
         superAdmRrss = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        superAdmPacks = new javax.swing.JPanel();
+        rrssBuscar = new javax.swing.JTextField();
+        rrssGuardarBtn = new javax.swing.JButton();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        rrssAgregarBtn = new javax.swing.JButton();
+        rrssBuscarBtn = new javax.swing.JButton();
+        rrssCodigo = new javax.swing.JTextField();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        rrssListado = new javax.swing.JList<>();
+        rrssModifBtn = new javax.swing.JButton();
+        jLabel57 = new javax.swing.JLabel();
+        rrssDescripcion = new javax.swing.JTextField();
+        jLabel69 = new javax.swing.JLabel();
         superAdmArticulos = new javax.swing.JPanel();
         jPanelComunas = new javax.swing.JPanel();
 
@@ -225,13 +240,13 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel15.setText("Ingreso Venta");
         superAdmIngresoVenta.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
-        dreamgiftTelefono.setName(""); // NOI18N
-        dreamgiftTelefono.addActionListener(new java.awt.event.ActionListener() {
+        iVentaTelefono.setName(""); // NOI18N
+        iVentaTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftTelefonoActionPerformed(evt);
+                iVentaTelefonoActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 220, -1));
+        superAdmIngresoVenta.add(iVentaTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 220, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -308,66 +323,66 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel31.setText("Saludo");
         superAdmIngresoVenta.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
 
-        dreamgiftTotal.setName(""); // NOI18N
-        dreamgiftTotal.addActionListener(new java.awt.event.ActionListener() {
+        iVentaTotal.setName(""); // NOI18N
+        iVentaTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftTotalActionPerformed(evt);
+                iVentaTotalActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 110, -1));
+        superAdmIngresoVenta.add(iVentaTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 110, -1));
 
-        dreamgiftNumeroPedido.setName(""); // NOI18N
-        dreamgiftNumeroPedido.addActionListener(new java.awt.event.ActionListener() {
+        iVentaNumeroPedido.setName(""); // NOI18N
+        iVentaNumeroPedido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftNumeroPedidoActionPerformed(evt);
+                iVentaNumeroPedidoActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftNumeroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 90, -1));
+        superAdmIngresoVenta.add(iVentaNumeroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 90, -1));
 
-        dreamgiftBusquedaRut.setName(""); // NOI18N
-        dreamgiftBusquedaRut.setText("12345678-9");
-        dreamgiftBusquedaRut.addActionListener(new java.awt.event.ActionListener() {
+        iVentaBusquedaRut.setName(""); // NOI18N
+        iVentaBusquedaRut.setText("12345678-9");
+        iVentaBusquedaRut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftBusquedaRutActionPerformed(evt);
+                iVentaBusquedaRutActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftBusquedaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 90, -1));
+        superAdmIngresoVenta.add(iVentaBusquedaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 90, -1));
 
-        dreamgiftRut.setName(""); // NOI18N
-        dreamgiftRut.addActionListener(new java.awt.event.ActionListener() {
+        iVentaRut.setName(""); // NOI18N
+        iVentaRut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftRutActionPerformed(evt);
+                iVentaRutActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
+        superAdmIngresoVenta.add(iVentaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
 
-        dreamgiftDireccion.setName(""); // NOI18N
-        dreamgiftDireccion.addActionListener(new java.awt.event.ActionListener() {
+        iVentaDireccion.setName(""); // NOI18N
+        iVentaDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftDireccionActionPerformed(evt);
+                iVentaDireccionActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
+        superAdmIngresoVenta.add(iVentaDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
 
-        dreamgiftMail.setName(""); // NOI18N
-        dreamgiftMail.addActionListener(new java.awt.event.ActionListener() {
+        iVentaMail.setName(""); // NOI18N
+        iVentaMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftMailActionPerformed(evt);
+                iVentaMailActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 230, -1));
+        superAdmIngresoVenta.add(iVentaMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 230, -1));
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Seleccion de Pack");
         superAdmIngresoVenta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 110, -1));
 
-        dreamgiftventasPend.setModel(new javax.swing.AbstractListModel<String>() {
+        iVentaventasPendList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(dreamgiftventasPend);
+        jScrollPane1.setViewportView(iVentaventasPendList);
 
         superAdmIngresoVenta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 160, 120));
 
@@ -376,163 +391,150 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel33.setText("Apellido");
         superAdmIngresoVenta.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, -1, -1));
 
-        dreamgiftNombre.setName(""); // NOI18N
-        dreamgiftNombre.addActionListener(new java.awt.event.ActionListener() {
+        iVentaNombre.setName(""); // NOI18N
+        iVentaNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftNombreActionPerformed(evt);
+                iVentaNombreActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 230, -1));
+        superAdmIngresoVenta.add(iVentaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 230, -1));
 
-        dreamgiftRrss.setName(""); // NOI18N
-        dreamgiftRrss.addActionListener(new java.awt.event.ActionListener() {
+        iVentaRrss.setName(""); // NOI18N
+        iVentaRrss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftRrssActionPerformed(evt);
+                iVentaRrssActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftRrss, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 220, -1));
+        superAdmIngresoVenta.add(iVentaRrss, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 220, -1));
 
-        dreamgiftFechaNac.setName(""); // NOI18N
-        dreamgiftFechaNac.addActionListener(new java.awt.event.ActionListener() {
+        iVentaFechaNac.setName(""); // NOI18N
+        iVentaFechaNac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftFechaNacActionPerformed(evt);
+                iVentaFechaNacActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 110, -1));
+        superAdmIngresoVenta.add(iVentaFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 110, -1));
 
-        dreamgiftDestinat.setName(""); // NOI18N
-        dreamgiftDestinat.addActionListener(new java.awt.event.ActionListener() {
+        iVentaDestinat.setName(""); // NOI18N
+        iVentaDestinat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftDestinatActionPerformed(evt);
+                iVentaDestinatActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftDestinat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 220, -1));
+        superAdmIngresoVenta.add(iVentaDestinat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 220, -1));
 
-        dreamgiftFechaEntrega.setName(""); // NOI18N
-        dreamgiftFechaEntrega.addActionListener(new java.awt.event.ActionListener() {
+        iVentaFechaEntrega.setName(""); // NOI18N
+        iVentaFechaEntrega.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftFechaEntregaActionPerformed(evt);
+                iVentaFechaEntregaActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftFechaEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 110, -1));
+        superAdmIngresoVenta.add(iVentaFechaEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 110, -1));
 
-        dreamgiftHoraEnt.setName(""); // NOI18N
-        dreamgiftHoraEnt.addActionListener(new java.awt.event.ActionListener() {
+        iVentaHoraEnt.setName(""); // NOI18N
+        iVentaHoraEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftHoraEntActionPerformed(evt);
+                iVentaHoraEntActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftHoraEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 220, -1));
+        superAdmIngresoVenta.add(iVentaHoraEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 220, -1));
 
-        dreamgiftDireccionEnt.setName(""); // NOI18N
-        dreamgiftDireccionEnt.addActionListener(new java.awt.event.ActionListener() {
+        iVentaDireccionEnt.setName(""); // NOI18N
+        iVentaDireccionEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftDireccionEntActionPerformed(evt);
+                iVentaDireccionEntActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftDireccionEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 220, -1));
+        superAdmIngresoVenta.add(iVentaDireccionEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 220, -1));
 
-        dreamgiftSaludo.setName(""); // NOI18N
-        dreamgiftSaludo.addActionListener(new java.awt.event.ActionListener() {
+        iVentaSaludo.setName(""); // NOI18N
+        iVentaSaludo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftSaludoActionPerformed(evt);
+                iVentaSaludoActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 480, 40));
+        superAdmIngresoVenta.add(iVentaSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 480, 40));
 
-        dreamgiftApellido.setName(""); // NOI18N
-        dreamgiftApellido.addActionListener(new java.awt.event.ActionListener() {
+        iVentaApellido.setName(""); // NOI18N
+        iVentaApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftApellidoActionPerformed(evt);
+                iVentaApellidoActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 220, -1));
+        superAdmIngresoVenta.add(iVentaApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 220, -1));
 
-        dreamgiftComunaEnt.setName(""); // NOI18N
-        dreamgiftComunaEnt.addActionListener(new java.awt.event.ActionListener() {
+        iVentaComunaEnt.setName(""); // NOI18N
+        iVentaComunaEnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftComunaEntActionPerformed(evt);
+                iVentaComunaEntActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftComunaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, 220, -1));
+        superAdmIngresoVenta.add(iVentaComunaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, 220, -1));
 
-        dreamgiftModificar.setBackground(new java.awt.Color(167, 196, 182));
-        dreamgiftModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        dreamgiftModificar.setText("Modificar");
-        dreamgiftModificar.addActionListener(new java.awt.event.ActionListener() {
+        iVentaModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        iVentaModificar.setText("Modificar");
+        iVentaModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftModificarActionPerformed(evt);
+                iVentaModificarActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 104, 30));
+        superAdmIngresoVenta.add(iVentaModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 104, 30));
 
-        dreamgiftBuscar.setBackground(new java.awt.Color(167, 196, 182));
-        dreamgiftBuscar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        dreamgiftBuscar.setText("Buscar");
-        dreamgiftBuscar.addActionListener(new java.awt.event.ActionListener() {
+        iVentaBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        iVentaBuscarBtn.setText("Buscar");
+        iVentaBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftBuscarActionPerformed(evt);
+                iVentaBuscarBtnActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
+        superAdmIngresoVenta.add(iVentaBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
 
-        dreamgiftPacks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aniversario  $19.990", "Cumpleaños   $21.990", "Navidad   $25.990", "Matrimonio   $35.990" }));
-        superAdmIngresoVenta.add(dreamgiftPacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 140, -1));
+        iVentaPacks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aniversario  $19.990", "Cumpleaños   $21.990", "Navidad   $25.990", "Matrimonio   $35.990" }));
+        superAdmIngresoVenta.add(iVentaPacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 140, -1));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText(" Ingrese Rut");
         superAdmIngresoVenta.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        dreamgiftTelefonoDest1.setName(""); // NOI18N
-        dreamgiftTelefonoDest1.addActionListener(new java.awt.event.ActionListener() {
+        iVentaTelefonoDest.setName(""); // NOI18N
+        iVentaTelefonoDest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftTelefonoDest1ActionPerformed(evt);
+                iVentaTelefonoDestActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftTelefonoDest1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 220, -1));
+        superAdmIngresoVenta.add(iVentaTelefonoDest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 220, -1));
 
-        dreamgiftComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pudahuel", "Santiago", "Providencia", "" }));
-        superAdmIngresoVenta.add(dreamgiftComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
+        iVentaComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pudahuel", "Santiago", "Providencia", "" }));
+        superAdmIngresoVenta.add(iVentaComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
 
-        dreamgiftBanco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banco Chile", "Santander" }));
-        superAdmIngresoVenta.add(dreamgiftBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 230, -1));
+        iVentaBanco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banco Chile", "Santander" }));
+        superAdmIngresoVenta.add(iVentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 230, -1));
 
-        dreamgiftCelular1.setName(""); // NOI18N
-        dreamgiftCelular1.addActionListener(new java.awt.event.ActionListener() {
+        iVentaCelular.setName(""); // NOI18N
+        iVentaCelular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftCelular1ActionPerformed(evt);
+                iVentaCelularActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftCelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 220, -1));
+        superAdmIngresoVenta.add(iVentaCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 220, -1));
 
-        dreamgiftIngresar1.setBackground(new java.awt.Color(167, 196, 182));
-        dreamgiftIngresar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        dreamgiftIngresar1.setText("Ingresar");
-        dreamgiftIngresar1.addActionListener(new java.awt.event.ActionListener() {
+        iVentaIngresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        iVentaIngresar.setText("Ingresar");
+        iVentaIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dreamgiftIngresar1ActionPerformed(evt);
+                iVentaIngresarActionPerformed(evt);
             }
         });
-        superAdmIngresoVenta.add(dreamgiftIngresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 104, 30));
+        superAdmIngresoVenta.add(iVentaIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 104, 30));
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 4, 4));
         jLabel47.setText("(12345678-9)");
         superAdmIngresoVenta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
-        javax.swing.GroupLayout jDesktopPane4Layout = new javax.swing.GroupLayout(jDesktopPane4);
-        jDesktopPane4.setLayout(jDesktopPane4Layout);
-        jDesktopPane4Layout.setHorizontalGroup(
-            jDesktopPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
-        );
-        jDesktopPane4Layout.setVerticalGroup(
-            jDesktopPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        superAdmIngresoVenta.add(jDesktopPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        superAdmIngresoVenta.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
 
         superAdmPestañas.addTab("Ingreso Venta", superAdmIngresoVenta);
 
@@ -545,46 +547,46 @@ public class SuperAdm extends javax.swing.JFrame {
                 ProveeEstadoActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 260, 160, -1));
+        superAdmProveedores.add(ProveeEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 160, -1));
 
         ProveeRazonSoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeRazonSocActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeRazonSoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 162, -1));
-        superAdmProveedores.add(ProveeRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 162, -1));
-        superAdmProveedores.add(ProveeDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 162, -1));
-        superAdmProveedores.add(ProveeTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 162, -1));
+        superAdmProveedores.add(ProveeRazonSoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 162, -1));
+        superAdmProveedores.add(ProveeRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 162, -1));
+        superAdmProveedores.add(ProveeDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 162, -1));
+        superAdmProveedores.add(ProveeTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 162, -1));
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("Estado");
-        superAdmProveedores.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 50, -1));
+        superAdmProveedores.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 50, -1));
 
         ProveeGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         ProveeGuardarBtn.setText("Guardar");
-        superAdmProveedores.add(ProveeGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, -1, -1));
+        superAdmProveedores.add(ProveeGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 120, -1));
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("Telefono");
-        superAdmProveedores.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        superAdmProveedores.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
         jLabel43.setText("Razon Social");
-        superAdmProveedores.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 90, -1));
+        superAdmProveedores.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 90, -1));
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("    Rut");
-        superAdmProveedores.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 50, -1));
+        superAdmProveedores.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 50, -1));
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("  Direccion");
-        superAdmProveedores.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 70, -1));
+        superAdmProveedores.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 70, -1));
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
@@ -594,32 +596,31 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel50.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("Mail");
-        superAdmProveedores.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, -1, -1));
+        superAdmProveedores.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
 
         ProveeMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeMailActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 162, -1));
+        superAdmProveedores.add(ProveeMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
 
         jLabel51.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setText("Comuna");
-        superAdmProveedores.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, -1, -1));
+        superAdmProveedores.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
 
         ProveeComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        superAdmProveedores.add(ProveeComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 160, -1));
+        superAdmProveedores.add(ProveeComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 160, -1));
 
-        ProveeModifBtn.setBackground(new java.awt.Color(167, 196, 182));
-        ProveeModifBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ProveeModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         ProveeModifBtn.setText("Modificar");
         ProveeModifBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeModifBtnActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 480, 104, 30));
+        superAdmProveedores.add(ProveeModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 480, 120, 30));
 
         ProveeBuscar.setName(""); // NOI18N
         ProveeBuscar.setText("76345678-9");
@@ -628,31 +629,30 @@ public class SuperAdm extends javax.swing.JFrame {
                 ProveeBuscarActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 90, -1));
+        superAdmProveedores.add(ProveeBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 90, -1));
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setText(" Ingrese Rut");
-        superAdmProveedores.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
+        superAdmProveedores.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, -1, -1));
 
         jLabel54.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(255, 4, 4));
         jLabel54.setText("(76345678-9)");
-        superAdmProveedores.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, -1));
+        superAdmProveedores.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
 
         ProveeNombContac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeNombContacActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeNombContac, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 162, -1));
+        superAdmProveedores.add(ProveeNombContac, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 162, -1));
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("Nombre Contacto");
-        superAdmProveedores.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 120, -1));
+        superAdmProveedores.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 120, -1));
 
-        ProveeBuscarBtn.setBackground(new java.awt.Color(167, 196, 182));
         ProveeBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         ProveeBuscarBtn.setText("Buscar");
         ProveeBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -660,19 +660,19 @@ public class SuperAdm extends javax.swing.JFrame {
                 ProveeBuscarBtnActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, -1, 20));
+        superAdmProveedores.add(ProveeBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, 20));
 
         jLabel72.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel72.setForeground(new java.awt.Color(255, 255, 255));
         jLabel72.setText("Id");
-        superAdmProveedores.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, -1, -1));
+        superAdmProveedores.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
 
         ProveeIdProv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeIdProvActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeIdProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 162, -1));
+        superAdmProveedores.add(ProveeIdProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 162, -1));
 
         proveeTabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -698,18 +698,9 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmProveedores.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 700, 120));
 
-        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
-        jDesktopPane2.setLayout(jDesktopPane2Layout);
-        jDesktopPane2Layout.setHorizontalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
-        );
-        jDesktopPane2Layout.setVerticalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        superAdmProveedores.add(jDesktopPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel49.setText("jLabel49");
+        superAdmProveedores.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         superAdmPestañas.addTab("Proveedores", superAdmProveedores);
 
@@ -724,12 +715,12 @@ public class SuperAdm extends javax.swing.JFrame {
 
         usuariosGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         usuariosGuardarBtn.setText("Guardar");
-        superAdmUsuarios.add(usuariosGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, -1, -1));
+        superAdmUsuarios.add(usuariosGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 120, -1));
 
         jLabel59.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel59.setForeground(new java.awt.Color(255, 255, 255));
         jLabel59.setText("Administracion Usuarios");
-        superAdmUsuarios.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, -1));
+        superAdmUsuarios.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
 
         jLabel62.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel62.setForeground(new java.awt.Color(255, 255, 255));
@@ -744,8 +735,7 @@ public class SuperAdm extends javax.swing.JFrame {
         usuariosContraseña.setText("jPasswordField1");
         superAdmUsuarios.add(usuariosContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 160, -1));
 
-        usuariosAgregarUserBtn.setBackground(new java.awt.Color(167, 196, 182));
-        usuariosAgregarUserBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        usuariosAgregarUserBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         usuariosAgregarUserBtn.setText("Agregar");
         usuariosAgregarUserBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -754,7 +744,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmUsuarios.add(usuariosAgregarUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 104, 30));
 
-        usuariosBuscarUserBtn.setBackground(new java.awt.Color(167, 196, 182));
         usuariosBuscarUserBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         usuariosBuscarUserBtn.setText("Buscar");
         usuariosBuscarUserBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -771,43 +760,33 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmUsuarios.add(usuarioNombreUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 162, -1));
 
-        dreamgiftventasPend1.setModel(new javax.swing.AbstractListModel<String>() {
+        usuarioLista.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        dreamgiftventasPend1.setToolTipText("");
-        jScrollPane5.setViewportView(dreamgiftventasPend1);
+        usuarioLista.setToolTipText("");
+        jScrollPane5.setViewportView(usuarioLista);
 
         superAdmUsuarios.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
 
-        usuariosModifUserBtn1.setBackground(new java.awt.Color(167, 196, 182));
-        usuariosModifUserBtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        usuariosModifUserBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         usuariosModifUserBtn1.setText("Modificar");
         usuariosModifUserBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuariosModifUserBtn1ActionPerformed(evt);
             }
         });
-        superAdmUsuarios.add(usuariosModifUserBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 104, 30));
+        superAdmUsuarios.add(usuariosModifUserBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, 120, 30));
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setText("Nombre Usuario");
         superAdmUsuarios.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, -1));
 
-        javax.swing.GroupLayout jDesktopPane6Layout = new javax.swing.GroupLayout(jDesktopPane6);
-        jDesktopPane6.setLayout(jDesktopPane6Layout);
-        jDesktopPane6Layout.setHorizontalGroup(
-            jDesktopPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
-        );
-        jDesktopPane6Layout.setVerticalGroup(
-            jDesktopPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        superAdmUsuarios.add(jDesktopPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel52.setText("jLabel52");
+        superAdmUsuarios.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         superAdmPestañas.addTab("Usuarios", superAdmUsuarios);
 
@@ -822,16 +801,16 @@ public class SuperAdm extends javax.swing.JFrame {
 
         bcoGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoGuardarBtn.setText("Guardar");
-        superAdmBancos.add(bcoGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, -1, -1));
+        superAdmBancos.add(bcoGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
 
         jLabel60.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel60.setForeground(new java.awt.Color(255, 255, 255));
         jLabel60.setText("Administracion Bancos");
-        superAdmBancos.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, -1));
+        superAdmBancos.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
 
         jLabel63.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel63.setText("Busqueda de Usuario");
+        jLabel63.setText("Busqueda de Banco");
         superAdmBancos.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
 
         jLabel65.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -839,8 +818,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel65.setText("Codigo");
         superAdmBancos.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
 
-        bcoAgregarBcoBtn.setBackground(new java.awt.Color(167, 196, 182));
-        bcoAgregarBcoBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        bcoAgregarBcoBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoAgregarBcoBtn.setText("Agregar");
         bcoAgregarBcoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -849,7 +827,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmBancos.add(bcoAgregarBcoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
 
-        bcoBuscarBtn.setBackground(new java.awt.Color(167, 196, 182));
         bcoBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         bcoBuscarBtn.setText("Buscar");
         bcoBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -876,15 +853,14 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmBancos.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
 
-        bcoModifBtn.setBackground(new java.awt.Color(167, 196, 182));
-        bcoModifBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        bcoModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoModifBtn.setText("Modificar");
         bcoModifBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bcoModifBtnActionPerformed(evt);
             }
         });
-        superAdmBancos.add(bcoModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 104, 30));
+        superAdmBancos.add(bcoModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
 
         jLabel56.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel56.setForeground(new java.awt.Color(255, 255, 255));
@@ -898,18 +874,9 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmBancos.add(bcoDescripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        superAdmBancos.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel58.setText("jLabel58");
+        superAdmBancos.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         superAdmPestañas.addTab("Bancos", superAdmBancos);
 
@@ -917,113 +884,112 @@ public class SuperAdm extends javax.swing.JFrame {
 
         clientesEstado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         clientesEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        superAdmlClientes.add(clientesEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 181, -1));
+        superAdmlClientes.add(clientesEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 181, -1));
 
         clientesNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientesNombreActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 162, -1));
-        superAdmlClientes.add(clientesRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 162, -1));
-        superAdmlClientes.add(clientesFechNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 162, -1));
-        superAdmlClientes.add(clientesDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 162, -1));
-        superAdmlClientes.add(clientesTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 162, -1));
+        superAdmlClientes.add(clientesNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 162, -1));
+        superAdmlClientes.add(clientesRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 162, -1));
+        superAdmlClientes.add(clientesFechNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 162, -1));
+        superAdmlClientes.add(clientesDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 162, -1));
+        superAdmlClientes.add(clientesTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 162, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Estado");
-        superAdmlClientes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 50, -1));
+        superAdmlClientes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 50, -1));
 
         clientesGuardar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         clientesGuardar.setText("Guardar");
-        superAdmlClientes.add(clientesGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, -1, -1));
+        superAdmlClientes.add(clientesGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 110, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Telefono");
-        superAdmlClientes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
+        superAdmlClientes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre");
-        superAdmlClientes.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+        superAdmlClientes.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("    Rut");
-        superAdmlClientes.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 40, -1));
+        superAdmlClientes.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 40, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Fecha Nacimiento");
-        superAdmlClientes.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+        superAdmlClientes.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("  Direccion");
-        superAdmlClientes.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 70, -1));
+        superAdmlClientes.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 70, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Banco");
-        superAdmlClientes.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, -1, -1));
+        superAdmlClientes.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("Administracion Clientes");
-        superAdmlClientes.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+        superAdmlClientes.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
 
         clientesApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientesApellidoActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
+        superAdmlClientes.add(clientesApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 162, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Apellido");
-        superAdmlClientes.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
+        superAdmlClientes.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, -1, -1));
 
         clientesBanco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        superAdmlClientes.add(clientesBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 160, -1));
+        superAdmlClientes.add(clientesBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 160, -1));
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("Mail");
-        superAdmlClientes.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
+        superAdmlClientes.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, -1));
 
         clientesMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientesMailActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 162, -1));
+        superAdmlClientes.add(clientesMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Comuna");
-        superAdmlClientes.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
+        superAdmlClientes.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
 
         clientesComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        superAdmlClientes.add(clientesComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 160, -1));
+        superAdmlClientes.add(clientesComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, -1));
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("Celular");
-        superAdmlClientes.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
-        superAdmlClientes.add(clientesCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 162, -1));
+        superAdmlClientes.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
+        superAdmlClientes.add(clientesCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 162, -1));
 
-        clientesModificar.setBackground(new java.awt.Color(167, 196, 182));
-        clientesModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        clientesModificar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         clientesModificar.setText("Modificar");
         clientesModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientesModificarActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 104, 30));
+        superAdmlClientes.add(clientesModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 110, 30));
 
         clientesBuscar.setName(""); // NOI18N
         clientesBuscar.setText("12345678-9");
@@ -1032,19 +998,18 @@ public class SuperAdm extends javax.swing.JFrame {
                 clientesBuscarActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 90, -1));
+        superAdmlClientes.add(clientesBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 90, -1));
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText(" Ingrese Rut");
-        superAdmlClientes.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, -1));
+        superAdmlClientes.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 4, 4));
         jLabel40.setText("(12345678-9)");
-        superAdmlClientes.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
+        superAdmlClientes.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, -1));
 
-        clientesBuscarBtn.setBackground(new java.awt.Color(167, 196, 182));
         clientesBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         clientesBuscarBtn.setText("Buscar");
         clientesBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -1052,71 +1017,128 @@ public class SuperAdm extends javax.swing.JFrame {
                 clientesBuscarBtnActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, -1, 20));
+        superAdmlClientes.add(clientesBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, 20));
 
-        javax.swing.GroupLayout jDesktopPane3Layout = new javax.swing.GroupLayout(jDesktopPane3);
-        jDesktopPane3.setLayout(jDesktopPane3Layout);
-        jDesktopPane3Layout.setHorizontalGroup(
-            jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
-        );
-        jDesktopPane3Layout.setVerticalGroup(
-            jDesktopPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
+        clienteListado.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        clienteListado.setToolTipText("");
+        jScrollPane7.setViewportView(clienteListado);
 
-        superAdmlClientes.add(jDesktopPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
+        superAdmlClientes.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 380, 120));
+
+        bcoAgregarBcoBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        bcoAgregarBcoBtn1.setText("Agregar");
+        bcoAgregarBcoBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoAgregarBcoBtn1ActionPerformed(evt);
+            }
+        });
+        superAdmlClientes.add(bcoAgregarBcoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 104, 30));
+
+        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel68.setText("jLabel68");
+        superAdmlClientes.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         superAdmPestañas.addTab("Clientes", superAdmlClientes);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        superAdmRrss.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout superAdmRrssLayout = new javax.swing.GroupLayout(superAdmRrss);
-        superAdmRrss.setLayout(superAdmRrssLayout);
-        superAdmRrssLayout.setHorizontalGroup(
-            superAdmRrssLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(superAdmRrssLayout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(514, Short.MAX_VALUE))
-        );
-        superAdmRrssLayout.setVerticalGroup(
-            superAdmRrssLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(superAdmRrssLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(445, Short.MAX_VALUE))
-        );
+        rrssBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssBuscarActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
+
+        rrssGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        rrssGuardarBtn.setText("Guardar");
+        superAdmRrss.add(rrssGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
+
+        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setText("Administracion RRSS");
+        superAdmRrss.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
+
+        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel66.setText("Busqueda de Usuario");
+        superAdmRrss.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
+
+        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel67.setText("Codigo");
+        superAdmRrss.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+
+        rrssAgregarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        rrssAgregarBtn.setText("Agregar");
+        rrssAgregarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssAgregarBtnActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssAgregarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
+
+        rrssBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rrssBuscarBtn.setText("Buscar");
+        rrssBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssBuscarBtnActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
+
+        rrssCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssCodigoActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
+
+        rrssListado.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        rrssListado.setToolTipText("");
+        jScrollPane8.setViewportView(rrssListado);
+
+        superAdmRrss.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
+
+        rrssModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        rrssModifBtn.setText("Modificar");
+        rrssModifBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssModifBtnActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setText("Descripcion");
+        superAdmRrss.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
+
+        rrssDescripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssDescripcionActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
+
+        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel69.setText("jLabel69");
+        superAdmRrss.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
 
         superAdmPestañas.addTab("Rrss", superAdmRrss);
-
-        javax.swing.GroupLayout superAdmPacksLayout = new javax.swing.GroupLayout(superAdmPacks);
-        superAdmPacks.setLayout(superAdmPacksLayout);
-        superAdmPacksLayout.setHorizontalGroup(
-            superAdmPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 725, Short.MAX_VALUE)
-        );
-        superAdmPacksLayout.setVerticalGroup(
-            superAdmPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        superAdmPestañas.addTab("Packs", superAdmPacks);
 
         javax.swing.GroupLayout superAdmArticulosLayout = new javax.swing.GroupLayout(superAdmArticulos);
         superAdmArticulos.setLayout(superAdmArticulosLayout);
         superAdmArticulosLayout.setHorizontalGroup(
             superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 725, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
         );
         superAdmArticulosLayout.setVerticalGroup(
             superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1131,20 +1153,20 @@ public class SuperAdm extends javax.swing.JFrame {
         jPanelComunas.setLayout(jPanelComunasLayout);
         jPanelComunasLayout.setHorizontalGroup(
             jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 721, Short.MAX_VALUE)
+            .addGap(0, 711, Short.MAX_VALUE)
         );
         jPanelComunasLayout.setVerticalGroup(
             jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 566, Short.MAX_VALUE)
         );
 
-        superAdmPestañas.addTab("BORRAR*Comunas", jPanelComunas);
+        superAdmPestañas.addTab("Comunas", jPanelComunas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(superAdmPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(superAdmPestañas, javax.swing.GroupLayout.PREFERRED_SIZE, 724, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1234,93 +1256,93 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clientesNombreActionPerformed
 
-    private void dreamgiftIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftIngresar1ActionPerformed
+    private void iVentaIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaIngresarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftIngresar1ActionPerformed
+    }//GEN-LAST:event_iVentaIngresarActionPerformed
 
-    private void dreamgiftCelular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftCelular1ActionPerformed
+    private void iVentaCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaCelularActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftCelular1ActionPerformed
+    }//GEN-LAST:event_iVentaCelularActionPerformed
 
-    private void dreamgiftTelefonoDest1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftTelefonoDest1ActionPerformed
+    private void iVentaTelefonoDestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoDestActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftTelefonoDest1ActionPerformed
+    }//GEN-LAST:event_iVentaTelefonoDestActionPerformed
 
-    private void dreamgiftBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftBuscarActionPerformed
+    private void iVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBuscarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftBuscarActionPerformed
+    }//GEN-LAST:event_iVentaBuscarBtnActionPerformed
 
-    private void dreamgiftModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftModificarActionPerformed
+    private void iVentaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaModificarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftModificarActionPerformed
+    }//GEN-LAST:event_iVentaModificarActionPerformed
 
-    private void dreamgiftComunaEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftComunaEntActionPerformed
+    private void iVentaComunaEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaComunaEntActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftComunaEntActionPerformed
+    }//GEN-LAST:event_iVentaComunaEntActionPerformed
 
-    private void dreamgiftApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftApellidoActionPerformed
+    private void iVentaApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftApellidoActionPerformed
+    }//GEN-LAST:event_iVentaApellidoActionPerformed
 
-    private void dreamgiftSaludoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftSaludoActionPerformed
+    private void iVentaSaludoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaSaludoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftSaludoActionPerformed
+    }//GEN-LAST:event_iVentaSaludoActionPerformed
 
-    private void dreamgiftDireccionEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftDireccionEntActionPerformed
+    private void iVentaDireccionEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionEntActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftDireccionEntActionPerformed
+    }//GEN-LAST:event_iVentaDireccionEntActionPerformed
 
-    private void dreamgiftHoraEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftHoraEntActionPerformed
+    private void iVentaHoraEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaHoraEntActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftHoraEntActionPerformed
+    }//GEN-LAST:event_iVentaHoraEntActionPerformed
 
-    private void dreamgiftFechaEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftFechaEntregaActionPerformed
+    private void iVentaFechaEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaFechaEntregaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftFechaEntregaActionPerformed
+    }//GEN-LAST:event_iVentaFechaEntregaActionPerformed
 
-    private void dreamgiftDestinatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftDestinatActionPerformed
+    private void iVentaDestinatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDestinatActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftDestinatActionPerformed
+    }//GEN-LAST:event_iVentaDestinatActionPerformed
 
-    private void dreamgiftFechaNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftFechaNacActionPerformed
+    private void iVentaFechaNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaFechaNacActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftFechaNacActionPerformed
+    }//GEN-LAST:event_iVentaFechaNacActionPerformed
 
-    private void dreamgiftRrssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftRrssActionPerformed
+    private void iVentaRrssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRrssActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftRrssActionPerformed
+    }//GEN-LAST:event_iVentaRrssActionPerformed
 
-    private void dreamgiftNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftNombreActionPerformed
+    private void iVentaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftNombreActionPerformed
+    }//GEN-LAST:event_iVentaNombreActionPerformed
 
-    private void dreamgiftMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftMailActionPerformed
+    private void iVentaMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaMailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftMailActionPerformed
+    }//GEN-LAST:event_iVentaMailActionPerformed
 
-    private void dreamgiftDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftDireccionActionPerformed
+    private void iVentaDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftDireccionActionPerformed
+    }//GEN-LAST:event_iVentaDireccionActionPerformed
 
-    private void dreamgiftRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftRutActionPerformed
+    private void iVentaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftRutActionPerformed
+    }//GEN-LAST:event_iVentaRutActionPerformed
 
-    private void dreamgiftBusquedaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftBusquedaRutActionPerformed
+    private void iVentaBusquedaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBusquedaRutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftBusquedaRutActionPerformed
+    }//GEN-LAST:event_iVentaBusquedaRutActionPerformed
 
-    private void dreamgiftNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftNumeroPedidoActionPerformed
+    private void iVentaNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNumeroPedidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftNumeroPedidoActionPerformed
+    }//GEN-LAST:event_iVentaNumeroPedidoActionPerformed
 
-    private void dreamgiftTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftTotalActionPerformed
+    private void iVentaTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftTotalActionPerformed
+    }//GEN-LAST:event_iVentaTotalActionPerformed
 
-    private void dreamgiftTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dreamgiftTelefonoActionPerformed
+    private void iVentaTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dreamgiftTelefonoActionPerformed
+    }//GEN-LAST:event_iVentaTelefonoActionPerformed
 
     private void bcoBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcoBuscarActionPerformed
         // TODO add your handling code here:
@@ -1345,6 +1367,34 @@ public class SuperAdm extends javax.swing.JFrame {
     private void bcoDescripcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcoDescripcion1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bcoDescripcion1ActionPerformed
+
+    private void bcoAgregarBcoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcoAgregarBcoBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bcoAgregarBcoBtn1ActionPerformed
+
+    private void rrssBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rrssBuscarActionPerformed
+
+    private void rrssAgregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssAgregarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rrssAgregarBtnActionPerformed
+
+    private void rrssBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssBuscarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rrssBuscarBtnActionPerformed
+
+    private void rrssCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rrssCodigoActionPerformed
+
+    private void rrssModifBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssModifBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rrssModifBtnActionPerformed
+
+    private void rrssDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssDescripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rrssDescripcionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1403,6 +1453,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField ProveeRut;
     public javax.swing.JTextField ProveeTelefono;
     public javax.swing.JButton bcoAgregarBcoBtn;
+    public javax.swing.JButton bcoAgregarBcoBtn1;
     public javax.swing.JTextField bcoBuscar;
     public javax.swing.JButton bcoBuscarBtn;
     public javax.swing.JTextField bcoCodigo;
@@ -1410,6 +1461,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton bcoGuardarBtn;
     public javax.swing.JList<String> bcoListado;
     public javax.swing.JButton bcoModifBtn;
+    public javax.swing.JList<String> clienteListado;
     public javax.swing.JTextField clientesApellido;
     public javax.swing.JComboBox<String> clientesBanco;
     public java.awt.TextField clientesBuscar;
@@ -1425,38 +1477,32 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField clientesNombre;
     public javax.swing.JTextField clientesRut;
     public javax.swing.JTextField clientesTelefono;
-    public java.awt.TextField dreamgiftApellido;
-    public javax.swing.JComboBox<String> dreamgiftBanco;
-    public javax.swing.JButton dreamgiftBuscar;
-    public java.awt.TextField dreamgiftBusquedaRut;
-    public java.awt.TextField dreamgiftCelular1;
-    public javax.swing.JComboBox<String> dreamgiftComuna;
-    public java.awt.TextField dreamgiftComunaEnt;
-    public java.awt.TextField dreamgiftDestinat;
-    public java.awt.TextField dreamgiftDireccion;
-    public java.awt.TextField dreamgiftDireccionEnt;
-    public java.awt.TextField dreamgiftFechaEntrega;
-    public java.awt.TextField dreamgiftFechaNac;
-    public java.awt.TextField dreamgiftHoraEnt;
-    public javax.swing.JButton dreamgiftIngresar1;
-    public java.awt.TextField dreamgiftMail;
-    public javax.swing.JButton dreamgiftModificar;
-    public java.awt.TextField dreamgiftNombre;
-    public java.awt.TextField dreamgiftNumeroPedido;
-    public javax.swing.JComboBox<String> dreamgiftPacks;
-    public java.awt.TextField dreamgiftRrss;
-    public java.awt.TextField dreamgiftRut;
-    public java.awt.TextField dreamgiftSaludo;
-    public java.awt.TextField dreamgiftTelefono;
-    public java.awt.TextField dreamgiftTelefonoDest1;
-    public java.awt.TextField dreamgiftTotal;
-    public javax.swing.JList<String> dreamgiftventasPend;
-    public javax.swing.JList<String> dreamgiftventasPend1;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JDesktopPane jDesktopPane2;
-    private javax.swing.JDesktopPane jDesktopPane3;
-    private javax.swing.JDesktopPane jDesktopPane4;
-    private javax.swing.JDesktopPane jDesktopPane6;
+    public java.awt.TextField iVentaApellido;
+    public javax.swing.JComboBox<String> iVentaBanco;
+    public javax.swing.JButton iVentaBuscarBtn;
+    public java.awt.TextField iVentaBusquedaRut;
+    public java.awt.TextField iVentaCelular;
+    public javax.swing.JComboBox<String> iVentaComuna;
+    public java.awt.TextField iVentaComunaEnt;
+    public java.awt.TextField iVentaDestinat;
+    public java.awt.TextField iVentaDireccion;
+    public java.awt.TextField iVentaDireccionEnt;
+    public java.awt.TextField iVentaFechaEntrega;
+    public java.awt.TextField iVentaFechaNac;
+    public java.awt.TextField iVentaHoraEnt;
+    public javax.swing.JButton iVentaIngresar;
+    public java.awt.TextField iVentaMail;
+    public javax.swing.JButton iVentaModificar;
+    public java.awt.TextField iVentaNombre;
+    public java.awt.TextField iVentaNumeroPedido;
+    public javax.swing.JComboBox<String> iVentaPacks;
+    public java.awt.TextField iVentaRrss;
+    public java.awt.TextField iVentaRut;
+    public java.awt.TextField iVentaSaludo;
+    public java.awt.TextField iVentaTelefono;
+    public java.awt.TextField iVentaTelefonoDest;
+    public java.awt.TextField iVentaTotal;
+    public javax.swing.JList<String> iVentaventasPendList;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
@@ -1500,42 +1546,61 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     public javax.swing.JLabel jLabel47;
     public javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
     public javax.swing.JLabel jLabel53;
     public javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
     public javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     public javax.swing.JLabel jLabel60;
+    public javax.swing.JLabel jLabel61;
     public javax.swing.JLabel jLabel62;
     public javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
+    public javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanelComunas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTextArea jTextArea1;
     public javax.swing.JTable proveeTabla1;
+    public javax.swing.JButton rrssAgregarBtn;
+    public javax.swing.JTextField rrssBuscar;
+    public javax.swing.JButton rrssBuscarBtn;
+    public javax.swing.JTextField rrssCodigo;
+    public javax.swing.JTextField rrssDescripcion;
+    public javax.swing.JButton rrssGuardarBtn;
+    public javax.swing.JList<String> rrssListado;
+    public javax.swing.JButton rrssModifBtn;
     private javax.swing.JPanel superAdmArticulos;
     private javax.swing.JPanel superAdmBancos;
     private javax.swing.JPanel superAdmIngresoVenta;
-    private javax.swing.JPanel superAdmPacks;
     public javax.swing.JTabbedPane superAdmPestañas;
     private javax.swing.JPanel superAdmProveedores;
     private javax.swing.JPanel superAdmRrss;
     private javax.swing.JPanel superAdmUsuarios;
     private javax.swing.JPanel superAdmlClientes;
     public javax.swing.JTextField usuarioBuscarUser;
+    public javax.swing.JList<String> usuarioLista;
     public javax.swing.JTextField usuarioNombreUser1;
     public javax.swing.JButton usuariosAgregarUserBtn;
     public javax.swing.JButton usuariosBuscarUserBtn;
