@@ -37,32 +37,27 @@ public class bancosC {
     
     public ArrayList<String> consultarBanco(String busqueda) {
         ArrayList<String> resultado;
-        String SQL;
-        String consultaInicio = "SELECT banco_id, banco_descripcion, banco_codigo, banco_estado FROM bancos ";
-
-        String[] posiblesRespuestas = { "WHERE banco_descripcion = " + busqueda, "WHERE banco_codigo = " + busqueda,
-                "WHERE banco_estado = " + busqueda, "WHERE banco_id = " + busqueda };
-
-        for (int i = 0; i < 4; i++) {
-            SQL = consultaInicio + posiblesRespuestas[i];
-            boolean existeDato = queries.consultaBooleana(SQL);
-
-            if (existeDato) {
-                resultado = this.extraerDatos(SQL);
-                return resultado;
-            }
-        }
-
-        return null;
+        String Query = "SELECT * FROM `bancos` WHERE `banco_id` = '" + busqueda + "' OR `banco_descripcion` like '%" + busqueda + "%' OR `banco_codigo` like '%" + busqueda + "%' OR `banco_estado` = '" + busqueda + "'";
+        
+        resultado = this.extraerDatos(Query);
+        return resultado;
     }
     
-    public boolean modificarBanco(int id, String descripcion, String codigo, int estado) {
-        String SQL = 
-                "UPDATE bancos SET banco_descripcion = " + descripcion + ", banco_codigo = " + codigo
-                        + ", banco_estado = " + estado;
-
+    public boolean modificarBanco(String id, String bankName, String bankCode, String bankStatus) {
+        boolean response = true;
         
-        return true;
+         try {
+            String Query = 
+                    "UPDATE `bancos` SET `banco_descripcion` = '" + bankName +
+                    "',banco_codigo = '" + bankCode +
+                    "',banco_estado = '" + bankStatus + "' WHERE `banco_id` = '" + id + "'"; 
+            response = this.queries.doQueryPost(Query);
+        
+        } catch(Exception e) {
+            System.out.println("bankInsert Error: " +  e.getMessage());
+        }
+        
+        return response;
     }
     
     private ArrayList<String> extraerDatos(String SQL) {
