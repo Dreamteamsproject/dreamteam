@@ -35,6 +35,72 @@ public class SuperAdm extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         superAdmPestañas = new javax.swing.JTabbedPane();
+        superAdmComunas = new javax.swing.JPanel();
+        comunaBuscar1 = new javax.swing.JTextField();
+        comunaGuardarBtn1 = new javax.swing.JButton();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        comunaAgregarBtn2 = new javax.swing.JButton();
+        comunaBuscarBtn1 = new javax.swing.JButton();
+        comunaCodigo1 = new javax.swing.JTextField();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        comunaListado1 = new javax.swing.JList<>();
+        comunaModifBtn1 = new javax.swing.JButton();
+        jLabel74 = new javax.swing.JLabel();
+        comunaDescripcion2 = new javax.swing.JTextField();
+        jLabel75 = new javax.swing.JLabel();
+        superAdmBancos = new javax.swing.JPanel();
+        bcoBuscar = new javax.swing.JTextField();
+        bcoGuardarBtn = new javax.swing.JButton();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        bcoAgregarBcoBtn = new javax.swing.JButton();
+        bcoBuscarBtn = new javax.swing.JButton();
+        bcoCodigo = new javax.swing.JTextField();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        bcoListado = new javax.swing.JList<>();
+        bcoModifBtn = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
+        bcoDescripcion1 = new javax.swing.JTextField();
+        jLabel58 = new javax.swing.JLabel();
+        superAdmRrss = new javax.swing.JPanel();
+        rrssBuscar = new javax.swing.JTextField();
+        rrssGuardarBtn = new javax.swing.JButton();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        rrssAgregarBtn = new javax.swing.JButton();
+        rrssBuscarBtn = new javax.swing.JButton();
+        rrssCodigo = new javax.swing.JTextField();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        rrssListado = new javax.swing.JList<>();
+        rrssModifBtn = new javax.swing.JButton();
+        jLabel57 = new javax.swing.JLabel();
+        rrssDescripcion = new javax.swing.JTextField();
+        jLabel69 = new javax.swing.JLabel();
+        superAdmlArticulos = new javax.swing.JPanel();
+        articulosDescrip = new javax.swing.JTextField();
+        articulosId = new javax.swing.JTextField();
+        articulosFechVenc = new javax.swing.JTextField();
+        ArticulosGuardar1 = new javax.swing.JButton();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        articulosIdCat = new javax.swing.JTextField();
+        jLabel84 = new javax.swing.JLabel();
+        ArticulosModificar1 = new javax.swing.JButton();
+        articulosBuscar1 = new java.awt.TextField();
+        jLabel88 = new javax.swing.JLabel();
+        articulosBuscarBtn1 = new javax.swing.JButton();
+        articulosAgregarBtn2 = new javax.swing.JButton();
+        jLabel86 = new javax.swing.JLabel();
+        articulosLote = new javax.swing.JTextField();
+        articulosList = new javax.swing.JScrollPane();
+        ArticulosList = new javax.swing.JTable();
+        jLabel90 = new javax.swing.JLabel();
         superAdmIngresoVenta = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -133,21 +199,6 @@ public class SuperAdm extends javax.swing.JFrame {
         usuariosModifUserBtn1 = new javax.swing.JButton();
         jLabel55 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
-        superAdmBancos = new javax.swing.JPanel();
-        bcoBuscar = new javax.swing.JTextField();
-        bcoGuardarBtn = new javax.swing.JButton();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        bcoAgregarBcoBtn = new javax.swing.JButton();
-        bcoBuscarBtn = new javax.swing.JButton();
-        bcoCodigo = new javax.swing.JTextField();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        bcoListado = new javax.swing.JList<>();
-        bcoModifBtn = new javax.swing.JButton();
-        jLabel56 = new javax.swing.JLabel();
-        bcoDescripcion1 = new javax.swing.JTextField();
-        jLabel58 = new javax.swing.JLabel();
         superAdmlClientes = new javax.swing.JPanel();
         clientesEstado = new javax.swing.JComboBox<>();
         clientesNombre = new javax.swing.JTextField();
@@ -182,23 +233,6 @@ public class SuperAdm extends javax.swing.JFrame {
         clienteListado = new javax.swing.JList<>();
         bcoAgregarBcoBtn1 = new javax.swing.JButton();
         jLabel68 = new javax.swing.JLabel();
-        superAdmRrss = new javax.swing.JPanel();
-        rrssBuscar = new javax.swing.JTextField();
-        rrssGuardarBtn = new javax.swing.JButton();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        rrssAgregarBtn = new javax.swing.JButton();
-        rrssBuscarBtn = new javax.swing.JButton();
-        rrssCodigo = new javax.swing.JTextField();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        rrssListado = new javax.swing.JList<>();
-        rrssModifBtn = new javax.swing.JButton();
-        jLabel57 = new javax.swing.JLabel();
-        rrssDescripcion = new javax.swing.JTextField();
-        jLabel69 = new javax.swing.JLabel();
-        superAdmArticulos = new javax.swing.JPanel();
-        jPanelComunas = new javax.swing.JPanel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -208,6 +242,405 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmPestañas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         superAdmPestañas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+
+        superAdmComunas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        comunaBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comunaBuscar1ActionPerformed(evt);
+            }
+        });
+        superAdmComunas.add(comunaBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
+
+        comunaGuardarBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        comunaGuardarBtn1.setText("Guardar");
+        superAdmComunas.add(comunaGuardarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
+
+        jLabel70.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel70.setText("Administracion Comunas");
+        superAdmComunas.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+
+        jLabel71.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel71.setText("Busqueda de Comuna");
+        superAdmComunas.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
+
+        jLabel73.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel73.setText("Codigo");
+        superAdmComunas.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+
+        comunaAgregarBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        comunaAgregarBtn2.setText("Agregar");
+        comunaAgregarBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comunaAgregarBtn2ActionPerformed(evt);
+            }
+        });
+        superAdmComunas.add(comunaAgregarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
+
+        comunaBuscarBtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        comunaBuscarBtn1.setText("Buscar");
+        comunaBuscarBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comunaBuscarBtn1ActionPerformed(evt);
+            }
+        });
+        superAdmComunas.add(comunaBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
+
+        comunaCodigo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comunaCodigo1ActionPerformed(evt);
+            }
+        });
+        superAdmComunas.add(comunaCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
+
+        comunaListado1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        comunaListado1.setToolTipText("");
+        jScrollPane9.setViewportView(comunaListado1);
+
+        superAdmComunas.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
+
+        comunaModifBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        comunaModifBtn1.setText("Modificar");
+        comunaModifBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comunaModifBtn1ActionPerformed(evt);
+            }
+        });
+        superAdmComunas.add(comunaModifBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
+
+        jLabel74.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel74.setText("Comuna");
+        superAdmComunas.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
+
+        comunaDescripcion2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comunaDescripcion2ActionPerformed(evt);
+            }
+        });
+        superAdmComunas.add(comunaDescripcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
+
+        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel75.setText("jLabel58");
+        superAdmComunas.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        superAdmPestañas.addTab("Comunas", superAdmComunas);
+
+        superAdmBancos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bcoBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoBuscarActionPerformed(evt);
+            }
+        });
+        superAdmBancos.add(bcoBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
+
+        bcoGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        bcoGuardarBtn.setText("Guardar");
+        superAdmBancos.add(bcoGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
+
+        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel60.setText("Administracion Bancos");
+        superAdmBancos.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+
+        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel63.setText("Busqueda de Banco");
+        superAdmBancos.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
+
+        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel65.setText("Codigo");
+        superAdmBancos.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
+
+        bcoAgregarBcoBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        bcoAgregarBcoBtn.setText("Agregar");
+        bcoAgregarBcoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoAgregarBcoBtnActionPerformed(evt);
+            }
+        });
+        superAdmBancos.add(bcoAgregarBcoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
+
+        bcoBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        bcoBuscarBtn.setText("Buscar");
+        bcoBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoBuscarBtnActionPerformed(evt);
+            }
+        });
+        superAdmBancos.add(bcoBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
+
+        bcoCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoCodigoActionPerformed(evt);
+            }
+        });
+        superAdmBancos.add(bcoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
+
+        bcoListado.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        bcoListado.setToolTipText("");
+        jScrollPane6.setViewportView(bcoListado);
+
+        superAdmBancos.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
+
+        bcoModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        bcoModifBtn.setText("Modificar");
+        bcoModifBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoModifBtnActionPerformed(evt);
+            }
+        });
+        superAdmBancos.add(bcoModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
+
+        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setText("Descripcion");
+        superAdmBancos.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
+
+        bcoDescripcion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bcoDescripcion1ActionPerformed(evt);
+            }
+        });
+        superAdmBancos.add(bcoDescripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
+
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel58.setText("jLabel58");
+        superAdmBancos.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        superAdmPestañas.addTab("Bancos", superAdmBancos);
+
+        superAdmRrss.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        rrssBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssBuscarActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
+
+        rrssGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        rrssGuardarBtn.setText("Guardar");
+        superAdmRrss.add(rrssGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
+
+        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setText("Administracion RRSS");
+        superAdmRrss.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
+
+        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel66.setText("Busqueda de RRSS");
+        superAdmRrss.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
+
+        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel67.setText("Id");
+        superAdmRrss.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
+
+        rrssAgregarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        rrssAgregarBtn.setText("Agregar");
+        rrssAgregarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssAgregarBtnActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssAgregarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
+
+        rrssBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rrssBuscarBtn.setText("Buscar");
+        rrssBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssBuscarBtnActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
+
+        rrssCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssCodigoActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
+
+        rrssListado.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        rrssListado.setToolTipText("");
+        jScrollPane8.setViewportView(rrssListado);
+
+        superAdmRrss.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
+
+        rrssModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        rrssModifBtn.setText("Modificar");
+        rrssModifBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssModifBtnActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setText("RRSS");
+        superAdmRrss.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
+
+        rrssDescripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rrssDescripcionActionPerformed(evt);
+            }
+        });
+        superAdmRrss.add(rrssDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
+
+        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel69.setText("jLabel69");
+        superAdmRrss.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
+
+        superAdmPestañas.addTab("Rrss", superAdmRrss);
+
+        superAdmlArticulos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        articulosDescrip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                articulosDescripActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(articulosDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 162, -1));
+        superAdmlArticulos.add(articulosId, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 162, -1));
+        superAdmlArticulos.add(articulosFechVenc, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 162, -1));
+
+        ArticulosGuardar1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        ArticulosGuardar1.setText("Guardar");
+        superAdmlArticulos.add(ArticulosGuardar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 110, -1));
+
+        jLabel78.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78.setText("Descripcion");
+        superAdmlArticulos.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 70, -1));
+
+        jLabel79.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel79.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel79.setText("Id");
+        superAdmlArticulos.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 20, -1));
+
+        jLabel80.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel80.setText("Fecha Vencimiento");
+        superAdmlArticulos.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
+
+        jLabel83.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel83.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel83.setText("Administracion Articulos");
+        superAdmlArticulos.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
+
+        articulosIdCat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                articulosIdCatActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(articulosIdCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 162, -1));
+
+        jLabel84.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel84.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel84.setText("Id Categoria");
+        superAdmlArticulos.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
+
+        ArticulosModificar1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        ArticulosModificar1.setText("Modificar");
+        ArticulosModificar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ArticulosModificar1ActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(ArticulosModificar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 110, 30));
+
+        articulosBuscar1.setName(""); // NOI18N
+        articulosBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                articulosBuscar1ActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(articulosBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 90, -1));
+
+        jLabel88.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel88.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel88.setText(" Ingrese Id");
+        superAdmlArticulos.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, -1, -1));
+
+        articulosBuscarBtn1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        articulosBuscarBtn1.setText("Buscar");
+        articulosBuscarBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                articulosBuscarBtn1ActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(articulosBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, -1, 20));
+
+        articulosAgregarBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        articulosAgregarBtn2.setText("Agregar");
+        articulosAgregarBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                articulosAgregarBtn2ActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(articulosAgregarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 104, 30));
+
+        jLabel86.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel86.setText("Lote");
+        superAdmlArticulos.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
+
+        articulosLote.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                articulosLoteActionPerformed(evt);
+            }
+        });
+        superAdmlArticulos.add(articulosLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 162, -1));
+
+        ArticulosList.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Id", "Razon Social", "Rut", "Telefono", "Direccion", "Comuna", "Nombre Contacto", "Mail", "Estado"
+            }
+        ));
+        articulosList.setViewportView(ArticulosList);
+        if (ArticulosList.getColumnModel().getColumnCount() > 0) {
+            ArticulosList.getColumnModel().getColumn(1).setResizable(false);
+            ArticulosList.getColumnModel().getColumn(4).setResizable(false);
+            ArticulosList.getColumnModel().getColumn(6).setResizable(false);
+        }
+
+        superAdmlArticulos.add(articulosList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 700, 120));
+
+        jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel90.setText("jLabel68");
+        superAdmlArticulos.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        superAdmPestañas.addTab("Articulos", superAdmlArticulos);
 
         superAdmIngresoVenta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         superAdmIngresoVenta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -830,96 +1263,6 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmPestañas.addTab("Usuarios", superAdmUsuarios);
 
-        superAdmBancos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        bcoBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bcoBuscarActionPerformed(evt);
-            }
-        });
-        superAdmBancos.add(bcoBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
-
-        bcoGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        bcoGuardarBtn.setText("Guardar");
-        superAdmBancos.add(bcoGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
-
-        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel60.setText("Administracion Bancos");
-        superAdmBancos.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
-
-        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel63.setText("Busqueda de Banco");
-        superAdmBancos.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
-
-        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel65.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel65.setText("Codigo");
-        superAdmBancos.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
-
-        bcoAgregarBcoBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        bcoAgregarBcoBtn.setText("Agregar");
-        bcoAgregarBcoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bcoAgregarBcoBtnActionPerformed(evt);
-            }
-        });
-        superAdmBancos.add(bcoAgregarBcoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
-
-        bcoBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        bcoBuscarBtn.setText("Buscar");
-        bcoBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bcoBuscarBtnActionPerformed(evt);
-            }
-        });
-        superAdmBancos.add(bcoBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
-
-        bcoCodigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bcoCodigoActionPerformed(evt);
-            }
-        });
-        superAdmBancos.add(bcoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
-
-        bcoListado.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        bcoListado.setToolTipText("");
-        jScrollPane6.setViewportView(bcoListado);
-
-        superAdmBancos.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
-
-        bcoModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        bcoModifBtn.setText("Modificar");
-        bcoModifBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bcoModifBtnActionPerformed(evt);
-            }
-        });
-        superAdmBancos.add(bcoModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
-
-        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setText("Descripcion");
-        superAdmBancos.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
-
-        bcoDescripcion1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bcoDescripcion1ActionPerformed(evt);
-            }
-        });
-        superAdmBancos.add(bcoDescripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
-
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
-        jLabel58.setText("jLabel58");
-        superAdmBancos.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
-
-        superAdmPestañas.addTab("Bancos", superAdmBancos);
-
         superAdmlClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         clientesEstado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -1083,124 +1426,6 @@ public class SuperAdm extends javax.swing.JFrame {
         superAdmlClientes.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         superAdmPestañas.addTab("Clientes", superAdmlClientes);
-
-        superAdmRrss.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        rrssBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rrssBuscarActionPerformed(evt);
-            }
-        });
-        superAdmRrss.add(rrssBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
-
-        rrssGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        rrssGuardarBtn.setText("Guardar");
-        superAdmRrss.add(rrssGuardarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 120, -1));
-
-        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setText("Administracion RRSS");
-        superAdmRrss.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
-
-        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel66.setText("Busqueda de Usuario");
-        superAdmRrss.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
-
-        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel67.setText("Codigo");
-        superAdmRrss.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, -1));
-
-        rrssAgregarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        rrssAgregarBtn.setText("Agregar");
-        rrssAgregarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rrssAgregarBtnActionPerformed(evt);
-            }
-        });
-        superAdmRrss.add(rrssAgregarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 104, 30));
-
-        rrssBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rrssBuscarBtn.setText("Buscar");
-        rrssBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rrssBuscarBtnActionPerformed(evt);
-            }
-        });
-        superAdmRrss.add(rrssBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
-
-        rrssCodigo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rrssCodigoActionPerformed(evt);
-            }
-        });
-        superAdmRrss.add(rrssCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
-
-        rrssListado.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        rrssListado.setToolTipText("");
-        jScrollPane8.setViewportView(rrssListado);
-
-        superAdmRrss.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
-
-        rrssModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        rrssModifBtn.setText("Modificar");
-        rrssModifBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rrssModifBtnActionPerformed(evt);
-            }
-        });
-        superAdmRrss.add(rrssModifBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 30));
-
-        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel57.setText("Descripcion");
-        superAdmRrss.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
-
-        rrssDescripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rrssDescripcionActionPerformed(evt);
-            }
-        });
-        superAdmRrss.add(rrssDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
-
-        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
-        jLabel69.setText("jLabel69");
-        superAdmRrss.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
-
-        superAdmPestañas.addTab("Rrss", superAdmRrss);
-
-        javax.swing.GroupLayout superAdmArticulosLayout = new javax.swing.GroupLayout(superAdmArticulos);
-        superAdmArticulos.setLayout(superAdmArticulosLayout);
-        superAdmArticulosLayout.setHorizontalGroup(
-            superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
-        );
-        superAdmArticulosLayout.setVerticalGroup(
-            superAdmArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        superAdmPestañas.addTab("Articulos", superAdmArticulos);
-
-        jPanelComunas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        javax.swing.GroupLayout jPanelComunasLayout = new javax.swing.GroupLayout(jPanelComunas);
-        jPanelComunas.setLayout(jPanelComunasLayout);
-        jPanelComunasLayout.setHorizontalGroup(
-            jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 726, Short.MAX_VALUE)
-        );
-        jPanelComunasLayout.setVerticalGroup(
-            jPanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 566, Short.MAX_VALUE)
-        );
-
-        superAdmPestañas.addTab("Comunas", jPanelComunas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1468,6 +1693,58 @@ public class SuperAdm extends javax.swing.JFrame {
        SAUsuariosC.CheckpassText();
     }//GEN-LAST:event_SAContraseñaNuevaKeyPressed
 
+    private void comunaBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaBuscar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comunaBuscar1ActionPerformed
+
+    private void comunaAgregarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaAgregarBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comunaAgregarBtn2ActionPerformed
+
+    private void comunaBuscarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaBuscarBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comunaBuscarBtn1ActionPerformed
+
+    private void comunaCodigo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaCodigo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comunaCodigo1ActionPerformed
+
+    private void comunaModifBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaModifBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comunaModifBtn1ActionPerformed
+
+    private void comunaDescripcion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaDescripcion2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comunaDescripcion2ActionPerformed
+
+    private void articulosDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosDescripActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_articulosDescripActionPerformed
+
+    private void articulosIdCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosIdCatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_articulosIdCatActionPerformed
+
+    private void ArticulosModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArticulosModificar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ArticulosModificar1ActionPerformed
+
+    private void articulosBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosBuscar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_articulosBuscar1ActionPerformed
+
+    private void articulosBuscarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosBuscarBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_articulosBuscarBtn1ActionPerformed
+
+    private void articulosAgregarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosAgregarBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_articulosAgregarBtn2ActionPerformed
+
+    private void articulosLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosLoteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_articulosLoteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1554,6 +1831,9 @@ public class SuperAdm extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton ArticulosGuardar1;
+    public javax.swing.JTable ArticulosList;
+    public javax.swing.JButton ArticulosModificar1;
     public java.awt.TextField ProveeBuscar;
     public javax.swing.JButton ProveeBuscarBtn;
     public javax.swing.JComboBox<String> ProveeComuna;
@@ -1570,6 +1850,15 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JPasswordField SAContraseñaNueva;
     public javax.swing.JButton SACrearUser;
     private javax.swing.JTextField SAUsuarioNuevo;
+    public javax.swing.JButton articulosAgregarBtn2;
+    public java.awt.TextField articulosBuscar1;
+    public javax.swing.JButton articulosBuscarBtn1;
+    public javax.swing.JTextField articulosDescrip;
+    public javax.swing.JTextField articulosFechVenc;
+    public javax.swing.JTextField articulosId;
+    public javax.swing.JTextField articulosIdCat;
+    private javax.swing.JScrollPane articulosList;
+    public javax.swing.JTextField articulosLote;
     public javax.swing.JButton bcoAgregarBcoBtn;
     public javax.swing.JButton bcoAgregarBcoBtn1;
     public javax.swing.JTextField bcoBuscar;
@@ -1595,6 +1884,14 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField clientesNombre;
     public javax.swing.JTextField clientesRut;
     public javax.swing.JTextField clientesTelefono;
+    public javax.swing.JButton comunaAgregarBtn2;
+    public javax.swing.JTextField comunaBuscar1;
+    public javax.swing.JButton comunaBuscarBtn1;
+    public javax.swing.JTextField comunaCodigo1;
+    public javax.swing.JTextField comunaDescripcion2;
+    public javax.swing.JButton comunaGuardarBtn1;
+    public javax.swing.JList<String> comunaListado1;
+    public javax.swing.JButton comunaModifBtn1;
     public java.awt.TextField iVentaApellido;
     public javax.swing.JComboBox<String> iVentaBanco;
     public javax.swing.JButton iVentaBuscarBtn;
@@ -1688,10 +1985,22 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    public javax.swing.JLabel jLabel70;
+    public javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    public javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel86;
+    public javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanelComunas;
+    private javax.swing.JLabel jLabel90;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1699,6 +2008,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;
     public javax.swing.JTable proveeTabla1;
     public javax.swing.JButton rrssAgregarBtn;
@@ -1709,13 +2019,14 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton rrssGuardarBtn;
     public javax.swing.JList<String> rrssListado;
     public javax.swing.JButton rrssModifBtn;
-    private javax.swing.JPanel superAdmArticulos;
     private javax.swing.JPanel superAdmBancos;
+    private javax.swing.JPanel superAdmComunas;
     private javax.swing.JPanel superAdmIngresoVenta;
     public javax.swing.JTabbedPane superAdmPestañas;
     private javax.swing.JPanel superAdmProveedores;
     private javax.swing.JPanel superAdmRrss;
     private javax.swing.JPanel superAdmUsuarios;
+    private javax.swing.JPanel superAdmlArticulos;
     private javax.swing.JPanel superAdmlClientes;
     public javax.swing.JTextField usuarioBuscarUser;
     public javax.swing.JList<String> usuarioLista;
