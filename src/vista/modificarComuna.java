@@ -92,6 +92,7 @@ public class modificarComuna extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/spiral205x212.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
+        jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 210));
 
         pack();
