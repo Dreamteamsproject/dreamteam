@@ -6,13 +6,17 @@
 package controlador;
 
 import static controlador.LoginC.LoginVisible;
+import modelo.Consultas;
 
 /**
  *
  * @author marce
  */
 public class Main {
+        
+    
     public static void main(String[] args) {
+        
         LoginC login = new LoginC();
         LoginVisible();        
         

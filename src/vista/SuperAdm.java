@@ -19,7 +19,9 @@ public class SuperAdm extends javax.swing.JFrame {
      * Creates new form MenuPpal
      */
     public SuperAdm() {
+        
         initComponents();
+        
         SAUsuariosC.IniciarClase();
         RedesC.RedesC();
         bancosC.bancosC();
@@ -27,6 +29,7 @@ public class SuperAdm extends javax.swing.JFrame {
         CatArtC.CatArtC();
         
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -209,7 +212,6 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel64 = new javax.swing.JLabel();
         SAContraseñaNueva = new javax.swing.JPasswordField();
         SACrearUser = new javax.swing.JButton();
-        usuariosBuscarUserBtn = new javax.swing.JButton();
         SAUsuarioNuevo = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
         usuarioLista = new javax.swing.JList<>();
@@ -1318,6 +1320,17 @@ public class SuperAdm extends javax.swing.JFrame {
                 usuarioBuscarUserActionPerformed(evt);
             }
         });
+        usuarioBuscarUser.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usuarioBuscarUserKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                usuarioBuscarUserKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                usuarioBuscarUserKeyTyped(evt);
+            }
+        });
         superAdmUsuarios.add(usuarioBuscarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 162, -1));
 
         jLabel59.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1370,15 +1383,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmUsuarios.add(SACrearUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 104, 30));
 
-        usuariosBuscarUserBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        usuariosBuscarUserBtn.setText("Buscar");
-        usuariosBuscarUserBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usuariosBuscarUserBtnActionPerformed(evt);
-            }
-        });
-        superAdmUsuarios.add(usuariosBuscarUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 80, 20));
-
         SAUsuarioNuevo.setForeground(new java.awt.Color(153, 153, 153));
         SAUsuarioNuevo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         SAUsuarioNuevo.setText("Añadir un usuario");
@@ -1402,11 +1406,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmUsuarios.add(SAUsuarioNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 162, -1));
 
-        usuarioLista.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         usuarioLista.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         usuarioLista.setToolTipText("");
         usuarioLista.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1623,10 +1622,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private void SAUsuarioNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SAUsuarioNuevoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SAUsuarioNuevoActionPerformed
-
-    private void usuariosBuscarUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosBuscarUserBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usuariosBuscarUserBtnActionPerformed
 
     private void SACrearUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SACrearUserActionPerformed
         SAUsuariosC.AgregarUsuario();
@@ -1869,7 +1864,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_comunaAgregarBtn2ActionPerformed
 
     private void comunaBuscarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaBuscarBtn1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_comunaBuscarBtn1ActionPerformed
 
     private void comunaCodigo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comunaCodigo1ActionPerformed
@@ -2003,6 +1998,18 @@ public class SuperAdm extends javax.swing.JFrame {
     private void jLabel82FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel82FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel82FocusGained
+
+    private void usuarioBuscarUserKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioBuscarUserKeyPressed
+
+    }//GEN-LAST:event_usuarioBuscarUserKeyPressed
+
+    private void usuarioBuscarUserKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioBuscarUserKeyTyped
+         
+    }//GEN-LAST:event_usuarioBuscarUserKeyTyped
+
+    private void usuarioBuscarUserKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioBuscarUserKeyReleased
+        SAUsuariosC.FiltrarUsuarios();
+    }//GEN-LAST:event_usuarioBuscarUserKeyReleased
 
     /**
      * @param args the command line arguments
@@ -2316,7 +2323,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JPanel superAdmlClientes;
     public javax.swing.JTextField usuarioBuscarUser;
     public javax.swing.JList<String> usuarioLista;
-    public javax.swing.JButton usuariosBuscarUserBtn;
     public javax.swing.JButton usuariosModifUserBtn1;
     // End of variables declaration//GEN-END:variables
 }

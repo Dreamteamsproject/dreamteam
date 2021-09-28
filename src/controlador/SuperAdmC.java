@@ -18,5 +18,7 @@ public class SuperAdmC {
             RedesC.buscar("1");
         else if( pestaña == 4 )
             CatArtC.buscar("1");
+        else if(pestaña == 7)
+            SAUsuariosC.RellenarUsuario();
     }
 }
