@@ -103,6 +103,8 @@ public class ComunasC {
         String[] parametros = ComunasC.selectedRowInfo();
         var editWindow = new modificarComuna();
         editWindow.setVisible(true);
+        editWindow.setLocationRelativeTo(SuperAdmC.superAdm);
+        
         
         ComunasC.datosModificar(editWindow, parametros);
         

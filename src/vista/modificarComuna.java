@@ -18,6 +18,7 @@ public class modificarComuna extends javax.swing.JFrame {
      * Creates new form modificarBanco
      */
     public modificarComuna() {
+        setUndecorated(true);
         initComponents();
     }
 

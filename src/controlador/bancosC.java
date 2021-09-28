@@ -105,6 +105,8 @@ public class bancosC {
         String[] parametros = bancosC.selectedRowInfo();
         var editWindow = new modificarBanco();
         editWindow.setVisible(true);
+        editWindow.setLocationRelativeTo(SuperAdmC.superAdm);
+        
         
         bancosC.datosModificar(editWindow, parametros);
         

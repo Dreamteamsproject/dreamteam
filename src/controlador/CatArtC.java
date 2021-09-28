@@ -11,53 +11,54 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Consultas;
 import vista.modificarBanco;
+import vista.modificarCatArt;
 import vista.modificarRedes;
 
 /**
  *
  * @author Mauro
  */
-public class RedesC {
+public class CatArtC {
     static Consultas queries = new Consultas();
     
-    public static void RedesC() {
+    public static void CatArtC() {
     }
     
-    public static boolean insertarRed(String nombreRed) {
+    public static boolean insertarCatArt(String nombreCat) {
         boolean response = true;
         
         try {
             String Query = 
-                    "INSERT INTO `rrss` (`rs_id`, `rs_nombre`, `rs_estado`) VALUES (NULL,'"
-                    + nombreRed  +  "','1' )";
-            response = RedesC.queries.doQueryPost(Query);
+                    "INSERT INTO `categorias_articulo` (`categoria_id`, `categoria_descripcion`, `categoria_estado`) VALUES (NULL,'"
+                    + nombreCat  +  "','1' )";
+            response = CatArtC.queries.doQueryPost(Query);
         
         } catch(Exception e) {
-            System.out.println("insertarRed Error: " +  e.getMessage());
+            System.out.println("insertarCategoriaArticulo Error: " +  e.getMessage());
         }
         
         return response;
     }
     
-    public static ArrayList<String> consultarRed(String busqueda) {
+    public static ArrayList<String> consultarCatArt(String busqueda) {
         ArrayList<String> resultado;
-        String Query = "SELECT * FROM `rrss` WHERE `rs_id` = '" + busqueda + "' OR `rs_nombre` like '%" + busqueda +  "%' OR `rs_estado` = '" + busqueda + "'";
+        String Query = "SELECT * FROM `categorias_articulo` WHERE `categoria_id` = '" + busqueda + "' OR `categoria_descripcion` like '%" + busqueda +  "%' OR `categoria_estado` = '" + busqueda + "'";
         
-        resultado = RedesC.extraerDatos(Query);
+        resultado = CatArtC.extraerDatos(Query);
         return resultado;
     }
     
-    public static boolean modificarRed(String id, String rsName, int rsStatus) {
+    public static boolean modificarCatArt(String id, String catName, int catStatus) {
         boolean response = false;
         
          try {
             String Query = 
-                    "UPDATE `rrss` SET `rs_nombre` = '" + rsName +
-                    "', `rs_estado` = '" + rsStatus + "' WHERE `rs_id` = '" + id + "'"; 
-            response = RedesC.queries.doQueryPost(Query);
+                    "UPDATE `categorias_articulo` SET `categoria_descripcion` = '" + catName +
+                    "', `categoria_estado` = '" + catStatus + "' WHERE `categoria_id` = '" + id + "'"; 
+            response = CatArtC.queries.doQueryPost(Query);
         
         } catch(Exception e) {
-            System.out.println("modificarRed Error: " +  e.getMessage());
+            System.out.println("ModificarCategoriaArticulo Error: " +  e.getMessage());
         }
         
         return response;
@@ -69,52 +70,52 @@ public class RedesC {
 
         try {
             for (boolean hayMasDatos = response.next(); hayMasDatos; hayMasDatos = response.next()) {
-                resultado.add(response.getString("rs_id"));
-                resultado.add(response.getString("rs_nombre"));
-                resultado.add(response.getString("rs_estado"));
+                resultado.add(response.getString("categoria_id"));
+                resultado.add(response.getString("categoria_descripcion"));
+                resultado.add(response.getString("categoria_estado"));
             }
 
             return resultado;
         } catch (SQLException e) {
-            System.out.println("extraerDatos Red Error: " + e.getLocalizedMessage());
+            System.out.println("extraerDatos CategoriaArticulo Error: " + e.getLocalizedMessage());
         }
         
         return null;
     }
     
     public static void buscar(String busqueda) {
-        var response = RedesC.consultarRed(busqueda);
-        RedesC.mostrarResultados(response);
+        var response = CatArtC.consultarCatArt(busqueda);
+        CatArtC.mostrarResultados(response);
     }
     
     public static void ingresar(String nombre) {
-        var response = RedesC.insertarRed(nombre);
+        var response = CatArtC.insertarCatArt(nombre);
         if (response)
-            JOptionPane.showMessageDialog(null, "Red ingresada con éxito");
+            JOptionPane.showMessageDialog(null, "Categoria ingresada con éxito");
         else
-            JOptionPane.showMessageDialog(null, "No fue posible ingresar la red");
+            JOptionPane.showMessageDialog(null, "No fue posible ingresar la Categoria");
     }
     
     public static void modificar() {
-        String[] parametros = RedesC.selectedRowInfo();
-        var editWindow = new modificarRedes();
+        String[] parametros = CatArtC.selectedRowInfo();
+        var editWindow = new modificarCatArt();
         editWindow.setVisible(true);
         editWindow.setLocationRelativeTo(SuperAdmC.superAdm);
         
         
-        RedesC.datosModificar(editWindow, parametros);
+        CatArtC.datosModificar(editWindow, parametros);
         
     }
     
-    private static void datosModificar(modificarRedes window, String[] parametros) {
-        window.getRedNameTF().setText(parametros[1]);
-        window.getRedStatusCB().setSelectedIndex(Integer.parseInt(parametros[2]));
+    private static void datosModificar(modificarCatArt window, String[] parametros) {
+        window.getCatArtNameTF().setText(parametros[1]);
+        window.getCatArtStatusCB().setSelectedIndex(Integer.parseInt(parametros[2]));
         
         window.getIdLabel().setText(parametros[0]);
     }
     
     public static void mostrarResultados(ArrayList<String> resultados) {
-        var table = SuperAdmC.superAdm.getRrssTabla();
+        var table = SuperAdmC.superAdm.getCatArtTabla();
         var model = (DefaultTableModel) table.getModel();
         int n;
         String estado;
@@ -139,7 +140,7 @@ public class RedesC {
     }
     
     public static String[] selectedRowInfo() {
-        var table = SuperAdmC.superAdm.getRrssTabla();
+        var table = SuperAdmC.superAdm.getCatArtTabla();
         int row = table.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         String info;

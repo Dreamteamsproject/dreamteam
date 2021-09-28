@@ -17,6 +17,7 @@ public class modificarRedes extends javax.swing.JFrame {
      * Creates new form modificarBanco
      */
     public modificarRedes() {
+        setUndecorated(true);
         initComponents();
     }
 
@@ -123,9 +124,9 @@ public class modificarRedes extends javax.swing.JFrame {
     private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveButtonMouseClicked
         var response = RedesC.modificarRed(this.idLabel.getText(), this.redNameTF.getText(), this.redStatusCB.getSelectedIndex());
         if( response )
-            this.resultMessage.setText("Banco modificado exitosamente");
+            this.resultMessage.setText("Red modificada exitosamente");
         else
-            this.resultMessage.setText("No fue posible modificar el banco");
+            this.resultMessage.setText("No fue posible modificar la red");
     }//GEN-LAST:event_saveButtonMouseClicked
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
