@@ -23,6 +23,7 @@ public class SuperAdm extends javax.swing.JFrame {
         SAUsuariosC.IniciarClase();
         RedesC.RedesC();
         bancosC.bancosC();
+        ComunasC.ComunasC();
         
         this.setLocationRelativeTo(null);
     }
@@ -48,11 +49,11 @@ public class SuperAdm extends javax.swing.JFrame {
         comunaAgregarBtn2 = new javax.swing.JButton();
         comunaBuscarBtn1 = new javax.swing.JButton();
         comunaCodigo1 = new javax.swing.JTextField();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        comunaListado1 = new javax.swing.JList<>();
         comunaModifBtn1 = new javax.swing.JButton();
         jLabel74 = new javax.swing.JLabel();
         comunaDescripcion2 = new javax.swing.JTextField();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        comunasTabla = new javax.swing.JTable();
         jLabel75 = new javax.swing.JLabel();
         superAdmBancos = new javax.swing.JPanel();
         bcoBuscar = new javax.swing.JTextField();
@@ -285,6 +286,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         comunaAgregarBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         comunaAgregarBtn2.setText("Agregar");
+        comunaAgregarBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comunaAgregarBtn2MouseClicked(evt);
+            }
+        });
         comunaAgregarBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comunaAgregarBtn2ActionPerformed(evt);
@@ -294,6 +300,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         comunaBuscarBtn1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         comunaBuscarBtn1.setText("Buscar");
+        comunaBuscarBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comunaBuscarBtn1MouseClicked(evt);
+            }
+        });
         comunaBuscarBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comunaBuscarBtn1ActionPerformed(evt);
@@ -308,18 +319,13 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmComunas.add(comunaCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
 
-        comunaListado1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        comunaListado1.setToolTipText("");
-        jScrollPane9.setViewportView(comunaListado1);
-
-        superAdmComunas.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
-
         comunaModifBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         comunaModifBtn1.setText("Modificar");
+        comunaModifBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comunaModifBtn1MouseClicked(evt);
+            }
+        });
         comunaModifBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comunaModifBtn1ActionPerformed(evt);
@@ -338,6 +344,16 @@ public class SuperAdm extends javax.swing.JFrame {
             }
         });
         superAdmComunas.add(comunaDescripcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
+
+        DefaultTableModel comunasModel = (DefaultTableModel) new DefaultTableModel();
+        comunasModel.addColumn("ID");
+        comunasModel.addColumn("Nombre");
+        comunasModel.addColumn("Código");
+        comunasModel. addColumn("Estado");
+        comunasTabla.setModel(comunasModel);
+        jScrollPane8.setViewportView(comunasTabla);
+
+        superAdmComunas.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, 150));
 
         jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel75.setText("jLabel58");
@@ -1820,6 +1836,18 @@ public class SuperAdm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_bcoGuardarBtnMouseClicked
 
+    private void comunaAgregarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comunaAgregarBtn2MouseClicked
+        ComunasC.ingresar(this.comunaDescripcion2.getText(), this.comunaCodigo1.getText());
+    }//GEN-LAST:event_comunaAgregarBtn2MouseClicked
+
+    private void comunaBuscarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comunaBuscarBtn1MouseClicked
+        ComunasC.buscar(this.comunaBuscar1.getText());
+    }//GEN-LAST:event_comunaBuscarBtn1MouseClicked
+
+    private void comunaModifBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comunaModifBtn1MouseClicked
+        ComunasC.modificar();
+    }//GEN-LAST:event_comunaModifBtn1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1893,6 +1921,10 @@ public class SuperAdm extends javax.swing.JFrame {
     
     public javax.swing.JTable getRrssTabla() {
         return this.rrssTabla;
+    }
+    
+    public javax.swing.JTable getComunasTabla() {
+        return this.comunasTabla;
     }
     
     
@@ -1973,8 +2005,8 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField comunaCodigo1;
     public javax.swing.JTextField comunaDescripcion2;
     public javax.swing.JButton comunaGuardarBtn1;
-    public javax.swing.JList<String> comunaListado1;
     public javax.swing.JButton comunaModifBtn1;
+    private javax.swing.JTable comunasTabla;
     public java.awt.TextField iVentaApellido;
     public javax.swing.JComboBox<String> iVentaBanco;
     public javax.swing.JButton iVentaBuscarBtn;
@@ -2090,7 +2122,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTextArea jTextArea1;
     public javax.swing.JTable proveeTabla1;
     public javax.swing.JButton rrssAgregarBtn;
