@@ -221,7 +221,6 @@ public class SuperAdm extends javax.swing.JFrame {
         clientesNombre = new javax.swing.JTextField();
         clientesRut = new javax.swing.JTextField();
         clientesFechNac = new javax.swing.JTextField();
-        clientesDireccion = new javax.swing.JTextField();
         clientesTelefono = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         clientesGuardar = new javax.swing.JButton();
@@ -229,16 +228,11 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         clientesApellido = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        clientesBanco = new javax.swing.JComboBox<>();
         jLabel36 = new javax.swing.JLabel();
         clientesMail = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        clientesComuna = new javax.swing.JComboBox<>();
         jLabel38 = new javax.swing.JLabel();
         clientesCelular = new javax.swing.JTextField();
         clientesModificar = new javax.swing.JButton();
@@ -1438,7 +1432,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
         clientesEstado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         clientesEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        superAdmlClientes.add(clientesEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 181, -1));
+        superAdmlClientes.add(clientesEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 181, -1));
 
         clientesNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1448,13 +1442,12 @@ public class SuperAdm extends javax.swing.JFrame {
         superAdmlClientes.add(clientesNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 162, -1));
         superAdmlClientes.add(clientesRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 162, -1));
         superAdmlClientes.add(clientesFechNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 162, -1));
-        superAdmlClientes.add(clientesDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 162, -1));
-        superAdmlClientes.add(clientesTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 162, -1));
+        superAdmlClientes.add(clientesTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Estado");
-        superAdmlClientes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 50, -1));
+        superAdmlClientes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 50, -1));
 
         clientesGuardar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         clientesGuardar.setText("Guardar");
@@ -1463,7 +1456,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Telefono");
-        superAdmlClientes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
+        superAdmlClientes.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -1479,16 +1472,6 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Fecha Nacimiento");
         superAdmlClientes.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("  Direccion");
-        superAdmlClientes.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 70, -1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Banco");
-        superAdmlClientes.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
@@ -1507,34 +1490,23 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel8.setText("Apellido");
         superAdmlClientes.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, -1, -1));
 
-        clientesBanco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        superAdmlClientes.add(clientesBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 160, -1));
-
         jLabel36.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("Mail");
-        superAdmlClientes.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, -1));
+        superAdmlClientes.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
 
         clientesMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientesMailActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("Comuna");
-        superAdmlClientes.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
-
-        clientesComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        superAdmlClientes.add(clientesComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 160, -1));
+        superAdmlClientes.add(clientesMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 162, -1));
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("Celular");
-        superAdmlClientes.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, -1, -1));
-        superAdmlClientes.add(clientesCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 162, -1));
+        superAdmlClientes.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, -1, -1));
+        superAdmlClientes.add(clientesCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 162, -1));
 
         clientesModificar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         clientesModificar.setText("Modificar");
@@ -1590,7 +1562,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 bcoAgregarBcoBtn1ActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(bcoAgregarBcoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 104, 30));
+        superAdmlClientes.add(bcoAgregarBcoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 104, 30));
 
         jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel68.setText("jLabel68");
@@ -2152,12 +2124,9 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JTable catArtTabla;
     public javax.swing.JList<String> clienteListado;
     public javax.swing.JTextField clientesApellido;
-    public javax.swing.JComboBox<String> clientesBanco;
     public java.awt.TextField clientesBuscar;
     public javax.swing.JButton clientesBuscarBtn;
     public javax.swing.JTextField clientesCelular;
-    public javax.swing.JComboBox<String> clientesComuna;
-    public javax.swing.JTextField clientesDireccion;
     public javax.swing.JComboBox<String> clientesEstado;
     public javax.swing.JTextField clientesFechNac;
     public javax.swing.JButton clientesGuardar;
@@ -2230,7 +2199,6 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel34;
     public javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     public javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -2255,7 +2223,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     public javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
     public javax.swing.JLabel jLabel60;
     public javax.swing.JLabel jLabel61;
     public javax.swing.JLabel jLabel62;
@@ -2266,7 +2233,6 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
     public javax.swing.JLabel jLabel70;
     public javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
