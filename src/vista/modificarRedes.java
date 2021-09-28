@@ -4,7 +4,7 @@
  */
 package vista;
 
-import controlador.bancosC;
+import controlador.RedesC;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -12,11 +12,11 @@ import javax.swing.JTextField;
  *
  * @author Mauro
  */
-public class modificarBanco extends javax.swing.JFrame {
+public class modificarRedes extends javax.swing.JFrame {
     /**
      * Creates new form modificarBanco
      */
-    public modificarBanco() {
+    public modificarRedes() {
         initComponents();
     }
 
@@ -31,23 +31,19 @@ public class modificarBanco extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         idLabel = new javax.swing.JLabel();
-        bankNameTF = new javax.swing.JTextField();
-        bankCodeTF = new javax.swing.JTextField();
+        redNameTF = new javax.swing.JTextField();
         saveButton = new javax.swing.JButton();
         closeButton = new javax.swing.JButton();
         resultMessage = new javax.swing.JLabel();
-        bankStatusCB = new javax.swing.JComboBox<>();
+        redStatusCB = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("ID");
 
         jLabel2.setText("Nombre");
-
-        jLabel3.setText("Código");
 
         jLabel4.setText("Estado");
 
@@ -65,7 +61,7 @@ public class modificarBanco extends javax.swing.JFrame {
             }
         });
 
-        bankStatusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inactivo", "Activo" }));
+        redStatusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inactivo", "Activo" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,30 +72,25 @@ public class modificarBanco extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(resultMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bankCodeTF)
-                            .addComponent(bankNameTF)))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(saveButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                         .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(idLabel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bankStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(idLabel))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(redStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(redNameTF))))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -112,29 +103,25 @@ public class modificarBanco extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(bankNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(bankCodeTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(redNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(bankStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
+                    .addComponent(redStatusCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
                 .addComponent(resultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(closeButton)
                     .addComponent(saveButton))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveButtonMouseClicked
-        var response = bancosC.modificarBanco(this.idLabel.getText(), this.bankNameTF.getText(), this.bankCodeTF.getText(), this.bankStatusCB.getSelectedIndex() );
+        var response = RedesC.modificarRed(this.idLabel.getText(), this.redNameTF.getText(), this.redStatusCB.getSelectedIndex());
         if( response )
             this.resultMessage.setText("Banco modificado exitosamente");
         else
@@ -143,7 +130,7 @@ public class modificarBanco extends javax.swing.JFrame {
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
         setVisible(false);
-        bancosC.buscar("1");
+        RedesC.buscar("1");
     }//GEN-LAST:event_closeButtonMouseClicked
 
     /**
@@ -181,24 +168,20 @@ public class modificarBanco extends javax.swing.JFrame {
         });
     }
 
-    public JTextField getBankCodeTF() {
-        return bankCodeTF;
+    public JTextField getRedNameTF() {
+        return redNameTF;
     }
 
-    public void setBankCodeTF(JTextField bankCodeTF) {
-        this.bankCodeTF = bankCodeTF;
+    public void setRedNameTF(JTextField bankNameTF) {
+        this.redNameTF = bankNameTF;
     }
 
-    public JTextField getBankNameTF() {
-        return bankNameTF;
+    public javax.swing.JComboBox<String> getRedStatusCB() {
+        return redStatusCB;
     }
 
-    public void setBankNameTF(JTextField bankNameTF) {
-        this.bankNameTF = bankNameTF;
-    }
-    
-    public javax.swing.JComboBox<String> getBankStatusCB() {
-        return this.bankStatusCB;
+    public void setRedStatusTF(javax.swing.JComboBox<String> redStatusCB) {
+        this.redStatusCB = redStatusCB;
     }
 
     public JLabel getIdLabel() {
@@ -210,15 +193,13 @@ public class modificarBanco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField bankCodeTF;
-    private javax.swing.JTextField bankNameTF;
-    private javax.swing.JComboBox<String> bankStatusCB;
     private javax.swing.JButton closeButton;
     private javax.swing.JLabel idLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField redNameTF;
+    private javax.swing.JComboBox<String> redStatusCB;
     private javax.swing.JLabel resultMessage;
     private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables

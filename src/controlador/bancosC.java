@@ -22,6 +22,9 @@ import javax.swing.table.DefaultTableModel;
 public class bancosC {
     static Consultas queries = new Consultas();
     
+    public static void bancosC(){
+    }
+    
     public static boolean insertarBanco(String nombreBanco, String codigoBanco) {
         boolean response = true;
         
@@ -46,7 +49,7 @@ public class bancosC {
         return resultado;
     }
     
-    public static boolean modificarBanco(String id, String bankName, String bankCode, String bankStatus) {
+    public static boolean modificarBanco(String id, String bankName, String bankCode, int bankStatus) {
         boolean response = false;
         
          try {
@@ -54,6 +57,8 @@ public class bancosC {
                     "UPDATE `bancos` SET `banco_descripcion` = '" + bankName +
                     "',banco_codigo = '" + bankCode +
                     "',banco_estado = '" + bankStatus + "' WHERE `banco_id` = '" + id + "'"; 
+            
+             System.out.println(Query);
             response = bancosC.queries.doQueryPost(Query);
         
         } catch(Exception e) {
@@ -108,7 +113,7 @@ public class bancosC {
     private static void datosModificar(modificarBanco window, String[] parametros) {
         window.getBankNameTF().setText(parametros[1]);
         window.getBankCodeTF().setText(parametros[2]);
-        window.getBankStatusTF().setText(parametros[3]);
+        window.getBankStatusCB().setSelectedIndex(Integer.parseInt(parametros[3]));
         
         window.getIdLabel().setText(parametros[0]);
     }
@@ -117,6 +122,7 @@ public class bancosC {
         var table = SuperAdmC.superAdm.getBcoTabla();
         var model = (DefaultTableModel) table.getModel();
         int n;
+        String estado;
         
         //Se limpia la tabla.
         model.setRowCount(0);
@@ -125,7 +131,12 @@ public class bancosC {
         if (resultados != null ){
             for(int i =0; (i * 4) < resultados.size() ; i++){
                 n = i * 4;
-                model.addRow(new Object[] { resultados.get( n ), resultados.get( n + 1 ), resultados.get( n + 2 ), resultados.get( n + 3 ) } );
+                if(Integer.parseInt(resultados.get( n+3 )) == 1)
+                    estado = "Activo";
+                else
+                    estado = "Inactivo";
+                
+                model.addRow(new Object[] { resultados.get( n ), resultados.get( n + 1 ), resultados.get( n + 2 ), estado } );
             }
            //Si el Array está vacío
         } else {
@@ -141,8 +152,12 @@ public class bancosC {
         
         info = model.getValueAt(row, 0).toString() + ","
                 + model.getValueAt(row, 1).toString() + ","
-                + model.getValueAt(row, 2).toString() + ","
-                + model.getValueAt(row, 3).toString();
+                + model.getValueAt(row, 2).toString() + ",";
+        
+        if( model.getValueAt(row, 3)  == "Activo")
+            info = info + "1";
+        else
+            info = info + "0";
         
         var result = info.split(",");
         

@@ -10,4 +10,11 @@ public class SuperAdmC {
     public static void SAVisible(){
         superAdm.setVisible(true);
     }
+    
+    public static void desplegarInfo(int pestaña) {
+        if( pestaña == 1 )
+            bancosC.buscar("1");
+        if( pestaña == 2 )
+            RedesC.buscar("1");
+    }
 }
