@@ -5,8 +5,9 @@
  */
 package vista;
 
-import controlador.SAUsuariosC;
+import controlador.*;
 import java.awt.Color;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -59,11 +60,11 @@ public class SuperAdm extends javax.swing.JFrame {
         bcoAgregarBcoBtn = new javax.swing.JButton();
         bcoBuscarBtn = new javax.swing.JButton();
         bcoCodigo = new javax.swing.JTextField();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        bcoListado = new javax.swing.JList<>();
         bcoModifBtn = new javax.swing.JButton();
         jLabel56 = new javax.swing.JLabel();
         bcoDescripcion1 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        bcoTabla = new javax.swing.JTable();
         jLabel58 = new javax.swing.JLabel();
         superAdmRrss = new javax.swing.JPanel();
         rrssBuscar = new javax.swing.JTextField();
@@ -242,6 +243,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmPestañas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         superAdmPestañas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        superAdmPestañas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                superAdmPestañasMouseClicked(evt);
+            }
+        });
 
         superAdmComunas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -372,6 +378,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         bcoBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         bcoBuscarBtn.setText("Buscar");
+        bcoBuscarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bcoBuscarBtnMouseClicked(evt);
+            }
+        });
         bcoBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bcoBuscarBtnActionPerformed(evt);
@@ -385,16 +396,6 @@ public class SuperAdm extends javax.swing.JFrame {
             }
         });
         superAdmBancos.add(bcoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 162, -1));
-
-        bcoListado.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        bcoListado.setToolTipText("");
-        jScrollPane6.setViewportView(bcoListado);
-
-        superAdmBancos.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 380, 120));
 
         bcoModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoModifBtn.setText("Modificar");
@@ -416,6 +417,16 @@ public class SuperAdm extends javax.swing.JFrame {
             }
         });
         superAdmBancos.add(bcoDescripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 162, -1));
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("Nombre");
+        model.addColumn("Código");
+        model.addColumn("Estado");
+        bcoTabla.setModel(model);
+        jScrollPane4.setViewportView(bcoTabla);
+
+        superAdmBancos.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, 150));
 
         jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel58.setText("jLabel58");
@@ -1745,6 +1756,14 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_articulosLoteActionPerformed
 
+    private void bcoBuscarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcoBuscarBtnMouseClicked
+        bancosC.buscar(this.bcoBuscar.getText());
+    }//GEN-LAST:event_bcoBuscarBtnMouseClicked
+
+    private void superAdmPestañasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_superAdmPestañasMouseClicked
+       bancosC.buscar("1");
+    }//GEN-LAST:event_superAdmPestañasMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1812,6 +1831,10 @@ public class SuperAdm extends javax.swing.JFrame {
         this.SAContraseñaNueva.setForeground(color);
     }
     
+    public javax.swing.JTable getBcoTabla() {
+        return this.bcoTabla;
+    }
+    
     
     
     
@@ -1866,8 +1889,8 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField bcoCodigo;
     public javax.swing.JTextField bcoDescripcion1;
     public javax.swing.JButton bcoGuardarBtn;
-    public javax.swing.JList<String> bcoListado;
     public javax.swing.JButton bcoModifBtn;
+    private javax.swing.JTable bcoTabla;
     public javax.swing.JList<String> clienteListado;
     public javax.swing.JTextField clientesApellido;
     public javax.swing.JComboBox<String> clientesBanco;
@@ -2004,8 +2027,8 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;

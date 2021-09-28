@@ -1,8 +1,11 @@
 package controlador;
 
 import modelo.*;
+import vista.*;
 import java.sql.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,16 +20,16 @@ import java.util.ArrayList;
 //bcoAgregarBcoBtn
 
 public class bancosC {
-    Consultas queries = new Consultas();
+    static Consultas queries = new Consultas();
     
-    public boolean insertarBanco(String nombreBanco, String codigoBanco) {
+    public static boolean insertarBanco(String nombreBanco, String codigoBanco) {
         boolean response = true;
         
         try {
             String Query = 
                     "INSERT INTO `bancos` (`banco_id`, `banco_descripcion`, `banco_codigo`, `banco_estado`) VALUES (NULL,'"
                     + nombreBanco  + "','" + codigoBanco + "','1' )";
-            response = this.queries.doQueryPost(Query);
+            response = bancosC.queries.doQueryPost(Query);
         
         } catch(Exception e) {
             System.out.println("insertarBanco Error: " +  e.getMessage());
@@ -35,15 +38,15 @@ public class bancosC {
         return response;
     }
     
-    public ArrayList<String> consultarBanco(String busqueda) {
+    public static ArrayList<String> consultarBanco(String busqueda) {
         ArrayList<String> resultado;
         String Query = "SELECT * FROM `bancos` WHERE `banco_id` = '" + busqueda + "' OR `banco_descripcion` like '%" + busqueda + "%' OR `banco_codigo` like '%" + busqueda + "%' OR `banco_estado` = '" + busqueda + "'";
         
-        resultado = this.extraerDatos(Query);
+        resultado = bancosC.extraerDatos(Query);
         return resultado;
     }
     
-    public boolean modificarBanco(String id, String bankName, String bankCode, String bankStatus) {
+    public static boolean modificarBanco(String id, String bankName, String bankCode, String bankStatus) {
         boolean response = true;
         
          try {
@@ -51,7 +54,7 @@ public class bancosC {
                     "UPDATE `bancos` SET `banco_descripcion` = '" + bankName +
                     "',banco_codigo = '" + bankCode +
                     "',banco_estado = '" + bankStatus + "' WHERE `banco_id` = '" + id + "'"; 
-            response = this.queries.doQueryPost(Query);
+            response = bancosC.queries.doQueryPost(Query);
         
         } catch(Exception e) {
             System.out.println("bankInsert Error: " +  e.getMessage());
@@ -60,7 +63,7 @@ public class bancosC {
         return response;
     }
     
-    private ArrayList<String> extraerDatos(String SQL) {
+    private static ArrayList<String> extraerDatos(String SQL) {
         ArrayList<String> resultado = new ArrayList<>();
         ResultSet response = queries.doQueryGet(SQL);
 
@@ -79,4 +82,30 @@ public class bancosC {
         
         return null;
     }
+    
+    public static void buscar(String busqueda) {
+        var response = bancosC.consultarBanco(busqueda);
+        bancosC.mostrarResultados(response);
+        
+    }
+    
+    public static void mostrarResultados(ArrayList<String> resultados) {
+        var table = SuperAdmC.superAdm.getBcoTabla();
+        var model = (DefaultTableModel) table.getModel();
+        int n;
+        
+        //Se limpia la tabla.
+        model.setRowCount(0);
+        
+        //Si existen elementos en el  Array, se agregan a la tabla
+        if (resultados != null ){
+            for(int i =0; (i * 4) < resultados.size() ; i++){
+                n = i * 4;
+                model.addRow(new Object[] { resultados.get( n ), resultados.get( n + 1 ), resultados.get( n + 2 ), resultados.get( n + 3 ) } );
+            }
+           //Si el Array está vacío
+        } else {
+            JOptionPane.showMessageDialog(null, "No se hallaron resultados :(");
+        }
+    } 
 }
