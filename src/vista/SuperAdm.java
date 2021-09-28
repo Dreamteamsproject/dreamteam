@@ -369,6 +369,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         bcoAgregarBcoBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoAgregarBcoBtn.setText("Agregar");
+        bcoAgregarBcoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bcoAgregarBcoBtnMouseClicked(evt);
+            }
+        });
         bcoAgregarBcoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bcoAgregarBcoBtnActionPerformed(evt);
@@ -388,7 +393,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 bcoBuscarBtnActionPerformed(evt);
             }
         });
-        superAdmBancos.add(bcoBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 20));
+        superAdmBancos.add(bcoBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 100, 20));
 
         bcoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -399,6 +404,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         bcoModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoModifBtn.setText("Modificar");
+        bcoModifBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bcoModifBtnMouseClicked(evt);
+            }
+        });
         bcoModifBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bcoModifBtnActionPerformed(evt);
@@ -1763,6 +1773,14 @@ public class SuperAdm extends javax.swing.JFrame {
     private void superAdmPestañasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_superAdmPestañasMouseClicked
        bancosC.buscar("1");
     }//GEN-LAST:event_superAdmPestañasMouseClicked
+
+    private void bcoAgregarBcoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcoAgregarBcoBtnMouseClicked
+        bancosC.ingresar(this.bcoDescripcion1.getText(), this.bcoCodigo.getText());
+    }//GEN-LAST:event_bcoAgregarBcoBtnMouseClicked
+
+    private void bcoModifBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcoModifBtnMouseClicked
+        bancosC.modificar();
+    }//GEN-LAST:event_bcoModifBtnMouseClicked
 
     /**
      * @param args the command line arguments

@@ -47,7 +47,7 @@ public class bancosC {
     }
     
     public static boolean modificarBanco(String id, String bankName, String bankCode, String bankStatus) {
-        boolean response = true;
+        boolean response = false;
         
          try {
             String Query = 
@@ -86,7 +86,31 @@ public class bancosC {
     public static void buscar(String busqueda) {
         var response = bancosC.consultarBanco(busqueda);
         bancosC.mostrarResultados(response);
+    }
+    
+    public static void ingresar(String nombre, String codigo) {
+        var response = bancosC.insertarBanco(nombre, codigo);
+        if (response)
+            JOptionPane.showMessageDialog(null, "Banco ingresado con éxito");
+        else
+            JOptionPane.showMessageDialog(null, "No fue posible ingresar el banco");
+    }
+    
+    public static void modificar() {
+        String[] parametros = bancosC.selectedRowInfo();
+        var editWindow = new modificarBanco();
+        editWindow.setVisible(true);
         
+        bancosC.datosModificar(editWindow, parametros);
+        
+    }
+    
+    private static void datosModificar(modificarBanco window, String[] parametros) {
+        window.getBankNameTF().setText(parametros[1]);
+        window.getBankCodeTF().setText(parametros[2]);
+        window.getBankStatusTF().setText(parametros[3]);
+        
+        window.getIdLabel().setText(parametros[0]);
     }
     
     public static void mostrarResultados(ArrayList<String> resultados) {
@@ -107,5 +131,22 @@ public class bancosC {
         } else {
             JOptionPane.showMessageDialog(null, "No se hallaron resultados :(");
         }
-    } 
+    }
+    
+    public static String[] selectedRowInfo() {
+        var table = SuperAdmC.superAdm.getBcoTabla();
+        int row = table.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        String info;
+        
+        info = model.getValueAt(row, 0).toString() + ","
+                + model.getValueAt(row, 1).toString() + ","
+                + model.getValueAt(row, 2).toString() + ","
+                + model.getValueAt(row, 3).toString();
+        
+        var result = info.split(",");
+        
+        
+        return result;
+    }
 }
