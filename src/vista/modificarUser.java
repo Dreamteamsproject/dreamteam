@@ -32,6 +32,7 @@ public class modificarUser extends javax.swing.JFrame {
         labelUs = new javax.swing.JLabel();
         labelCo = new javax.swing.JLabel();
         estadoComboBox = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -45,14 +46,23 @@ public class modificarUser extends javax.swing.JFrame {
         getContentPane().add(mUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, -1));
         getContentPane().add(mContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 100, -1));
 
+        labelUs.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelUs.setForeground(new java.awt.Color(255, 255, 255));
         labelUs.setText("Usuario");
         getContentPane().add(labelUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 50, -1));
 
+        labelCo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelCo.setForeground(new java.awt.Color(255, 255, 255));
         labelCo.setText("Contraseña");
         getContentPane().add(labelCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
 
         estadoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
         getContentPane().add(estadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 60, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/spiral380.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 100));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -98,6 +108,7 @@ public class modificarUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> estadoComboBox;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelCo;
     private javax.swing.JLabel labelUs;
     private javax.swing.JTextField mContraseña;
