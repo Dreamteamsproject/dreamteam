@@ -1597,6 +1597,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
     private void SACrearUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SACrearUserActionPerformed
         SAUsuariosC.AgregarUsuario();
+        SAUsuariosC.RellenarUsuario();
     }//GEN-LAST:event_SACrearUserActionPerformed
 
     private void usuarioBuscarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioBuscarUserActionPerformed
