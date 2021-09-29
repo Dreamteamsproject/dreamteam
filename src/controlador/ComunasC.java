@@ -21,6 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class ComunasC {
     static Consultas queries = new Consultas();
+    public static int consultasRealizadas = 0;
     
     public static void ComunasC(){}
     
@@ -89,6 +90,8 @@ public class ComunasC {
     public static void buscar(String busqueda) {
         var response = ComunasC.consultarComuna(busqueda);
         ComunasC.mostrarResultados(response);
+        
+        ComunasC.consultasRealizadas++;
     }
     
     public static void ingresar(String nombre, String codigo) {

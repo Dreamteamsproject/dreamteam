@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.ArticulosC;
 import controlador.CatArtC;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -98,6 +99,7 @@ public class modificarCatArt extends javax.swing.JFrame {
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
         setVisible(false);
+        ArticulosC.actualizarListaCategorias();
         CatArtC.buscar("1");
     }//GEN-LAST:event_closeButtonMouseClicked
 

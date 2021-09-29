@@ -20,5 +20,11 @@ public class SuperAdmC {
             CatArtC.buscar("1");
         else if(pestaña == 7)
             SAUsuariosC.RellenarUsuario();
+        else if(pestaña == 3)
+            ArticulosC.buscar("1");
+        else if(pestaña == 0){
+            if(ComunasC.consultasRealizadas != 0)
+                ComunasC.buscar("1");
+        }
     }
 }

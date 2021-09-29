@@ -7,6 +7,7 @@ package vista;
 
 import controlador.*;
 import java.awt.Color;
+import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -20,13 +21,14 @@ public class SuperAdm extends javax.swing.JFrame {
      */
     public SuperAdm() {
         
-        initComponents();
-        
-        SAUsuariosC.IniciarClase();
+         SAUsuariosC.IniciarClase();
         RedesC.RedesC();
         bancosC.bancosC();
         ComunasC.ComunasC();
         CatArtC.CatArtC();
+        ArticulosC.ArticulosC();
+        
+        initComponents();
         
         this.setLocationRelativeTo(null);
         
@@ -98,8 +100,6 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel88 = new javax.swing.JLabel();
         articulosBuscarBtn1 = new javax.swing.JButton();
         articulosAgregarBtn2 = new javax.swing.JButton();
-        articulosList = new javax.swing.JScrollPane();
-        articulosTabla = new javax.swing.JTable();
         ArticuloCatCB = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         artStockTF = new javax.swing.JTextField();
@@ -112,6 +112,8 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel79 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        articulosTabla = new javax.swing.JTable();
         jLabel90 = new javax.swing.JLabel();
         superAdmCatArt = new javax.swing.JPanel();
         catArtBuscar1 = new javax.swing.JTextField();
@@ -257,6 +259,11 @@ public class SuperAdm extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         superAdmPestañas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         superAdmPestañas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -650,7 +657,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 articulosBuscarBtn1ActionPerformed(evt);
             }
         });
-        superAdmlArticulos.add(articulosBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, -1, 20));
+        superAdmlArticulos.add(articulosBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 100, 20));
 
         articulosAgregarBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         articulosAgregarBtn2.setText("Agregar");
@@ -666,24 +673,7 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmlArticulos.add(articulosAgregarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 104, 30));
 
-        DefaultTableModel articulosModel = new DefaultTableModel();
-        articulosModel.addColumn("ID");
-        articulosModel.addColumn("Descripción");
-        articulosModel.addColumn("Stock");
-        articulosModel.addColumn("Fecha Vencimiento");
-        articulosModel.addColumn("Categoria");
-        articulosModel.addColumn("Estado");
-        articulosTabla.setModel(articulosModel);
-        articulosList.setViewportView(articulosTabla);
-        if (articulosTabla.getColumnModel().getColumnCount() > 0) {
-            articulosTabla.getColumnModel().getColumn(1).setResizable(false);
-            articulosTabla.getColumnModel().getColumn(4).setResizable(false);
-            articulosTabla.getColumnModel().getColumn(6).setResizable(false);
-        }
-
-        superAdmlArticulos.add(articulosList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 700, 120));
-
-        ArticuloCatCB.setModel(new javax.swing.DefaultComboBoxModel<>(ArticulosC.obtenerListaCategorias()));
+        ArticuloCatCB.setModel(new javax.swing.DefaultComboBoxModel<>(ArticulosC.listaCategorias));
         superAdmlArticulos.add(ArticuloCatCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 160, -1));
 
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
@@ -693,7 +683,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
         jLabel7.setForeground(new java.awt.Color(240, 240, 240));
         jLabel7.setText("Fecha Vencimiento");
-        superAdmlArticulos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
+        superAdmlArticulos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
         superAdmlArticulos.add(diaTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 30, -1));
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -719,6 +709,18 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel85.setForeground(new java.awt.Color(240, 240, 240));
         jLabel85.setText("Mes");
         superAdmlArticulos.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, -1, -1));
+
+        DefaultTableModel articulosModel = new DefaultTableModel();
+        articulosModel.addColumn("ID");
+        articulosModel.addColumn("Descripción");
+        articulosModel.addColumn("Stock");
+        articulosModel.addColumn("Fecha Vencimiento");
+        articulosModel.addColumn("Categoria");
+        articulosModel.addColumn("Estado");
+        articulosTabla.setModel(articulosModel);
+        jScrollPane9.setViewportView(articulosTabla);
+
+        superAdmlArticulos.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 330, 670, 130));
 
         jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel90.setText("jLabel68");
@@ -1901,6 +1903,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
     private void bcoAgregarBcoBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcoAgregarBcoBtnMouseClicked
         bancosC.ingresar(this.bcoDescripcion1.getText(), this.bcoCodigo.getText());
+        bancosC.buscar("1");
     }//GEN-LAST:event_bcoAgregarBcoBtnMouseClicked
 
     private void bcoModifBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcoModifBtnMouseClicked
@@ -1909,6 +1912,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
     private void rrssAgregarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rrssAgregarBtnMouseClicked
         RedesC.ingresar(this.rrssDescripcion.getText());
+        RedesC.buscar("1");
     }//GEN-LAST:event_rrssAgregarBtnMouseClicked
 
     private void rrssBuscarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rrssBuscarBtnMouseClicked
@@ -1933,6 +1937,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
     private void comunaAgregarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comunaAgregarBtn2MouseClicked
         ComunasC.ingresar(this.comunaDescripcion2.getText(), this.comunaCodigo1.getText());
+        ComunasC.buscar("1");
     }//GEN-LAST:event_comunaAgregarBtn2MouseClicked
 
     private void comunaBuscarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comunaBuscarBtn1MouseClicked
@@ -1953,6 +1958,8 @@ public class SuperAdm extends javax.swing.JFrame {
 
     private void catArtAgregarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catArtAgregarBtnMouseClicked
         CatArtC.ingresar(this.catArtAgregarTF.getText());
+        ArticulosC.actualizarListaCategorias();
+        CatArtC.buscar("1");
     }//GEN-LAST:event_catArtAgregarBtnMouseClicked
 
     private void catArtAgregarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catArtAgregarBtnActionPerformed
@@ -1997,6 +2004,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
     private void articulosAgregarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulosAgregarBtn2MouseClicked
        ArticulosC.ingresar(this.artNameTF.getText(), this.artStockTF.getText(), this.diaTF.getText(), this.mesTF.getText(), this.anioTF.getText(), this.ArticuloCatCB.getSelectedItem().toString() );
+       ArticulosC.buscar("1");
     }//GEN-LAST:event_articulosAgregarBtn2MouseClicked
 
     private void articulosBuscarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulosBuscarBtn1MouseClicked
@@ -2006,6 +2014,10 @@ public class SuperAdm extends javax.swing.JFrame {
     private void ArticulosModificar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ArticulosModificar1MouseClicked
         ArticulosC.modificar();
     }//GEN-LAST:event_ArticulosModificar1MouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        ComunasC.buscar("1");
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -2093,6 +2105,16 @@ public class SuperAdm extends javax.swing.JFrame {
      public javax.swing.JTable getArtTabla() {
         return this.articulosTabla;
     }
+
+    public JComboBox<String> getArticuloCatCB() {
+        return ArticuloCatCB;
+    }
+
+    public void setArticuloCatCB(JComboBox<String> ArticuloCatCB) {
+        this.ArticuloCatCB = ArticuloCatCB;
+    }
+     
+     
     
     
     
@@ -2139,8 +2161,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton articulosAgregarBtn2;
     public java.awt.TextField articulosBuscar1;
     public javax.swing.JButton articulosBuscarBtn1;
-    private javax.swing.JScrollPane articulosList;
-    public javax.swing.JTable articulosTabla;
+    private javax.swing.JTable articulosTabla;
     public javax.swing.JButton bcoAgregarBcoBtn;
     public javax.swing.JButton bcoAgregarBcoBtn1;
     public javax.swing.JTextField bcoBuscar;
@@ -2301,6 +2322,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField mesTF;
     public javax.swing.JTable proveeTabla1;

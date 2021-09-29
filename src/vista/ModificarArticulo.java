@@ -20,6 +20,7 @@ public class ModificarArticulo extends javax.swing.JFrame {
      * Creates new form ModificarArticulo
      */
     public ModificarArticulo() {
+        setUndecorated(true);
         initComponents();
     }
 
@@ -41,12 +42,19 @@ public class ModificarArticulo extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         artName = new javax.swing.JTextField();
         artStock = new javax.swing.JTextField();
-        artFV = new javax.swing.JTextField();
+        artDiaFV = new javax.swing.JTextField();
         artCategoria = new javax.swing.JComboBox<>();
         artEstado = new javax.swing.JComboBox<>();
         saveButton = new javax.swing.JButton();
         closeButton = new javax.swing.JButton();
         resultMessage = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        artMesFV = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        artAnioFV = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,6 +88,16 @@ public class ModificarArticulo extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setText("/");
+
+        jLabel8.setText("/");
+
+        jLabel9.setText("Día");
+
+        jLabel10.setText("Mes");
+
+        jLabel11.setText("Año");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,18 +120,38 @@ public class ModificarArticulo extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(artCategoria, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(artEstado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(artName, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(artStock)
-                            .addComponent(artFV))
-                        .addGap(62, 62, 62))
+                            .addComponent(artName)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(artDiaFV, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel7))
+                                    .addComponent(jLabel9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(artMesFV, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(artAnioFV))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                                        .addComponent(jLabel11)
+                                        .addGap(10, 10, 10)))))
+                        .addGap(27, 27, 27))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(saveButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(closeButton)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(resultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(resultMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(saveButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(closeButton)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,22 +171,31 @@ public class ModificarArticulo extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(artFV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(artDiaFV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(artMesFV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(artAnioFV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1, 1, 1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(artCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(artCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(artEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addComponent(resultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(artEstado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(resultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(closeButton))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
@@ -156,11 +203,12 @@ public class ModificarArticulo extends javax.swing.JFrame {
 
     private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveButtonMouseClicked
         String categoria = ArticulosC.getIdOf(this.artCategoria.getSelectedItem().toString());
-        var response = ArticulosC.modificarArticulo(this.idLabel.getText(), this.artName.getText(), this.artStock.getText(), this.artFV.getText(), categoria, "" + this.artEstado.getSelectedIndex());
+        String fechaVencimiento = ArticulosC.toDate(Integer.parseInt(this.artDiaFV.getText()), Integer.parseInt(this.artMesFV.getText()), Integer.parseInt(this.artAnioFV.getText()));
+        var response = ArticulosC.modificarArticulo(this.idLabel.getText(), this.artName.getText(), this.artStock.getText(), fechaVencimiento, categoria, "" + this.artEstado.getSelectedIndex());
         if( response )
-            this.resultMessage.setText("Banco modificado exitosamente");
+            this.resultMessage.setText("Articulo modificado exitosamente");
         else
-            this.resultMessage.setText("No fue posible modificar el banco");
+            this.resultMessage.setText("X No fue posible modificar el articulo");
     }//GEN-LAST:event_saveButtonMouseClicked
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
@@ -219,14 +267,6 @@ public class ModificarArticulo extends javax.swing.JFrame {
         this.artEstado = artEstado;
     }
 
-    public JTextField getArtFV() {
-        return artFV;
-    }
-
-    public void setArtFV(JTextField artFV) {
-        this.artFV = artFV;
-    }
-
     public JTextField getArtName() {
         return artName;
     }
@@ -250,23 +290,42 @@ public class ModificarArticulo extends javax.swing.JFrame {
     public void setIdLabel(JLabel idLabel) {
         this.idLabel = idLabel;
     }
+
+    public JTextField getArtAnioFV() {
+        return artAnioFV;
+    }
+
+    public JTextField getArtDiaFV() {
+        return artDiaFV;
+    }
+
+    public JTextField getArtMesFV() {
+        return artMesFV;
+    }
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField artAnioFV;
     private javax.swing.JComboBox<String> artCategoria;
+    private javax.swing.JTextField artDiaFV;
     private javax.swing.JComboBox<String> artEstado;
-    private javax.swing.JTextField artFV;
+    private javax.swing.JTextField artMesFV;
     private javax.swing.JTextField artName;
     private javax.swing.JTextField artStock;
     private javax.swing.JButton closeButton;
     private javax.swing.JLabel idLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel resultMessage;
     private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables
