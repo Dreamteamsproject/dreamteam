@@ -88,25 +88,30 @@ public class SuperAdm extends javax.swing.JFrame {
         rrssTabla = new javax.swing.JTable();
         jLabel69 = new javax.swing.JLabel();
         superAdmlArticulos = new javax.swing.JPanel();
-        articulosDescrip = new javax.swing.JTextField();
-        articulosId = new javax.swing.JTextField();
-        articulosFechVenc = new javax.swing.JTextField();
+        artNameTF = new javax.swing.JTextField();
         ArticulosGuardar1 = new javax.swing.JButton();
         jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
-        articulosIdCat = new javax.swing.JTextField();
         jLabel84 = new javax.swing.JLabel();
         ArticulosModificar1 = new javax.swing.JButton();
         articulosBuscar1 = new java.awt.TextField();
         jLabel88 = new javax.swing.JLabel();
         articulosBuscarBtn1 = new javax.swing.JButton();
         articulosAgregarBtn2 = new javax.swing.JButton();
-        jLabel86 = new javax.swing.JLabel();
-        articulosLote = new javax.swing.JTextField();
         articulosList = new javax.swing.JScrollPane();
-        ArticulosList = new javax.swing.JTable();
+        articulosTabla = new javax.swing.JTable();
+        ArticuloCatCB = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        artStockTF = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        diaTF = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        mesTF = new javax.swing.JTextField();
+        jLabel77 = new javax.swing.JLabel();
+        anioTF = new javax.swing.JTextField();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
         jLabel90 = new javax.swing.JLabel();
         superAdmCatArt = new javax.swing.JPanel();
         catArtBuscar1 = new javax.swing.JTextField();
@@ -580,14 +585,12 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmlArticulos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        articulosDescrip.addActionListener(new java.awt.event.ActionListener() {
+        artNameTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                articulosDescripActionPerformed(evt);
+                artNameTFActionPerformed(evt);
             }
         });
-        superAdmlArticulos.add(articulosDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 162, -1));
-        superAdmlArticulos.add(articulosId, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 162, -1));
-        superAdmlArticulos.add(articulosFechVenc, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 162, -1));
+        superAdmlArticulos.add(artNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 162, -1));
 
         ArticulosGuardar1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         ArticulosGuardar1.setText("Guardar");
@@ -598,35 +601,23 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel78.setText("Descripcion");
         superAdmlArticulos.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 70, -1));
 
-        jLabel79.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel79.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel79.setText("Id");
-        superAdmlArticulos.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 20, -1));
-
-        jLabel80.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel80.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel80.setText("Fecha Vencimiento");
-        superAdmlArticulos.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
-
         jLabel83.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel83.setForeground(new java.awt.Color(255, 255, 255));
         jLabel83.setText("Administracion Articulos");
         superAdmlArticulos.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
 
-        articulosIdCat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                articulosIdCatActionPerformed(evt);
-            }
-        });
-        superAdmlArticulos.add(articulosIdCat, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 162, -1));
-
         jLabel84.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel84.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel84.setText("Id Categoria");
-        superAdmlArticulos.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
+        jLabel84.setText("Categoria");
+        superAdmlArticulos.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, -1));
 
         ArticulosModificar1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         ArticulosModificar1.setText("Modificar");
+        ArticulosModificar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ArticulosModificar1MouseClicked(evt);
+            }
+        });
         ArticulosModificar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ArticulosModificar1ActionPerformed(evt);
@@ -649,6 +640,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         articulosBuscarBtn1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         articulosBuscarBtn1.setText("Buscar");
+        articulosBuscarBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                articulosBuscarBtn1MouseClicked(evt);
+            }
+        });
         articulosBuscarBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 articulosBuscarBtn1ActionPerformed(evt);
@@ -658,6 +654,11 @@ public class SuperAdm extends javax.swing.JFrame {
 
         articulosAgregarBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         articulosAgregarBtn2.setText("Agregar");
+        articulosAgregarBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                articulosAgregarBtn2MouseClicked(evt);
+            }
+        });
         articulosAgregarBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 articulosAgregarBtn2ActionPerformed(evt);
@@ -665,41 +666,59 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmlArticulos.add(articulosAgregarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 104, 30));
 
-        jLabel86.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel86.setText("Lote");
-        superAdmlArticulos.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
-
-        articulosLote.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                articulosLoteActionPerformed(evt);
-            }
-        });
-        superAdmlArticulos.add(articulosLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 162, -1));
-
-        ArticulosList.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Id", "Razon Social", "Rut", "Telefono", "Direccion", "Comuna", "Nombre Contacto", "Mail", "Estado"
-            }
-        ));
-        articulosList.setViewportView(ArticulosList);
-        if (ArticulosList.getColumnModel().getColumnCount() > 0) {
-            ArticulosList.getColumnModel().getColumn(1).setResizable(false);
-            ArticulosList.getColumnModel().getColumn(4).setResizable(false);
-            ArticulosList.getColumnModel().getColumn(6).setResizable(false);
+        DefaultTableModel articulosModel = new DefaultTableModel();
+        articulosModel.addColumn("ID");
+        articulosModel.addColumn("Descripción");
+        articulosModel.addColumn("Stock");
+        articulosModel.addColumn("Fecha Vencimiento");
+        articulosModel.addColumn("Categoria");
+        articulosModel.addColumn("Estado");
+        articulosTabla.setModel(articulosModel);
+        articulosList.setViewportView(articulosTabla);
+        if (articulosTabla.getColumnModel().getColumnCount() > 0) {
+            articulosTabla.getColumnModel().getColumn(1).setResizable(false);
+            articulosTabla.getColumnModel().getColumn(4).setResizable(false);
+            articulosTabla.getColumnModel().getColumn(6).setResizable(false);
         }
 
         superAdmlArticulos.add(articulosList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 700, 120));
+
+        ArticuloCatCB.setModel(new javax.swing.DefaultComboBoxModel<>(ArticulosC.obtenerListaCategorias()));
+        superAdmlArticulos.add(ArticuloCatCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 160, -1));
+
+        jLabel6.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel6.setText("Stock");
+        superAdmlArticulos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
+        superAdmlArticulos.add(artStockTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 160, -1));
+
+        jLabel7.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel7.setText("Fecha Vencimiento");
+        superAdmlArticulos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
+        superAdmlArticulos.add(diaTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 30, -1));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel37.setText("/");
+        superAdmlArticulos.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 10, 20));
+        superAdmlArticulos.add(mesTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 30, -1));
+
+        jLabel77.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel77.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel77.setText("/");
+        superAdmlArticulos.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 10, 20));
+        superAdmlArticulos.add(anioTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, 70, -1));
+
+        jLabel79.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel79.setText("Año");
+        superAdmlArticulos.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, -1, -1));
+
+        jLabel80.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel80.setText("Día");
+        superAdmlArticulos.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, -1, -1));
+
+        jLabel85.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel85.setText("Mes");
+        superAdmlArticulos.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, -1, -1));
 
         jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel90.setText("jLabel68");
@@ -1852,13 +1871,9 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comunaDescripcion2ActionPerformed
 
-    private void articulosDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosDescripActionPerformed
+    private void artNameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_artNameTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_articulosDescripActionPerformed
-
-    private void articulosIdCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosIdCatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_articulosIdCatActionPerformed
+    }//GEN-LAST:event_artNameTFActionPerformed
 
     private void ArticulosModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArticulosModificar1ActionPerformed
         // TODO add your handling code here:
@@ -1875,10 +1890,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private void articulosAgregarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosAgregarBtn2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_articulosAgregarBtn2ActionPerformed
-
-    private void articulosLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosLoteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_articulosLoteActionPerformed
 
     private void bcoBuscarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcoBuscarBtnMouseClicked
         bancosC.buscar(this.bcoBuscar.getText());
@@ -1984,6 +1995,18 @@ public class SuperAdm extends javax.swing.JFrame {
         SAUsuariosC.FiltrarUsuarios();
     }//GEN-LAST:event_usuarioBuscarUserKeyReleased
 
+    private void articulosAgregarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulosAgregarBtn2MouseClicked
+       ArticulosC.ingresar(this.artNameTF.getText(), this.artStockTF.getText(), this.diaTF.getText(), this.mesTF.getText(), this.anioTF.getText(), this.ArticuloCatCB.getSelectedItem().toString() );
+    }//GEN-LAST:event_articulosAgregarBtn2MouseClicked
+
+    private void articulosBuscarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulosBuscarBtn1MouseClicked
+       ArticulosC.buscar(this.articulosBuscar1.getText());
+    }//GEN-LAST:event_articulosBuscarBtn1MouseClicked
+
+    private void ArticulosModificar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ArticulosModificar1MouseClicked
+        ArticulosC.modificar();
+    }//GEN-LAST:event_ArticulosModificar1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2067,6 +2090,11 @@ public class SuperAdm extends javax.swing.JFrame {
         return this.catArtTabla;
     }
     
+     public javax.swing.JTable getArtTabla() {
+        return this.articulosTabla;
+    }
+    
+    
     
     
     
@@ -2086,8 +2114,8 @@ public class SuperAdm extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ArticuloCatCB;
     public javax.swing.JButton ArticulosGuardar1;
-    public javax.swing.JTable ArticulosList;
     public javax.swing.JButton ArticulosModificar1;
     public java.awt.TextField ProveeBuscar;
     public javax.swing.JButton ProveeBuscarBtn;
@@ -2105,15 +2133,14 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JPasswordField SAContraseñaNueva;
     public javax.swing.JButton SACrearUser;
     private javax.swing.JTextField SAUsuarioNuevo;
+    private javax.swing.JTextField anioTF;
+    public javax.swing.JTextField artNameTF;
+    private javax.swing.JTextField artStockTF;
     public javax.swing.JButton articulosAgregarBtn2;
     public java.awt.TextField articulosBuscar1;
     public javax.swing.JButton articulosBuscarBtn1;
-    public javax.swing.JTextField articulosDescrip;
-    public javax.swing.JTextField articulosFechVenc;
-    public javax.swing.JTextField articulosId;
-    public javax.swing.JTextField articulosIdCat;
     private javax.swing.JScrollPane articulosList;
-    public javax.swing.JTextField articulosLote;
+    public javax.swing.JTable articulosTabla;
     public javax.swing.JButton bcoAgregarBcoBtn;
     public javax.swing.JButton bcoAgregarBcoBtn1;
     public javax.swing.JTextField bcoBuscar;
@@ -2151,6 +2178,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton comunaGuardarBtn1;
     public javax.swing.JButton comunaModifBtn1;
     private javax.swing.JTable comunasTabla;
+    private javax.swing.JTextField diaTF;
     public java.awt.TextField iVentaApellido;
     public javax.swing.JComboBox<String> iVentaBanco;
     public javax.swing.JButton iVentaBuscarBtn;
@@ -2207,6 +2235,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel34;
     public javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     public javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
@@ -2231,6 +2260,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     public javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
     public javax.swing.JLabel jLabel60;
     public javax.swing.JLabel jLabel61;
     public javax.swing.JLabel jLabel62;
@@ -2241,6 +2271,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
     public javax.swing.JLabel jLabel70;
     public javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
@@ -2248,6 +2279,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     public javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
@@ -2256,7 +2288,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel82;
     public javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel85;
     public javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
@@ -2270,6 +2302,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField mesTF;
     public javax.swing.JTable proveeTabla1;
     public javax.swing.JButton rrssAgregarBtn;
     public javax.swing.JTextField rrssBuscar;
