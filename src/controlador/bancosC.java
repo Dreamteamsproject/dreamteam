@@ -28,6 +28,9 @@ public class bancosC {
     public static boolean insertarBanco(String nombreBanco, String codigoBanco) {
         boolean response = true;
         
+        if("".equals(nombreBanco) || "".equals(codigoBanco))
+            return false;
+        
         try {
             String Query = 
                     "INSERT INTO `bancos` (`banco_id`, `banco_descripcion`, `banco_codigo`, `banco_estado`) VALUES (NULL,'"
@@ -51,6 +54,9 @@ public class bancosC {
     
     public static boolean modificarBanco(String id, String bankName, String bankCode, int bankStatus) {
         boolean response = false;
+        
+        if("".equals(bankName) || "".equals(bankCode))
+            return false;
         
          try {
             String Query = 

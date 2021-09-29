@@ -1960,8 +1960,8 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_usuarioBuscarUserKeyReleased
 
     private void articulosAgregarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulosAgregarBtn2MouseClicked
-       ArticulosC.ingresar(this.artNameTF.getText(), this.artStockTF.getText(), this.diaTF.getText(), this.mesTF.getText(), this.anioTF.getText(), this.ArticuloCatCB.getSelectedItem().toString() );
-       ArticulosC.buscar("1");
+      ArticulosC.ingresar(this.artNameTF.getText(), this.artStockTF.getText(), this.diaTF.getText(), this.mesTF.getText(), this.anioTF.getText(), this.ArticuloCatCB.getSelectedItem().toString() );
+      ArticulosC.buscar("1");
     }//GEN-LAST:event_articulosAgregarBtn2MouseClicked
 
     private void articulosBuscarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulosBuscarBtn1MouseClicked

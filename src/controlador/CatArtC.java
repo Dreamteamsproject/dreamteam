@@ -27,6 +27,9 @@ public class CatArtC {
     public static boolean insertarCatArt(String nombreCat) {
         boolean response = true;
         
+        if("".equals(nombreCat))
+            return false;
+        
         try {
             String Query = 
                     "INSERT INTO `categorias_articulo` (`categoria_id`, `categoria_descripcion`, `categoria_estado`) VALUES (NULL,'"
@@ -50,6 +53,9 @@ public class CatArtC {
     
     public static boolean modificarCatArt(String id, String catName, int catStatus) {
         boolean response = false;
+        
+        if("".equals(catName))
+            return false;
         
          try {
             String Query = 

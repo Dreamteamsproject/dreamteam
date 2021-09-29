@@ -28,6 +28,9 @@ public class ComunasC {
     public static boolean insertarComuna(String nombreComuna, String codigoComuna) {
         boolean response = true;
         
+        if("".equals(nombreComuna) || "".equals(codigoComuna))
+            return false;
+        
         try {
             String Query = 
                     "INSERT INTO `comunas` (`comuna_id`, `comuna_nombre`, `comuna_codigo`, `comuna_estado`) VALUES (NULL,'"
@@ -51,6 +54,9 @@ public class ComunasC {
     
     public static boolean modificarComuna(String id, String comunaName, String comunaCode, int comunaStatus) {
         boolean response = false;
+        
+         if("".equals(comunaName) || "".equals(comunaCode))
+            return false;
         
          try {
             String Query = 

@@ -31,6 +31,9 @@ public class ArticulosC {
     public static boolean insertarArticulo(String nombre, String stock, String fechaVencimiento, String categoria) {
         boolean response = true;
         
+        if("".equals(nombre) || "".equals(stock) || "".equals(fechaVencimiento))
+            return false;
+        
         try {
             String Query = 
                 "INSERT INTO `articulos` (`articulo_descripcion`, `articulo_stock`, `articulo_fechavencimiento`, `id_categoria`, `articulo_estado`) VALUES"
@@ -54,6 +57,9 @@ public class ArticulosC {
     
     public static boolean modificarArticulo(String id, String nombre, String stock, String fechaVencimiento, String categoria, String estado) {
         boolean response = false;
+        
+        if("".equals(nombre) || "".equals(stock) || "".equals(fechaVencimiento))
+            return false;
         
          try {
             String Query = 
@@ -101,10 +107,17 @@ public class ArticulosC {
     }
     
     public static void ingresar(String nombre, String stock, String dia, String mes, String anio, String categoria) {
-        String fechaVencimiento = ArticulosC.toDate(Integer.parseInt(dia), Integer.parseInt(mes), Integer.parseInt(anio));
+        String fechaVencimiento;
+        boolean response;
         String id = ArticulosC.getIdOf(categoria);
         
-        var response = ArticulosC.insertarArticulo(nombre, stock, fechaVencimiento, id);
+        if(!"".equals(dia) && !"".equals(mes) && !"".equals(anio)){
+            fechaVencimiento = ArticulosC.toDate(Integer.parseInt(dia), Integer.parseInt(mes), Integer.parseInt(anio));
+            response = ArticulosC.insertarArticulo(nombre, stock, fechaVencimiento, id);
+        } else {
+            response = false;
+        }
+        
         if (response)
             JOptionPane.showMessageDialog(null, "Articulo ingresado con éxito");
         else

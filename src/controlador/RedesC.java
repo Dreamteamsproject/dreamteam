@@ -26,6 +26,9 @@ public class RedesC {
     public static boolean insertarRed(String nombreRed) {
         boolean response = true;
         
+        if("".equals(nombreRed))
+            return false;
+        
         try {
             String Query = 
                     "INSERT INTO `rrss` (`rs_id`, `rs_nombre`, `rs_estado`) VALUES (NULL,'"
@@ -49,6 +52,9 @@ public class RedesC {
     
     public static boolean modificarRed(String id, String rsName, int rsStatus) {
         boolean response = false;
+        
+        if("".equals(rsName))
+            return false;
         
          try {
             String Query = 
