@@ -113,9 +113,6 @@ public class ArticulosC {
     
     public static void modificar() {
         String[] parametros = ArticulosC.selectedRowInfo();
-//        for(int i = 0; i < parametros.length; i++){
-//            System.out.println(parametros[i]);
-//        }
         var editWindow = new ModificarArticulo();
         editWindow.setVisible(true);
         editWindow.setLocationRelativeTo(SuperAdmC.superAdm);
@@ -126,7 +123,7 @@ public class ArticulosC {
     }
     
     private static void datosModificar(ModificarArticulo window, String[] parametros) {
-        String description = ArticulosC.getNameOf(parametros[4]);
+//        String description = ArticulosC.getNameOf(parametros[4]);
         String[] fechaVencimiento = parametros[3].split("-");
         
         window.getArtName().setText(parametros[1]);
@@ -136,7 +133,7 @@ public class ArticulosC {
         window.getArtMesFV().setText(fechaVencimiento[1]);
         window.getArtAnioFV().setText(fechaVencimiento[0]);
         
-        window.getArtCategoria().setSelectedItem(description);
+        window.getArtCategoria().setSelectedItem(parametros[4]);
         window.getArtEstado().setSelectedIndex(Integer.parseInt(parametros[5]));
         
         window.getIdLabel().setText(parametros[0]);
@@ -147,6 +144,7 @@ public class ArticulosC {
         var model = (DefaultTableModel) table.getModel();
         int n;
         String estado;
+        String categoria;
         
         //Se limpia la tabla.
         model.setRowCount(0);
@@ -159,8 +157,10 @@ public class ArticulosC {
                     estado = "Activo";
                 else
                     estado = "Inactivo";
+                
+                categoria = ArticulosC.getNameOf(resultados.get( n + 4 ));
 
-                model.addRow(new Object[] { resultados.get( n ), resultados.get( n + 1 ), resultados.get( n + 2 ), resultados.get( n + 3 ), resultados.get( n + 4 ), estado } );
+                model.addRow(new Object[] { resultados.get( n ), resultados.get( n + 1 ), resultados.get( n + 2 ), resultados.get( n + 3 ), categoria, estado } );
             }
            //Si el Array está vacío
         } else {
@@ -173,6 +173,7 @@ public class ArticulosC {
         int row = table.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         String info;
+        String categoria;
         
         info = model.getValueAt(row, 0).toString() + ","
             + model.getValueAt(row, 1).toString() + ","
