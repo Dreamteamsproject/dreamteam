@@ -5,6 +5,10 @@
  */
 package vista;
 
+import controlador.SAUsuariosC;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+
 /**
  *
  * @author marce
@@ -14,8 +18,13 @@ public class modificarUser extends javax.swing.JFrame {
     /**
      * Creates new form modificarUser
      */
-    public modificarUser() {
+    public modificarUser(String user, String contraseña,String id) {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.mUsuario.setText(user);
+        this.mContraseña.setText(contraseña);
+        this.estadoComboBox.setSelectedIndex(0);
+        this.idUser.setText(id);
     }
 
     /**
@@ -32,37 +41,61 @@ public class modificarUser extends javax.swing.JFrame {
         labelUs = new javax.swing.JLabel();
         labelCo = new javax.swing.JLabel();
         estadoComboBox = new javax.swing.JComboBox<>();
+        salvarUser = new javax.swing.JButton();
+        cancelarUser = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        idUser = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        mUsuario.setEditable(false);
         mUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(mUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, -1));
-        getContentPane().add(mContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 100, -1));
+        getContentPane().add(mUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, -1));
+        getContentPane().add(mContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 100, -1));
 
         labelUs.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelUs.setForeground(new java.awt.Color(255, 255, 255));
         labelUs.setText("Usuario");
-        getContentPane().add(labelUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 50, -1));
+        getContentPane().add(labelUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 50, -1));
 
         labelCo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         labelCo.setForeground(new java.awt.Color(255, 255, 255));
         labelCo.setText("Contraseña");
-        getContentPane().add(labelCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        getContentPane().add(labelCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
 
-        estadoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
-        getContentPane().add(estadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 60, -1));
+        estadoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
+        getContentPane().add(estadoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 60, -1));
+
+        salvarUser.setText("Salvar");
+        salvarUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarUserActionPerformed(evt);
+            }
+        });
+        getContentPane().add(salvarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 90, 20));
+
+        cancelarUser.setText("Cancelar");
+        cancelarUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarUserActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cancelarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 80, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/spiral380.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 100));
+
+        idUser.setText("jLabel2");
+        idUser.setEnabled(false);
+        getContentPane().add(idUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -70,6 +103,15 @@ public class modificarUser extends javax.swing.JFrame {
     private void mUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mUsuarioActionPerformed
+
+    private void cancelarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarUserActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_cancelarUserActionPerformed
+
+    private void salvarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarUserActionPerformed
+        SAUsuariosC.ModificarUserGuardar(mContraseña.getText(), idUser.getText());
+        this.dispose();
+    }//GEN-LAST:event_salvarUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,17 +143,41 @@ public class modificarUser extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new modificarUser().setVisible(true);
+                
             }
         });
     }
 
+    public JComboBox<String> getEstadoComboBox() {
+        return estadoComboBox;
+    }
+
+    public void setEstadoComboBox(JComboBox<String> estadoComboBox) {
+        this.estadoComboBox = estadoComboBox;
+    }
+
+    public JLabel getLabelCo() {
+        return labelCo;
+    }
+
+
+    public JLabel getLabelUs() {
+        return labelUs;
+    }
+
+   
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cancelarUser;
     private javax.swing.JComboBox<String> estadoComboBox;
+    private javax.swing.JLabel idUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelCo;
     private javax.swing.JLabel labelUs;
     private javax.swing.JTextField mContraseña;
     private javax.swing.JTextField mUsuario;
+    private javax.swing.JButton salvarUser;
     // End of variables declaration//GEN-END:variables
 }

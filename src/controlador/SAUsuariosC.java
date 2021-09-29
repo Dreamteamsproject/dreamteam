@@ -1,6 +1,7 @@
 package controlador;
 
 import java.awt.Color;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -8,6 +9,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import modelo.Consultas;
 import vista.SuperAdm;
+import vista.modificarUser;
 
 
 public class SAUsuariosC {
@@ -99,5 +101,29 @@ public class SAUsuariosC {
     
         if(SuperAdmC.superAdm.getSAContraseñaNuevaGetText().equals("")){SuperAdmC.superAdm.setSAContraseñaNuevaSetText("Añadirunpass");SuperAdmC.superAdm.setSAContraseñaNuevaSetColor(Color.gray);}
         
+    }
+    
+    public static void ModificarUser(){
+    
+        try {
+            ResultSet resultadoM = consultaSQL.doQueryGet("select*from usuarios where usuario_nombre  like '%"+SuperAdmC.superAdm.usuarioLista.getSelectedValue()+"%'");
+            resultadoM.next();
+            String nombre = resultadoM.getString("usuario_nombre");
+            String clave = resultadoM.getString("usuario_clave");
+            String id = resultadoM.getString("usuario_id");
+            modificarUser modificarUser = new modificarUser(nombre, clave, id);
+            modificarUser.setVisible(true);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(SAUsuariosC.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public static void ModificarUserGuardar(String clave, String id){
+        
+        String SQL = "update usuarios SET usuario_clave = '"+clave+"' where usuario_id = '"+id+"'";
+        consultaSQL.doQueryPost(SQL);
+    
+    
     }
 }
