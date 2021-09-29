@@ -1,6 +1,7 @@
 package modelo;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 
 public class Consultas {
@@ -72,7 +73,8 @@ public class Consultas {
                 System.out.println("Error: " +  e.getLocalizedMessage());
                 return false;
             }
-     
+            JOptionPane.showMessageDialog(null, "actualizacion exitosa");
+        
         return true;
     }
     

@@ -1574,7 +1574,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldDireccionActionPerformed
 
     private void usuariosModifUserBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosModifUserBtn1ActionPerformed
-        // TODO add your handling code here:
+        SAUsuariosC.ModificarUser();
     }//GEN-LAST:event_usuariosModifUserBtn1ActionPerformed
 
     private void SAUsuarioNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SAUsuarioNuevoActionPerformed
