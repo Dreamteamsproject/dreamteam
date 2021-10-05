@@ -168,7 +168,7 @@ public class venta extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Ventas Pendientes");
-        iVenta.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 140, -1));
+        iVenta.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 140, -1));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
@@ -288,7 +288,7 @@ public class venta extends javax.swing.JFrame {
         });
         iVentaVentasPendList.setViewportView(iVentaventasPendList);
 
-        iVenta.add(iVentaVentasPendList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 160, 120));
+        iVenta.add(iVentaVentasPendList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 160, 120));
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
@@ -434,7 +434,7 @@ public class venta extends javax.swing.JFrame {
         jLabel47.setText("(12345678-9)");
         iVenta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
-        ventaFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        ventaFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         iVenta.add(ventaFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         ventaPestañas.addTab("Ingreso Venta", iVenta);
@@ -609,7 +609,7 @@ public class venta extends javax.swing.JFrame {
 
         consultaClientes.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 700, 120));
 
-        ventaFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        ventaFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         consultaClientes.add(ventaFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         ventaPestañas.addTab("Consulta Clientes", consultaClientes);
