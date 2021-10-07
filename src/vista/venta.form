@@ -2303,6 +2303,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="cVentaAnulaVentaBtn">
               <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Anular Venta"/>
               </Properties>
               <Events>
@@ -2319,6 +2322,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="cVentaConfPagoBtn">
               <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Confirmacion Pago"/>
               </Properties>
               <Events>

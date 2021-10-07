@@ -969,6 +969,7 @@ public class venta extends javax.swing.JFrame {
         });
         consultaVentas.add(cVentaBuscarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
 
+        cVentaAnulaVentaBtn.setForeground(new java.awt.Color(255, 255, 255));
         cVentaAnulaVentaBtn.setText("Anular Venta");
         cVentaAnulaVentaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -977,6 +978,7 @@ public class venta extends javax.swing.JFrame {
         });
         consultaVentas.add(cVentaAnulaVentaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
 
+        cVentaConfPagoBtn.setForeground(new java.awt.Color(255, 255, 255));
         cVentaConfPagoBtn.setText("Confirmacion Pago");
         cVentaConfPagoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
