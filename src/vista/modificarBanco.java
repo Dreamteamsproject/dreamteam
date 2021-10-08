@@ -99,7 +99,7 @@ public class modificarBanco extends javax.swing.JFrame {
 
     private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveButtonMouseClicked
         var response = bancosC.modificarBanco(this.idLabel.getText(), this.bankNameTF.getText(), this.bankCodeTF.getText(), this.bankStatusCB.getSelectedIndex() );
-        if( response )
+        if(response)
             this.resultMessage.setText("Banco modificado exitosamente");
         else
             this.resultMessage.setText("No fue posible modificar el banco");
@@ -138,11 +138,7 @@ public class modificarBanco extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new modificarBanco().setVisible(true);
-            }
-        });
+     
     }
 
     public JTextField getBankCodeTF() {

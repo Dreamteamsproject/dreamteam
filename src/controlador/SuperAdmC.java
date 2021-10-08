@@ -9,6 +9,7 @@ public class SuperAdmC {
     
     public static void SAVisible(){
         superAdm.setVisible(true);
+        superAdm.setLocationRelativeTo(null);   
     }
     
     public static void desplegarInfo(int pestaña) {

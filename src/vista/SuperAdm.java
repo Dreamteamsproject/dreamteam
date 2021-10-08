@@ -21,16 +21,13 @@ public class SuperAdm extends javax.swing.JFrame {
      */
     public SuperAdm() {
         
-         SAUsuariosC.IniciarClase();
+        SAUsuariosC.IniciarClase();
         RedesC.RedesC();
         bancosC.bancosC();
         ComunasC.ComunasC();
         CatArtC.CatArtC();
         ArticulosC.ArticulosC();
-        
         initComponents();
-        
-        this.setLocationRelativeTo(null);
         
     }
 
@@ -1706,7 +1703,7 @@ public class SuperAdm extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
-        /* Create and display the form */
+        /*Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SuperAdm().setVisible(true);
