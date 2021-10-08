@@ -6,7 +6,6 @@
 package controlador;
 
 import static controlador.LoginC.LoginVisible;
-import modelo.Consultas;
 
 /**
  *
