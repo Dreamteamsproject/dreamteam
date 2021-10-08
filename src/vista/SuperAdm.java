@@ -87,12 +87,13 @@ public class SuperAdm extends javax.swing.JFrame {
         rrssTabla = new javax.swing.JTable();
         jLabel69 = new javax.swing.JLabel();
         superAdmlArticulos = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        articulosTabla = new javax.swing.JTable();
         artNameTF = new javax.swing.JTextField();
         jLabel78 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
         ArticulosModificar1 = new javax.swing.JButton();
-        articulosBuscar1 = new java.awt.TextField();
         jLabel88 = new javax.swing.JLabel();
         articulosBuscarBtn1 = new javax.swing.JButton();
         articulosAgregarBtn2 = new javax.swing.JButton();
@@ -105,11 +106,10 @@ public class SuperAdm extends javax.swing.JFrame {
         mesTF = new javax.swing.JTextField();
         jLabel77 = new javax.swing.JLabel();
         anioTF = new javax.swing.JTextField();
+        articulosBuscar1 = new javax.swing.JTextField();
         jLabel79 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        articulosTabla = new javax.swing.JTable();
         jLabel90 = new javax.swing.JLabel();
         superAdmCatArt = new javax.swing.JPanel();
         catArtBuscar1 = new javax.swing.JTextField();
@@ -537,6 +537,18 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmlArticulos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        DefaultTableModel articulosModel = new DefaultTableModel();
+        articulosModel.addColumn("ID");
+        articulosModel.addColumn("Descripción");
+        articulosModel.addColumn("Stock");
+        articulosModel.addColumn("Fecha Vencimiento");
+        articulosModel.addColumn("Categoria");
+        articulosModel.addColumn("Estado");
+        articulosTabla.setModel(articulosModel);
+        jScrollPane9.setViewportView(articulosTabla);
+
+        superAdmlArticulos.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 330, 670, 130));
+
         artNameTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 artNameTFActionPerformed(evt);
@@ -573,14 +585,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmlArticulos.add(ArticulosModificar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 110, 30));
 
-        articulosBuscar1.setName(""); // NOI18N
-        articulosBuscar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                articulosBuscar1ActionPerformed(evt);
-            }
-        });
-        superAdmlArticulos.add(articulosBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 90, -1));
-
         jLabel88.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel88.setForeground(new java.awt.Color(255, 255, 255));
         jLabel88.setText(" Ingrese Id");
@@ -598,7 +602,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 articulosBuscarBtn1ActionPerformed(evt);
             }
         });
-        superAdmlArticulos.add(articulosBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 100, 20));
+        superAdmlArticulos.add(articulosBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 100, 20));
 
         articulosAgregarBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         articulosAgregarBtn2.setText("Agregar");
@@ -638,6 +642,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel77.setText("/");
         superAdmlArticulos.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 10, 20));
         superAdmlArticulos.add(anioTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 160, 70, -1));
+        superAdmlArticulos.add(articulosBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 100, -1));
 
         jLabel79.setForeground(new java.awt.Color(240, 240, 240));
         jLabel79.setText("Año");
@@ -650,18 +655,6 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel85.setForeground(new java.awt.Color(240, 240, 240));
         jLabel85.setText("Mes");
         superAdmlArticulos.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, -1, -1));
-
-        DefaultTableModel articulosModel = new DefaultTableModel();
-        articulosModel.addColumn("ID");
-        articulosModel.addColumn("Descripción");
-        articulosModel.addColumn("Stock");
-        articulosModel.addColumn("Fecha Vencimiento");
-        articulosModel.addColumn("Categoria");
-        articulosModel.addColumn("Estado");
-        articulosTabla.setModel(articulosModel);
-        jScrollPane9.setViewportView(articulosTabla);
-
-        superAdmlArticulos.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 330, 670, 130));
 
         jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel90.setText("jLabel68");
@@ -1521,10 +1514,6 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ArticulosModificar1ActionPerformed
 
-    private void articulosBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosBuscar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_articulosBuscar1ActionPerformed
-
     private void articulosBuscarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulosBuscarBtn1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_articulosBuscarBtn1ActionPerformed
@@ -1824,7 +1813,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField artNameTF;
     private javax.swing.JTextField artStockTF;
     public javax.swing.JButton articulosAgregarBtn2;
-    public java.awt.TextField articulosBuscar1;
+    public javax.swing.JTextField articulosBuscar1;
     public javax.swing.JButton articulosBuscarBtn1;
     private javax.swing.JTable articulosTabla;
     public javax.swing.JButton bcoAgregarBcoBtn;

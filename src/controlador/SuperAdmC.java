@@ -12,19 +12,16 @@ public class SuperAdmC {
     }
     
     public static void desplegarInfo(int pestaña) {
-        if( pestaña == 1 )
-            bancosC.buscar("1");
-        else if( pestaña == 2 )
-            RedesC.buscar("1");
-        else if( pestaña == 4 )
-            CatArtC.buscar("1");
-        else if(pestaña == 7)
-            SAUsuariosC.RellenarUsuario();
-        else if(pestaña == 3)
-            ArticulosC.buscar("1");
-        else if(pestaña == 0){
-            if(ComunasC.consultasRealizadas != 0)
-                ComunasC.buscar("1");
+        switch (pestaña) {
+            case 0 -> {if(ComunasC.consultasRealizadas != 0) ComunasC.buscar("1");}
+            case 1 -> bancosC.buscar("1");
+            case 2 -> RedesC.buscar("1");
+            case 3 -> ArticulosC.buscar("1");
+            case 4 -> CatArtC.buscar("1");
+            case 5 -> System.out.println("");
+            case 6 -> SAUsuariosC.RellenarUsuario();
+            case 7 -> SAClientesC.RellenarCliente();
+            default -> {}
         }
     }
 }
