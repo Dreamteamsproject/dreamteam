@@ -169,10 +169,8 @@ public class SuperAdm extends javax.swing.JFrame {
         clientesEstado = new javax.swing.JComboBox<>();
         clientesNombre = new javax.swing.JTextField();
         clientesRut = new javax.swing.JTextField();
-        clientesFechNac = new javax.swing.JTextField();
         clientesTelefono = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        clientesGuardar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -185,7 +183,8 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         clientesCelular = new javax.swing.JTextField();
         clientesModificar = new javax.swing.JButton();
-        clientesBuscar = new java.awt.TextField();
+        fechaCliente = new com.toedter.calendar.JDateChooser();
+        clientesBuscar = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         clientesBuscarBtn = new javax.swing.JButton();
@@ -1067,17 +1066,12 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmlClientes.add(clientesNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 162, -1));
         superAdmlClientes.add(clientesRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 162, -1));
-        superAdmlClientes.add(clientesFechNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 162, -1));
         superAdmlClientes.add(clientesTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Estado");
         superAdmlClientes.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 50, -1));
-
-        clientesGuardar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        clientesGuardar.setText("Guardar");
-        superAdmlClientes.add(clientesGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 110, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -1141,15 +1135,8 @@ public class SuperAdm extends javax.swing.JFrame {
                 clientesModificarActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 110, 30));
-
-        clientesBuscar.setName(""); // NOI18N
-        clientesBuscar.setText("12345678-9");
-        clientesBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clientesBuscarActionPerformed(evt);
-            }
-        });
+        superAdmlClientes.add(clientesModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 110, 30));
+        superAdmlClientes.add(fechaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 160, -1));
         superAdmlClientes.add(clientesBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 90, -1));
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -1169,13 +1156,8 @@ public class SuperAdm extends javax.swing.JFrame {
                 clientesBuscarBtnActionPerformed(evt);
             }
         });
-        superAdmlClientes.add(clientesBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, 20));
+        superAdmlClientes.add(clientesBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, -1, 20));
 
-        clienteListado.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         clienteListado.setToolTipText("");
         jScrollPane7.setViewportView(clienteListado);
 
@@ -1411,10 +1393,6 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clientesBuscarBtnActionPerformed
 
-    private void clientesBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesBuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clientesBuscarActionPerformed
-
     private void clientesModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesModificarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clientesModificarActionPerformed
@@ -1456,7 +1434,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_bcoDescripcion1ActionPerformed
 
     private void bcoAgregarBcoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bcoAgregarBcoBtn1ActionPerformed
-        // TODO add your handling code here:
+         SAClientesC.AgregarCliente();
     }//GEN-LAST:event_bcoAgregarBcoBtn1ActionPerformed
 
     private void rrssBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssBuscarActionPerformed
@@ -1865,12 +1843,10 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JTable catArtTabla;
     public javax.swing.JList<String> clienteListado;
     public javax.swing.JTextField clientesApellido;
-    public java.awt.TextField clientesBuscar;
+    private javax.swing.JTextField clientesBuscar;
     public javax.swing.JButton clientesBuscarBtn;
     public javax.swing.JTextField clientesCelular;
     public javax.swing.JComboBox<String> clientesEstado;
-    public javax.swing.JTextField clientesFechNac;
-    public javax.swing.JButton clientesGuardar;
     public javax.swing.JTextField clientesMail;
     public javax.swing.JButton clientesModificar;
     public javax.swing.JTextField clientesNombre;
@@ -1884,6 +1860,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton comunaModifBtn1;
     private javax.swing.JTable comunasTabla;
     private javax.swing.JTextField diaTF;
+    public com.toedter.calendar.JDateChooser fechaCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
