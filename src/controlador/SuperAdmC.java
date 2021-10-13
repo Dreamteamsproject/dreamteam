@@ -19,7 +19,7 @@ public class SuperAdmC {
             case 2 -> RedesC.buscar("1");
             case 3 -> ArticulosC.buscar("1");
             case 4 -> CatArtC.buscar("1");
-            case 5 -> System.out.println("");
+            case 5 -> ProveedoresC.buscar();
             case 6 -> SAUsuariosC.RellenarUsuario();
             case 7 -> SAClientesC.RellenarCliente();
             default -> {}

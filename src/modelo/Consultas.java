@@ -53,7 +53,7 @@ public class Consultas {
             return rs;
             
         } catch (SQLException e) {
-            System.out.println("Error: " +  e.getLocalizedMessage());
+            System.out.println("Error consultas.doQueryGet: " +  e.getLocalizedMessage());
         }
         
         return null;
@@ -70,14 +70,27 @@ public class Consultas {
                 st.executeUpdate(SQL);
                 
             } catch (SQLException e) {
-                System.out.println("Error: " +  e.getLocalizedMessage());
+                System.out.println("Error consultas.doQueryPost: " +  e.getLocalizedMessage());
                 return false;
             }
-            JOptionPane.showMessageDialog(null, "actualizacion exitosa");
         
         return true;
     }
     
-
+    public ResultSet traerTodos(String tabla){
+        String Query = "SELECT * FROM " + tabla;
+        
+        try{
+            var st = conexionSQL.createStatement();
+            var rs = st.executeQuery(Query);
+           
+            return rs;
+            
+        } catch (SQLException e) {
+            System.out.println("Error Consultas.traerTodos: " + e.getLocalizedMessage());
+        }
+        
+        return null;
+    }
         
 }

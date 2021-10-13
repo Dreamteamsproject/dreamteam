@@ -27,6 +27,7 @@ public class SuperAdm extends javax.swing.JFrame {
         ComunasC.ComunasC();
         CatArtC.CatArtC();
         ArticulosC.ArticulosC();
+        ProveedoresC.ProveedoresC();
         initComponents();
         
     }
@@ -121,12 +122,10 @@ public class SuperAdm extends javax.swing.JFrame {
         catArtTabla = new javax.swing.JTable();
         jLabel82 = new javax.swing.JLabel();
         superAdmProveedores = new javax.swing.JPanel();
-        ProveeEstado = new javax.swing.JComboBox<>();
         ProveeRazonSoc = new javax.swing.JTextField();
         ProveeRut = new javax.swing.JTextField();
         ProveeDireccion = new javax.swing.JTextField();
         ProveeTelefono = new javax.swing.JTextField();
-        jLabel41 = new javax.swing.JLabel();
         ProveeGuardarBtn = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
@@ -135,20 +134,16 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel48 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
         ProveeMail = new javax.swing.JTextField();
-        jLabel51 = new javax.swing.JLabel();
-        ProveeComuna = new javax.swing.JComboBox<>();
         ProveeModifBtn = new javax.swing.JButton();
         ProveeBuscar = new java.awt.TextField();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
-        ProveeNombContac = new javax.swing.JTextField();
-        jLabel45 = new javax.swing.JLabel();
+        addButton = new javax.swing.JButton();
         ProveeBuscarBtn = new javax.swing.JButton();
-        jLabel72 = new javax.swing.JLabel();
-        ProveeIdProv = new javax.swing.JTextField();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        proveeTabla1 = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        proveedorTabla = new javax.swing.JTable();
         jLabel49 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         superAdmUsuarios = new javax.swing.JPanel();
         usuarioBuscarUser = new javax.swing.JTextField();
         jLabel59 = new javax.swing.JLabel();
@@ -754,15 +749,6 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmProveedores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ProveeEstado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        ProveeEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        ProveeEstado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProveeEstadoActionPerformed(evt);
-            }
-        });
-        superAdmProveedores.add(ProveeEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 160, -1));
-
         ProveeRazonSoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeRazonSocActionPerformed(evt);
@@ -772,11 +758,6 @@ public class SuperAdm extends javax.swing.JFrame {
         superAdmProveedores.add(ProveeRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 162, -1));
         superAdmProveedores.add(ProveeDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 162, -1));
         superAdmProveedores.add(ProveeTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 162, -1));
-
-        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel41.setText("Estado");
-        superAdmProveedores.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 50, -1));
 
         ProveeGuardarBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         ProveeGuardarBtn.setText("Guardar");
@@ -810,25 +791,22 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel50.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("Mail");
-        superAdmProveedores.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
+        superAdmProveedores.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
 
         ProveeMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeMailActionPerformed(evt);
             }
         });
-        superAdmProveedores.add(ProveeMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 162, -1));
-
-        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel51.setText("Comuna");
-        superAdmProveedores.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
-
-        ProveeComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        superAdmProveedores.add(ProveeComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 160, -1));
+        superAdmProveedores.add(ProveeMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 162, -1));
 
         ProveeModifBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         ProveeModifBtn.setText("Modificar");
+        ProveeModifBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProveeModifBtnMouseClicked(evt);
+            }
+        });
         ProveeModifBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeModifBtnActionPerformed(evt);
@@ -855,20 +833,21 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel54.setText("(76345678-9)");
         superAdmProveedores.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
 
-        ProveeNombContac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProveeNombContacActionPerformed(evt);
+        addButton.setText("Agregar");
+        addButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addButtonMouseClicked(evt);
             }
         });
-        superAdmProveedores.add(ProveeNombContac, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 162, -1));
-
-        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setText("Nombre Contacto");
-        superAdmProveedores.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 120, -1));
+        superAdmProveedores.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, -1, -1));
 
         ProveeBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         ProveeBuscarBtn.setText("Buscar");
+        ProveeBuscarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ProveeBuscarBtnMouseClicked(evt);
+            }
+        });
         ProveeBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProveeBuscarBtnActionPerformed(evt);
@@ -876,50 +855,24 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmProveedores.add(ProveeBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, 20));
 
-        jLabel72.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel72.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel72.setText("Id");
-        superAdmProveedores.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
+        DefaultTableModel proveedorTable = new DefaultTableModel();
+        proveedorTable.addColumn("RUT");
+        proveedorTable.addColumn("Nombre");
+        proveedorTable.addColumn("Telefono");
+        proveedorTable.addColumn("Correo");
+        proveedorTable.addColumn("Direccion");
+        proveedorTable.addColumn("Estado");
+        proveedorTabla.setModel(proveedorTable);
+        jScrollPane1.setViewportView(proveedorTabla);
 
-        ProveeIdProv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProveeIdProvActionPerformed(evt);
-            }
-        });
-        superAdmProveedores.add(ProveeIdProv, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 162, -1));
-
-        proveeTabla1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Id", "Razon Social", "Rut", "Telefono", "Direccion", "Comuna", "Nombre Contacto", "Mail", "Estado"
-            }
-        ));
-        jScrollPane3.setViewportView(proveeTabla1);
-        if (proveeTabla1.getColumnModel().getColumnCount() > 0) {
-            proveeTabla1.getColumnModel().getColumn(1).setResizable(false);
-            proveeTabla1.getColumnModel().getColumn(4).setResizable(false);
-            proveeTabla1.getColumnModel().getColumn(4).setHeaderValue("Direccion");
-            proveeTabla1.getColumnModel().getColumn(5).setHeaderValue("Comuna");
-            proveeTabla1.getColumnModel().getColumn(6).setResizable(false);
-            proveeTabla1.getColumnModel().getColumn(6).setHeaderValue("Nombre Contacto");
-            proveeTabla1.getColumnModel().getColumn(7).setHeaderValue("Mail");
-            proveeTabla1.getColumnModel().getColumn(8).setHeaderValue("Estado");
-        }
-
-        superAdmProveedores.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 700, 120));
+        superAdmProveedores.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 680, 150));
 
         jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel49.setText("jLabel49");
         superAdmProveedores.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        jButton1.setText("jButton1");
+        superAdmProveedores.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, -1, -1));
 
         superAdmPestañas.addTab("Proveedores", superAdmProveedores);
 
@@ -1347,17 +1300,9 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioBuscarUserActionPerformed
 
-    private void ProveeIdProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeIdProvActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProveeIdProvActionPerformed
-
     private void ProveeBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeBuscarBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProveeBuscarBtnActionPerformed
-
-    private void ProveeNombContacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeNombContacActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProveeNombContacActionPerformed
 
     private void ProveeBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeBuscarActionPerformed
         // TODO add your handling code here:
@@ -1374,10 +1319,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private void ProveeRazonSocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeRazonSocActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ProveeRazonSocActionPerformed
-
-    private void ProveeEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProveeEstadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProveeEstadoActionPerformed
 
     private void clientesBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesBuscarBtnActionPerformed
         // TODO add your handling code here:
@@ -1669,6 +1610,19 @@ public class SuperAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_packNombrePackActionPerformed
 
+    private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
+        ProveedoresC.ingresar(this.ProveeRut.getText(), ProveeRazonSoc.getText(), ProveeTelefono.getText(), ProveeMail.getText(), ProveeDireccion.getText());
+        ProveedoresC.buscar();
+    }//GEN-LAST:event_addButtonMouseClicked
+
+    private void ProveeModifBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProveeModifBtnMouseClicked
+        ProveedoresC.modificar();
+    }//GEN-LAST:event_ProveeModifBtnMouseClicked
+
+    private void ProveeBuscarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProveeBuscarBtnMouseClicked
+        ProveedoresC.buscar(ProveeBuscar.getText());
+    }//GEN-LAST:event_ProveeBuscarBtnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1755,6 +1709,10 @@ public class SuperAdm extends javax.swing.JFrame {
      public javax.swing.JTable getArtTabla() {
         return this.articulosTabla;
     }
+     
+     public javax.swing.JTable getProveedorTabla() {
+        return this.proveedorTabla;
+    }
 
     public JComboBox<String> getArticuloCatCB() {
         return ArticuloCatCB;
@@ -1764,8 +1722,6 @@ public class SuperAdm extends javax.swing.JFrame {
         this.ArticuloCatCB = ArticuloCatCB;
     }
      
-     
-    
     
     
     
@@ -1792,20 +1748,17 @@ public class SuperAdm extends javax.swing.JFrame {
     public java.awt.TextField PackBuscar;
     public java.awt.TextField ProveeBuscar;
     public javax.swing.JButton ProveeBuscarBtn;
-    public javax.swing.JComboBox<String> ProveeComuna;
     public javax.swing.JTextField ProveeDireccion;
-    public javax.swing.JComboBox<String> ProveeEstado;
     public javax.swing.JButton ProveeGuardarBtn;
-    public javax.swing.JTextField ProveeIdProv;
     public javax.swing.JTextField ProveeMail;
     public javax.swing.JButton ProveeModifBtn;
-    public javax.swing.JTextField ProveeNombContac;
     public javax.swing.JTextField ProveeRazonSoc;
     public javax.swing.JTextField ProveeRut;
     public javax.swing.JTextField ProveeTelefono;
     private javax.swing.JPasswordField SAContraseñaNueva;
     public javax.swing.JButton SACrearUser;
     private javax.swing.JTextField SAUsuarioNuevo;
+    private javax.swing.JButton addButton;
     private javax.swing.JTextField anioTF;
     public javax.swing.JTextField artNameTF;
     private javax.swing.JTextField artStockTF;
@@ -1847,6 +1800,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JTable comunasTabla;
     private javax.swing.JTextField diaTF;
     public com.toedter.calendar.JDateChooser fechaCliente;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1857,18 +1811,15 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     public javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     public javax.swing.JLabel jLabel47;
     public javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     public javax.swing.JLabel jLabel53;
     public javax.swing.JLabel jLabel54;
@@ -1891,7 +1842,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     public javax.swing.JLabel jLabel70;
     public javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
@@ -1912,12 +1862,12 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel91;
     public javax.swing.JLabel jLabel92;
     public javax.swing.JLabel jLabel93;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
@@ -1938,7 +1888,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public java.awt.TextField packValor;
     public javax.swing.JButton packquitarArtBtn;
     private javax.swing.JLabel packsFondo;
-    public javax.swing.JTable proveeTabla1;
+    private javax.swing.JTable proveedorTabla;
     public javax.swing.JButton rrssAgregarBtn;
     public javax.swing.JTextField rrssBuscar;
     public javax.swing.JButton rrssBuscarBtn;
