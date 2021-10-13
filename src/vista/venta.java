@@ -32,7 +32,6 @@ public class venta extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         iVentaTelefono = new java.awt.TextField();
         jLabel16 = new javax.swing.JLabel();
@@ -50,7 +49,7 @@ public class venta extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        iVentaTotal = new java.awt.TextField();
+        iVentaValorPack = new java.awt.TextField();
         iVentaNumeroPedido = new java.awt.TextField();
         iVentaBusquedaRut = new java.awt.TextField();
         iVentaRut = new java.awt.TextField();
@@ -58,111 +57,78 @@ public class venta extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         iVentaVentasPendList = new javax.swing.JScrollPane();
         iVentaventasPendList = new javax.swing.JList<>();
-        jLabel33 = new javax.swing.JLabel();
         iVentaNombre = new java.awt.TextField();
         iVentaRrss = new java.awt.TextField();
-        iVentaFechaNac = new java.awt.TextField();
         iVentaDestinat = new java.awt.TextField();
-        iVentaFechaEntrega = new java.awt.TextField();
         iVentaHoraEnt = new java.awt.TextField();
         iVentaDireccionEnt = new java.awt.TextField();
         iVentaSaludo = new java.awt.TextField();
-        iVentaApellido = new java.awt.TextField();
         iVentaComunaEnt = new java.awt.TextField();
-        iVentaModificar = new javax.swing.JButton();
+        iVentaModificarBtn = new javax.swing.JButton();
         iVentaBuscarBtn = new javax.swing.JButton();
         iVentaPacks = new javax.swing.JComboBox<>();
         jLabel34 = new javax.swing.JLabel();
         iVentaTelefonoDest = new java.awt.TextField();
-        iVentaBanco = new javax.swing.JComboBox<>();
         iVentaCelular = new java.awt.TextField();
-        iVentaIngresar = new javax.swing.JButton();
+        iVentaIngresarBtn = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel33 = new javax.swing.JLabel();
+        iVentaIva = new java.awt.TextField();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        iVentaTotal = new java.awt.TextField();
+        iVentaFechaNac = new com.toedter.calendar.JDateChooser();
+        iVentaFechaEnt = new com.toedter.calendar.JDateChooser();
         ventaFondo = new javax.swing.JLabel();
-        consultaClientes = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        cCteTelefono1 = new java.awt.TextField();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        cCteNumeroPedido1 = new java.awt.TextField();
-        cCteBusquedaRut1 = new java.awt.TextField();
-        cCteRut1 = new java.awt.TextField();
-        cCteMail1 = new java.awt.TextField();
-        iVentaVentasPendList1 = new javax.swing.JScrollPane();
-        cCteventasPendList = new javax.swing.JList<>();
-        jLabel55 = new javax.swing.JLabel();
-        cCteNombre1 = new java.awt.TextField();
-        cCteApellido1 = new java.awt.TextField();
-        iVentaBuscarBtn1 = new javax.swing.JButton();
-        jLabel56 = new javax.swing.JLabel();
-        cCteCelular1 = new java.awt.TextField();
-        cCteExportarBtn = new javax.swing.JButton();
-        jLabel57 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        cCteVentasList = new javax.swing.JTable();
-        ventaFondo1 = new javax.swing.JLabel();
         consultaVentas = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        cVentaTelefono1 = new java.awt.TextField();
-        jLabel46 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        cVentaSelPack = new java.awt.TextField();
         cVentaNumeroPedido = new java.awt.TextField();
         cVentaBusquedaRut1 = new java.awt.TextField();
         cVentaRut1 = new java.awt.TextField();
-        cVentaMail1 = new java.awt.TextField();
-        jLabel66 = new javax.swing.JLabel();
-        iVentaVentasPendList2 = new javax.swing.JScrollPane();
-        iVentaventasPendList1 = new javax.swing.JList<>();
-        jLabel67 = new javax.swing.JLabel();
         cVentaNombre1 = new java.awt.TextField();
-        cVentaBanco = new java.awt.TextField();
-        cVentaFechaNac1 = new java.awt.TextField();
         cVentaDestinat1 = new java.awt.TextField();
-        cVentaFechaEntrega1 = new java.awt.TextField();
-        cVentaHoraEnt1 = new java.awt.TextField();
-        cVentaDireccionEnt1 = new java.awt.TextField();
-        cVentaSaludo1 = new java.awt.TextField();
-        cVentaApellido1 = new java.awt.TextField();
-        cVentaComunaEnt1 = new java.awt.TextField();
-        cVentaModificar1 = new javax.swing.JButton();
+        cVentaCancelBtn = new javax.swing.JButton();
         cVentaBuscarBtn = new javax.swing.JButton();
         jLabel68 = new javax.swing.JLabel();
-        cVentaTelefonoDest1 = new java.awt.TextField();
-        cVentaCelular1 = new java.awt.TextField();
         cVentaIngresar1 = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
-        cVentaBuscarBtn3 = new javax.swing.JButton();
-        cVentaAnulaVentaBtn = new javax.swing.JRadioButton();
-        cVentaConfPagoBtn = new javax.swing.JRadioButton();
-        cVentaRrss2 = new java.awt.TextField();
-        cVentaTotal2 = new java.awt.TextField();
+        cVentaBuscarBtn2 = new javax.swing.JButton();
+        cVentaBanco = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        cVentaTabla = new javax.swing.JTable();
+        cVentaIngresarBtn = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         ventaFondo2 = new javax.swing.JLabel();
-        ooccPendTerm = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        pedidosDespacho = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        pDespPrintBtn = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        pDespTabla = new javax.swing.JTable();
+        pDespBusqDia = new com.toedter.calendar.JDateChooser();
+        pDespExpBtn = new javax.swing.JButton();
+        ventaFondo1 = new javax.swing.JLabel();
+        estadoDespacho = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        estDespPrintBtn = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        estDespTabla = new javax.swing.JTable();
+        estDespBusqDia = new com.toedter.calendar.JDateChooser();
+        estDespCamEstadBtn = new javax.swing.JButton();
+        estDespExpBtn = new javax.swing.JButton();
+        ventaFondo3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -187,22 +153,17 @@ public class venta extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Nombre");
-        iVenta.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        iVenta.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Rut");
-        iVenta.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Banco");
-        iVenta.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        iVenta.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Ingreso Venta");
-        iVenta.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+        jLabel15.setText("Destinatario");
+        iVenta.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
         iVentaTelefono.setName(""); // NOI18N
         iVentaTelefono.addActionListener(new java.awt.event.ActionListener() {
@@ -214,8 +175,8 @@ public class venta extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Total");
-        iVenta.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jLabel16.setText("Valor Pack");
+        iVenta.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
@@ -230,12 +191,12 @@ public class venta extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("RRSS");
-        iVenta.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 40, -1));
+        iVenta.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 40, -1));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Mail");
-        iVenta.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        iVenta.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
@@ -245,7 +206,7 @@ public class venta extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Telefono");
-        iVenta.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
+        iVenta.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
@@ -255,22 +216,22 @@ public class venta extends javax.swing.JFrame {
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Fecha Entrega");
-        iVenta.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, -1));
+        iVenta.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Direccion Entrega");
-        iVenta.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
+        iVenta.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Destinatario");
-        iVenta.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
+        iVenta.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Comuna Entrega");
-        iVenta.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
+        iVenta.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
@@ -280,20 +241,20 @@ public class venta extends javax.swing.JFrame {
         jLabel30.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Hora Entrega");
-        iVenta.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
+        iVenta.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("Saludo");
-        iVenta.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+        iVenta.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
 
-        iVentaTotal.setName(""); // NOI18N
-        iVentaTotal.addActionListener(new java.awt.event.ActionListener() {
+        iVentaValorPack.setName(""); // NOI18N
+        iVentaValorPack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaTotalActionPerformed(evt);
+                iVentaValorPackActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 110, -1));
+        iVenta.add(iVentaValorPack, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, 110, -1));
 
         iVentaNumeroPedido.setName(""); // NOI18N
         iVentaNumeroPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -318,7 +279,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaRutActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
+        iVenta.add(iVentaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
 
         iVentaMail.setName(""); // NOI18N
         iVentaMail.addActionListener(new java.awt.event.ActionListener() {
@@ -326,12 +287,12 @@ public class venta extends javax.swing.JFrame {
                 iVentaMailActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
+        iVenta.add(iVentaMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Seleccion de Pack");
-        iVenta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 110, -1));
+        iVenta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 110, -1));
 
         iVentaventasPendList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
@@ -341,11 +302,6 @@ public class venta extends javax.swing.JFrame {
         iVentaVentasPendList.setViewportView(iVentaventasPendList);
 
         iVenta.add(iVentaVentasPendList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 160, 120));
-
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("Apellido");
-        iVenta.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         iVentaNombre.setName(""); // NOI18N
         iVentaNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -361,15 +317,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaRrssActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaRrss, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 230, -1));
-
-        iVentaFechaNac.setName(""); // NOI18N
-        iVentaFechaNac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaFechaNacActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 110, -1));
+        iVenta.add(iVentaRrss, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 220, -1));
 
         iVentaDestinat.setName(""); // NOI18N
         iVentaDestinat.addActionListener(new java.awt.event.ActionListener() {
@@ -377,15 +325,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaDestinatActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaDestinat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 220, -1));
-
-        iVentaFechaEntrega.setName(""); // NOI18N
-        iVentaFechaEntrega.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaFechaEntregaActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaFechaEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 110, -1));
+        iVenta.add(iVentaDestinat, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 220, -1));
 
         iVentaHoraEnt.setName(""); // NOI18N
         iVentaHoraEnt.addActionListener(new java.awt.event.ActionListener() {
@@ -393,7 +333,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaHoraEntActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaHoraEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 220, -1));
+        iVenta.add(iVentaHoraEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 220, -1));
 
         iVentaDireccionEnt.setName(""); // NOI18N
         iVentaDireccionEnt.addActionListener(new java.awt.event.ActionListener() {
@@ -401,7 +341,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaDireccionEntActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaDireccionEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 220, -1));
+        iVenta.add(iVentaDireccionEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 220, -1));
 
         iVentaSaludo.setName(""); // NOI18N
         iVentaSaludo.addActionListener(new java.awt.event.ActionListener() {
@@ -409,15 +349,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaSaludoActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 480, 40));
-
-        iVentaApellido.setName(""); // NOI18N
-        iVentaApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaApellidoActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
+        iVenta.add(iVentaSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 480, 40));
 
         iVentaComunaEnt.setName(""); // NOI18N
         iVentaComunaEnt.addActionListener(new java.awt.event.ActionListener() {
@@ -425,16 +357,16 @@ public class venta extends javax.swing.JFrame {
                 iVentaComunaEntActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaComunaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, 220, -1));
+        iVenta.add(iVentaComunaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 220, -1));
 
-        iVentaModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        iVentaModificar.setText("Modificar");
-        iVentaModificar.addActionListener(new java.awt.event.ActionListener() {
+        iVentaModificarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        iVentaModificarBtn.setText("Modificar");
+        iVentaModificarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaModificarActionPerformed(evt);
+                iVentaModificarBtnActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 104, 30));
+        iVenta.add(iVentaModificarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 104, 30));
 
         iVentaBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         iVentaBuscarBtn.setText("Buscar");
@@ -446,7 +378,7 @@ public class venta extends javax.swing.JFrame {
         iVenta.add(iVentaBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
 
         iVentaPacks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aniversario  $19.990", "Cumpleaños   $21.990", "Navidad   $25.990", "Matrimonio   $35.990" }));
-        iVenta.add(iVentaPacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 140, -1));
+        iVenta.add(iVentaPacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 210, -1));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
@@ -459,10 +391,7 @@ public class venta extends javax.swing.JFrame {
                 iVentaTelefonoDestActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaTelefonoDest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 220, -1));
-
-        iVentaBanco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banco Chile", "Santander" }));
-        iVenta.add(iVentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 230, -1));
+        iVenta.add(iVentaTelefonoDest, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 220, -1));
 
         iVentaCelular.setName(""); // NOI18N
         iVentaCelular.addActionListener(new java.awt.event.ActionListener() {
@@ -472,199 +401,58 @@ public class venta extends javax.swing.JFrame {
         });
         iVenta.add(iVentaCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 220, -1));
 
-        iVentaIngresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        iVentaIngresar.setText("Ingresar");
-        iVentaIngresar.addActionListener(new java.awt.event.ActionListener() {
+        iVentaIngresarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        iVentaIngresarBtn.setText("Ingresar");
+        iVentaIngresarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaIngresarActionPerformed(evt);
+                iVentaIngresarBtnActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 104, 30));
+        iVenta.add(iVentaIngresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 104, 30));
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 4, 4));
         jLabel47.setText("(12345678-9)");
         iVenta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
+        iVenta.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 720, 10));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Ingreso Venta");
+        iVenta.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
+
+        iVentaIva.setName(""); // NOI18N
+        iVentaIva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iVentaIvaActionPerformed(evt);
+            }
+        });
+        iVenta.add(iVentaIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, 110, -1));
+
+        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setText("IVA");
+        iVenta.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, -1, -1));
+
+        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setText("Total a pagar");
+        iVenta.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, -1, -1));
+
+        iVentaTotal.setName(""); // NOI18N
+        iVentaTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iVentaTotalActionPerformed(evt);
+            }
+        });
+        iVenta.add(iVentaTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, 110, -1));
+        iVenta.add(iVentaFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 220, -1));
+        iVenta.add(iVentaFechaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 220, -1));
 
         ventaFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         iVenta.add(ventaFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         ventaPestañas.addTab("Ingreso Venta", iVenta);
-
-        consultaClientes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        consultaClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        consultaClientes.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Nombre");
-        consultaClientes.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Rut");
-        consultaClientes.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("Consulta Clientes");
-        consultaClientes.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
-
-        cCteTelefono1.setName(""); // NOI18N
-        cCteTelefono1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteTelefono1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 220, -1));
-
-        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText("Ventas Pendientes");
-        consultaClientes.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 140, -1));
-
-        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setText("Telefono");
-        consultaClientes.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
-
-        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setText("Mail");
-        consultaClientes.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
-
-        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setText("Celular");
-        consultaClientes.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, -1, -1));
-
-        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel51.setText("Numero Pedido");
-        consultaClientes.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, -1, -1));
-
-        cCteNumeroPedido1.setName(""); // NOI18N
-        cCteNumeroPedido1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteNumeroPedido1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteNumeroPedido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 90, -1));
-
-        cCteBusquedaRut1.setName(""); // NOI18N
-        cCteBusquedaRut1.setText("12345678-9");
-        cCteBusquedaRut1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteBusquedaRut1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteBusquedaRut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 90, -1));
-
-        cCteRut1.setName(""); // NOI18N
-        cCteRut1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteRut1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteRut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
-
-        cCteMail1.setName(""); // NOI18N
-        cCteMail1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteMail1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteMail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
-
-        cCteventasPendList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        iVentaVentasPendList1.setViewportView(cCteventasPendList);
-
-        consultaClientes.add(iVentaVentasPendList1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 160, 120));
-
-        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel55.setText("Apellido");
-        consultaClientes.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-
-        cCteNombre1.setName(""); // NOI18N
-        cCteNombre1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteNombre1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 230, -1));
-
-        cCteApellido1.setName(""); // NOI18N
-        cCteApellido1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteApellido1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
-
-        iVentaBuscarBtn1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        iVentaBuscarBtn1.setText("Buscar");
-        iVentaBuscarBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaBuscarBtn1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(iVentaBuscarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
-
-        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setText(" Ingrese Rut");
-        consultaClientes.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
-
-        cCteCelular1.setName(""); // NOI18N
-        cCteCelular1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteCelular1ActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteCelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 220, -1));
-
-        cCteExportarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cCteExportarBtn.setText("Exportar");
-        cCteExportarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cCteExportarBtnActionPerformed(evt);
-            }
-        });
-        consultaClientes.add(cCteExportarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 104, 30));
-
-        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 4, 4));
-        jLabel57.setText("(12345678-9)");
-        consultaClientes.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
-
-        cCteVentasList.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Id", "Razon Social", "Rut", "Telefono", "Direccion", "Comuna", "Nombre Contacto", "Mail", "Estado"
-            }
-        ));
-        jScrollPane3.setViewportView(cCteVentasList);
-
-        consultaClientes.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 700, 120));
-
-        ventaFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
-        consultaClientes.add(ventaFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
-
-        ventaPestañas.addTab("Consulta Clientes", consultaClientes);
 
         consultaVentas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         consultaVentas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -672,114 +460,44 @@ public class venta extends javax.swing.JFrame {
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel38.setText("Nombre");
-        consultaVentas.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        jLabel38.setText("Nombre Cliente");
+        consultaVentas.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, -1, -1));
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("Rut");
-        consultaVentas.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+        consultaVentas.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, -1, -1));
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
         jLabel43.setText("Banco");
-        consultaVentas.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        consultaVentas.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, -1, -1));
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Consulta Venta");
         consultaVentas.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
-        cVentaTelefono1.setName(""); // NOI18N
-        cVentaTelefono1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaTelefono1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 220, -1));
-
-        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel46.setText("Total");
-        consultaVentas.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
-
-        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setText("Ventas Pendientes");
-        consultaVentas.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 140, -1));
-
-        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel49.setText("Telefono");
-        consultaVentas.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, -1, -1));
-
-        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel50.setText("RRSS");
-        consultaVentas.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 40, -1));
-
-        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel52.setText("Mail");
-        consultaVentas.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        jLabel48.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        consultaVentas.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 170, 20));
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel53.setText("Fecha Nac.");
-        consultaVentas.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, -1));
-
-        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel54.setText("Telefono");
-        consultaVentas.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
-
-        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setText("Celular");
-        consultaVentas.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
-
-        jLabel59.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel59.setText("Fecha Entrega");
-        consultaVentas.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, -1));
-
-        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel60.setText("Direccion Entrega");
-        consultaVentas.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
+        jLabel53.setText("Fecha Pago");
+        consultaVentas.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jLabel61.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setText("Destinatario");
-        consultaVentas.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
-
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel62.setText("Comuna Entrega");
-        consultaVentas.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
+        jLabel61.setText("Codigo transaccion");
+        consultaVentas.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         jLabel63.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
         jLabel63.setText("Numero Pedido");
-        consultaVentas.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
-
-        jLabel64.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setText("Hora Entrega");
-        consultaVentas.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
-
-        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel65.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel65.setText("Saludo");
-        consultaVentas.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, -1, -1));
-
-        cVentaSelPack.setName(""); // NOI18N
-        cVentaSelPack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaSelPackActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaSelPack, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 140, -1));
+        consultaVentas.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, -1, -1));
 
         cVentaNumeroPedido.setName(""); // NOI18N
         cVentaNumeroPedido.addActionListener(new java.awt.event.ActionListener() {
@@ -787,7 +505,7 @@ public class venta extends javax.swing.JFrame {
                 cVentaNumeroPedidoActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaNumeroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 90, -1));
+        consultaVentas.add(cVentaNumeroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 160, -1));
 
         cVentaBusquedaRut1.setName(""); // NOI18N
         cVentaBusquedaRut1.addActionListener(new java.awt.event.ActionListener() {
@@ -795,7 +513,7 @@ public class venta extends javax.swing.JFrame {
                 cVentaBusquedaRut1ActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaBusquedaRut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 90, -1));
+        consultaVentas.add(cVentaBusquedaRut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 160, -1));
 
         cVentaRut1.setName(""); // NOI18N
         cVentaRut1.addActionListener(new java.awt.event.ActionListener() {
@@ -803,29 +521,7 @@ public class venta extends javax.swing.JFrame {
                 cVentaRut1ActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaRut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
-
-        cVentaMail1.setName(""); // NOI18N
-        cVentaMail1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaMail1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaMail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
-
-        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel66.setText("Seleccion de Pack");
-        consultaVentas.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 110, -1));
-
-        iVentaVentasPendList2.setViewportView(iVentaventasPendList1);
-
-        consultaVentas.add(iVentaVentasPendList2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 160, 120));
-
-        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel67.setText("Apellido");
-        consultaVentas.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        consultaVentas.add(cVentaRut1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 230, -1));
 
         cVentaNombre1.setName(""); // NOI18N
         cVentaNombre1.addActionListener(new java.awt.event.ActionListener() {
@@ -833,23 +529,7 @@ public class venta extends javax.swing.JFrame {
                 cVentaNombre1ActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 230, -1));
-
-        cVentaBanco.setName(""); // NOI18N
-        cVentaBanco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaBancoActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 230, -1));
-
-        cVentaFechaNac1.setName(""); // NOI18N
-        cVentaFechaNac1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaFechaNac1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaFechaNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 110, -1));
+        consultaVentas.add(cVentaNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 230, -1));
 
         cVentaDestinat1.setName(""); // NOI18N
         cVentaDestinat1.addActionListener(new java.awt.event.ActionListener() {
@@ -857,64 +537,16 @@ public class venta extends javax.swing.JFrame {
                 cVentaDestinat1ActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaDestinat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 220, -1));
+        consultaVentas.add(cVentaDestinat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 140, -1));
 
-        cVentaFechaEntrega1.setName(""); // NOI18N
-        cVentaFechaEntrega1.addActionListener(new java.awt.event.ActionListener() {
+        cVentaCancelBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cVentaCancelBtn.setText("Cancelar");
+        cVentaCancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaFechaEntrega1ActionPerformed(evt);
+                cVentaCancelBtnActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaFechaEntrega1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 110, -1));
-
-        cVentaHoraEnt1.setName(""); // NOI18N
-        cVentaHoraEnt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaHoraEnt1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaHoraEnt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 220, -1));
-
-        cVentaDireccionEnt1.setName(""); // NOI18N
-        cVentaDireccionEnt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaDireccionEnt1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaDireccionEnt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 220, -1));
-
-        cVentaSaludo1.setName(""); // NOI18N
-        cVentaSaludo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaSaludo1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaSaludo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 480, 40));
-
-        cVentaApellido1.setName(""); // NOI18N
-        cVentaApellido1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaApellido1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
-
-        cVentaComunaEnt1.setName(""); // NOI18N
-        cVentaComunaEnt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaComunaEnt1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaComunaEnt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, 220, -1));
-
-        cVentaModificar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cVentaModificar1.setText("Modificar");
-        cVentaModificar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaModificar1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaModificar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 520, 104, 30));
+        consultaVentas.add(cVentaCancelBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 100, 20));
 
         cVentaBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cVentaBuscarBtn.setText("Buscar");
@@ -923,338 +555,393 @@ public class venta extends javax.swing.JFrame {
                 cVentaBuscarBtnActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, 20));
+        consultaVentas.add(cVentaBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 20));
 
         jLabel68.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel68.setForeground(new java.awt.Color(255, 255, 255));
         jLabel68.setText(" Ingrese Rut");
-        consultaVentas.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        consultaVentas.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
 
-        cVentaTelefonoDest1.setName(""); // NOI18N
-        cVentaTelefonoDest1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaTelefonoDest1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaTelefonoDest1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 220, -1));
-
-        cVentaCelular1.setName(""); // NOI18N
-        cVentaCelular1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaCelular1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaCelular1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 220, -1));
-
-        cVentaIngresar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cVentaIngresar1.setText("Ingresar");
+        cVentaIngresar1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cVentaIngresar1.setText("Editar");
         cVentaIngresar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cVentaIngresar1ActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaIngresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, 104, 30));
+        consultaVentas.add(cVentaIngresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, 100, 20));
 
         jLabel69.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel69.setForeground(new java.awt.Color(255, 4, 4));
         jLabel69.setText("(12345678-9)");
-        consultaVentas.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
+        consultaVentas.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, -1, -1));
 
-        cVentaBuscarBtn3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        cVentaBuscarBtn3.setText("Buscar");
-        cVentaBuscarBtn3.addActionListener(new java.awt.event.ActionListener() {
+        cVentaBuscarBtn2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cVentaBuscarBtn2.setText("Buscar");
+        cVentaBuscarBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaBuscarBtn3ActionPerformed(evt);
+                cVentaBuscarBtn2ActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaBuscarBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
+        consultaVentas.add(cVentaBuscarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, 20));
 
-        cVentaAnulaVentaBtn.setForeground(new java.awt.Color(255, 255, 255));
-        cVentaAnulaVentaBtn.setText("Anular Venta");
-        cVentaAnulaVentaBtn.addActionListener(new java.awt.event.ActionListener() {
+        cVentaBanco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        consultaVentas.add(cVentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 230, -1));
+
+        cVentaTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Numero Pedido", "Fecha Pedido", "Nombre Cliente", "Numero Telefono", "Monto", "Pack", "Seleccion"
+            }
+        ));
+        cVentaTabla.setToolTipText("");
+        cVentaTabla.setShowGrid(true);
+        jScrollPane1.setViewportView(cVentaTabla);
+
+        consultaVentas.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 700, 170));
+
+        cVentaIngresarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cVentaIngresarBtn.setText("Confirmar");
+        cVentaIngresarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaAnulaVentaBtnActionPerformed(evt);
+                cVentaIngresarBtnActionPerformed(evt);
             }
         });
-        consultaVentas.add(cVentaAnulaVentaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
-
-        cVentaConfPagoBtn.setForeground(new java.awt.Color(255, 255, 255));
-        cVentaConfPagoBtn.setText("Confirmacion Pago");
-        cVentaConfPagoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaConfPagoBtnActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaConfPagoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
-
-        cVentaRrss2.setName(""); // NOI18N
-        cVentaRrss2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaRrss2ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaRrss2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 230, -1));
-
-        cVentaTotal2.setName(""); // NOI18N
-        cVentaTotal2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaTotal2ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaTotal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 110, -1));
+        consultaVentas.add(cVentaIngresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 100, 20));
+        consultaVentas.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 140, -1));
 
         ventaFondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         consultaVentas.add(ventaFondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
 
         ventaPestañas.addTab("Consulta Ventas", consultaVentas);
 
-        ooccPendTerm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pedidosDespacho.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pedidosDespacho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pedidosDespacho.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
-        ooccPendTerm.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 570));
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText("Pedidos a Despacho");
+        pedidosDespacho.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
-        ventaPestañas.addTab("OOCC Pendientes y Terminadas", ooccPendTerm);
+        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText("Busqueda por dia");
+        pedidosDespacho.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 140, -1));
+
+        pDespPrintBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        pDespPrintBtn.setText("Imprimir");
+        pDespPrintBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pDespPrintBtnActionPerformed(evt);
+            }
+        });
+        pedidosDespacho.add(pDespPrintBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 104, 30));
+
+        pDespTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nro Pedido", "Destinatario", "Direccion", "Comuna", "Fecha Entrega", "Hora Entrega"
+            }
+        ));
+        jScrollPane3.setViewportView(pDespTabla);
+
+        pedidosDespacho.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
+        pedidosDespacho.add(pDespBusqDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 220, -1));
+
+        pDespExpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        pDespExpBtn.setText("Exportar");
+        pDespExpBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pDespExpBtnActionPerformed(evt);
+            }
+        });
+        pedidosDespacho.add(pDespExpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 104, 30));
+
+        ventaFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
+        pedidosDespacho.add(ventaFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        ventaPestañas.addTab("Pedidos a despacho", pedidosDespacho);
+
+        estadoDespacho.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        estadoDespacho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        estadoDespacho.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("Pedidos a Despacho");
+        estadoDespacho.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Busqueda por dia");
+        estadoDespacho.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 140, -1));
+
+        estDespPrintBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        estDespPrintBtn.setText("Imprimir");
+        estDespPrintBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estDespPrintBtnActionPerformed(evt);
+            }
+        });
+        estadoDespacho.add(estDespPrintBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 104, 30));
+
+        estDespTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nro Pedido", "Destinatario", "Direccion", "Comuna", "Fecha Entrega", "Hora Entrega", "Estado Entrega"
+            }
+        ));
+        jScrollPane4.setViewportView(estDespTabla);
+
+        estadoDespacho.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
+        estadoDespacho.add(estDespBusqDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 220, -1));
+
+        estDespCamEstadBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        estDespCamEstadBtn.setText("Cambiar Estado");
+        estDespCamEstadBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estDespCamEstadBtnActionPerformed(evt);
+            }
+        });
+        estadoDespacho.add(estDespCamEstadBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 150, 30));
+
+        estDespExpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        estDespExpBtn.setText("Exportar");
+        estDespExpBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estDespExpBtnActionPerformed(evt);
+            }
+        });
+        estadoDespacho.add(estDespExpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 104, 30));
+
+        ventaFondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
+        estadoDespacho.add(ventaFondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        ventaPestañas.addTab("Estado Despacho", estadoDespacho);
 
         getContentPane().add(ventaPestañas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 730, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void iVentaTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaTelefonoActionPerformed
-
-    private void iVentaTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTotalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaTotalActionPerformed
-
-    private void iVentaNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNumeroPedidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaNumeroPedidoActionPerformed
-
-    private void iVentaBusquedaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBusquedaRutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaBusquedaRutActionPerformed
-
-    private void iVentaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaRutActionPerformed
-
-    private void iVentaMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaMailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaMailActionPerformed
-
-    private void iVentaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaNombreActionPerformed
-
-    private void iVentaRrssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRrssActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaRrssActionPerformed
-
-    private void iVentaFechaNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaFechaNacActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaFechaNacActionPerformed
-
-    private void iVentaDestinatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDestinatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaDestinatActionPerformed
-
-    private void iVentaFechaEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaFechaEntregaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaFechaEntregaActionPerformed
-
-    private void iVentaHoraEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaHoraEntActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaHoraEntActionPerformed
-
-    private void iVentaDireccionEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionEntActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaDireccionEntActionPerformed
-
-    private void iVentaSaludoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaSaludoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaSaludoActionPerformed
-
-    private void iVentaApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaApellidoActionPerformed
-
-    private void iVentaComunaEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaComunaEntActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaComunaEntActionPerformed
-
-    private void iVentaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaModificarActionPerformed
-
-    private void iVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBuscarBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaBuscarBtnActionPerformed
-
-    private void iVentaTelefonoDestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoDestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaTelefonoDestActionPerformed
-
-    private void iVentaCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaCelularActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaCelularActionPerformed
-
-    private void iVentaIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaIngresarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaIngresarActionPerformed
-
-    private void ventaPestañasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_ventaPestañasStateChanged
-        
-    }//GEN-LAST:event_ventaPestañasStateChanged
-
     private void ventaPestañasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ventaPestañasMouseClicked
 
     }//GEN-LAST:event_ventaPestañasMouseClicked
 
-    private void cCteTelefono1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteTelefono1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cCteTelefono1ActionPerformed
+    private void ventaPestañasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_ventaPestañasStateChanged
 
-    private void cCteNumeroPedido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteNumeroPedido1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cCteNumeroPedido1ActionPerformed
+    }//GEN-LAST:event_ventaPestañasStateChanged
 
-    private void cCteBusquedaRut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteBusquedaRut1ActionPerformed
+    private void pDespExpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pDespExpBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cCteBusquedaRut1ActionPerformed
+    }//GEN-LAST:event_pDespExpBtnActionPerformed
 
-    private void cCteRut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteRut1ActionPerformed
+    private void pDespPrintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pDespPrintBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cCteRut1ActionPerformed
+    }//GEN-LAST:event_pDespPrintBtnActionPerformed
 
-    private void cCteMail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteMail1ActionPerformed
+    private void cVentaIngresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaIngresarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cCteMail1ActionPerformed
+    }//GEN-LAST:event_cVentaIngresarBtnActionPerformed
 
-    private void cCteNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteNombre1ActionPerformed
+    private void cVentaBuscarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBuscarBtn2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cCteNombre1ActionPerformed
-
-    private void cCteApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteApellido1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cCteApellido1ActionPerformed
-
-    private void iVentaBuscarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBuscarBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaBuscarBtn1ActionPerformed
-
-    private void cCteCelular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteCelular1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cCteCelular1ActionPerformed
-
-    private void cCteExportarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCteExportarBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cCteExportarBtnActionPerformed
-
-    private void cVentaTelefono1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaTelefono1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaTelefono1ActionPerformed
-
-    private void cVentaSelPackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaSelPackActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaSelPackActionPerformed
-
-    private void cVentaNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaNumeroPedidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaNumeroPedidoActionPerformed
-
-    private void cVentaBusquedaRut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBusquedaRut1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaBusquedaRut1ActionPerformed
-
-    private void cVentaRut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaRut1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaRut1ActionPerformed
-
-    private void cVentaMail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaMail1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaMail1ActionPerformed
-
-    private void cVentaNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaNombre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaNombre1ActionPerformed
-
-    private void cVentaBancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBancoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaBancoActionPerformed
-
-    private void cVentaFechaNac1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaFechaNac1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaFechaNac1ActionPerformed
-
-    private void cVentaDestinat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaDestinat1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaDestinat1ActionPerformed
-
-    private void cVentaFechaEntrega1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaFechaEntrega1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaFechaEntrega1ActionPerformed
-
-    private void cVentaHoraEnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaHoraEnt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaHoraEnt1ActionPerformed
-
-    private void cVentaDireccionEnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaDireccionEnt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaDireccionEnt1ActionPerformed
-
-    private void cVentaSaludo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaSaludo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaSaludo1ActionPerformed
-
-    private void cVentaApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaApellido1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaApellido1ActionPerformed
-
-    private void cVentaComunaEnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaComunaEnt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaComunaEnt1ActionPerformed
-
-    private void cVentaModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaModificar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaModificar1ActionPerformed
-
-    private void cVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBuscarBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaBuscarBtnActionPerformed
-
-    private void cVentaTelefonoDest1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaTelefonoDest1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaTelefonoDest1ActionPerformed
-
-    private void cVentaCelular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaCelular1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaCelular1ActionPerformed
+    }//GEN-LAST:event_cVentaBuscarBtn2ActionPerformed
 
     private void cVentaIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaIngresar1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cVentaIngresar1ActionPerformed
 
-    private void cVentaBuscarBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBuscarBtn3ActionPerformed
+    private void cVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBuscarBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaBuscarBtn3ActionPerformed
+    }//GEN-LAST:event_cVentaBuscarBtnActionPerformed
 
-    private void cVentaAnulaVentaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaAnulaVentaBtnActionPerformed
+    private void cVentaCancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaCancelBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaAnulaVentaBtnActionPerformed
+    }//GEN-LAST:event_cVentaCancelBtnActionPerformed
 
-    private void cVentaConfPagoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaConfPagoBtnActionPerformed
+    private void cVentaDestinat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaDestinat1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaConfPagoBtnActionPerformed
+    }//GEN-LAST:event_cVentaDestinat1ActionPerformed
 
-    private void cVentaRrss2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaRrss2ActionPerformed
+    private void cVentaNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaNombre1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaRrss2ActionPerformed
+    }//GEN-LAST:event_cVentaNombre1ActionPerformed
 
-    private void cVentaTotal2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaTotal2ActionPerformed
+    private void cVentaRut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaRut1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaTotal2ActionPerformed
+    }//GEN-LAST:event_cVentaRut1ActionPerformed
+
+    private void cVentaBusquedaRut1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBusquedaRut1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cVentaBusquedaRut1ActionPerformed
+
+    private void cVentaNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaNumeroPedidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cVentaNumeroPedidoActionPerformed
+
+    private void iVentaTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaTotalActionPerformed
+
+    private void iVentaIvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaIvaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaIvaActionPerformed
+
+    private void iVentaIngresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaIngresarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaIngresarBtnActionPerformed
+
+    private void iVentaCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaCelularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaCelularActionPerformed
+
+    private void iVentaTelefonoDestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoDestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaTelefonoDestActionPerformed
+
+    private void iVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBuscarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaBuscarBtnActionPerformed
+
+    private void iVentaModificarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaModificarBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaModificarBtnActionPerformed
+
+    private void iVentaComunaEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaComunaEntActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaComunaEntActionPerformed
+
+    private void iVentaSaludoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaSaludoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaSaludoActionPerformed
+
+    private void iVentaDireccionEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionEntActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaDireccionEntActionPerformed
+
+    private void iVentaHoraEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaHoraEntActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaHoraEntActionPerformed
+
+    private void iVentaDestinatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDestinatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaDestinatActionPerformed
+
+    private void iVentaRrssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRrssActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaRrssActionPerformed
+
+    private void iVentaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaNombreActionPerformed
+
+    private void iVentaMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaMailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaMailActionPerformed
+
+    private void iVentaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaRutActionPerformed
+
+    private void iVentaBusquedaRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBusquedaRutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaBusquedaRutActionPerformed
+
+    private void iVentaNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNumeroPedidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaNumeroPedidoActionPerformed
+
+    private void iVentaValorPackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaValorPackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaValorPackActionPerformed
+
+    private void iVentaTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaTelefonoActionPerformed
+
+    private void estDespPrintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespPrintBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_estDespPrintBtnActionPerformed
+
+    private void estDespCamEstadBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespCamEstadBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_estDespCamEstadBtnActionPerformed
+
+    private void estDespExpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespExpBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_estDespExpBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1292,61 +979,39 @@ public class venta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public java.awt.TextField cCteApellido1;
-    public java.awt.TextField cCteBusquedaRut1;
-    public java.awt.TextField cCteCelular1;
-    public javax.swing.JButton cCteExportarBtn;
-    public java.awt.TextField cCteMail1;
-    public java.awt.TextField cCteNombre1;
-    public java.awt.TextField cCteNumeroPedido1;
-    public java.awt.TextField cCteRut1;
-    public java.awt.TextField cCteTelefono1;
-    public javax.swing.JTable cCteVentasList;
-    public javax.swing.JList<String> cCteventasPendList;
-    public javax.swing.JRadioButton cVentaAnulaVentaBtn;
-    public java.awt.TextField cVentaApellido1;
-    public java.awt.TextField cVentaBanco;
+    public javax.swing.JComboBox<String> cVentaBanco;
     public javax.swing.JButton cVentaBuscarBtn;
-    public javax.swing.JButton cVentaBuscarBtn3;
+    public javax.swing.JButton cVentaBuscarBtn2;
     public java.awt.TextField cVentaBusquedaRut1;
-    public java.awt.TextField cVentaCelular1;
-    public java.awt.TextField cVentaComunaEnt1;
-    public javax.swing.JRadioButton cVentaConfPagoBtn;
+    public javax.swing.JButton cVentaCancelBtn;
     public java.awt.TextField cVentaDestinat1;
-    public java.awt.TextField cVentaDireccionEnt1;
-    public java.awt.TextField cVentaFechaEntrega1;
-    public java.awt.TextField cVentaFechaNac1;
-    public java.awt.TextField cVentaHoraEnt1;
     public javax.swing.JButton cVentaIngresar1;
-    public java.awt.TextField cVentaMail1;
-    public javax.swing.JButton cVentaModificar1;
+    public javax.swing.JButton cVentaIngresarBtn;
     public java.awt.TextField cVentaNombre1;
     public java.awt.TextField cVentaNumeroPedido;
-    public java.awt.TextField cVentaRrss2;
     public java.awt.TextField cVentaRut1;
-    public java.awt.TextField cVentaSaludo1;
-    public java.awt.TextField cVentaSelPack;
-    public java.awt.TextField cVentaTelefono1;
-    public java.awt.TextField cVentaTelefonoDest1;
-    public java.awt.TextField cVentaTotal2;
-    public javax.swing.JPanel consultaClientes;
+    public javax.swing.JTable cVentaTabla;
     public javax.swing.JPanel consultaVentas;
+    public com.toedter.calendar.JDateChooser estDespBusqDia;
+    public javax.swing.JButton estDespCamEstadBtn;
+    public javax.swing.JButton estDespExpBtn;
+    public javax.swing.JButton estDespPrintBtn;
+    public javax.swing.JTable estDespTabla;
+    public javax.swing.JPanel estadoDespacho;
     public javax.swing.JPanel iVenta;
-    public java.awt.TextField iVentaApellido;
-    public javax.swing.JComboBox<String> iVentaBanco;
     public javax.swing.JButton iVentaBuscarBtn;
-    public javax.swing.JButton iVentaBuscarBtn1;
     public java.awt.TextField iVentaBusquedaRut;
     public java.awt.TextField iVentaCelular;
     public java.awt.TextField iVentaComunaEnt;
     public java.awt.TextField iVentaDestinat;
     public java.awt.TextField iVentaDireccionEnt;
-    public java.awt.TextField iVentaFechaEntrega;
-    public java.awt.TextField iVentaFechaNac;
+    public com.toedter.calendar.JDateChooser iVentaFechaEnt;
+    public com.toedter.calendar.JDateChooser iVentaFechaNac;
     public java.awt.TextField iVentaHoraEnt;
-    public javax.swing.JButton iVentaIngresar;
+    public javax.swing.JButton iVentaIngresarBtn;
+    public java.awt.TextField iVentaIva;
     public java.awt.TextField iVentaMail;
-    public javax.swing.JButton iVentaModificar;
+    public javax.swing.JButton iVentaModificarBtn;
     public java.awt.TextField iVentaNombre;
     public java.awt.TextField iVentaNumeroPedido;
     public javax.swing.JComboBox<String> iVentaPacks;
@@ -1356,22 +1021,17 @@ public class venta extends javax.swing.JFrame {
     public java.awt.TextField iVentaTelefono;
     public java.awt.TextField iVentaTelefonoDest;
     public java.awt.TextField iVentaTotal;
+    public java.awt.TextField iVentaValorPack;
     private javax.swing.JScrollPane iVentaVentasPendList;
-    private javax.swing.JScrollPane iVentaVentasPendList1;
-    private javax.swing.JScrollPane iVentaVentasPendList2;
     public javax.swing.JList<String> iVentaventasPendList;
-    public javax.swing.JList<String> iVentaventasPendList1;
+    public com.toedter.calendar.JDateChooser jDateChooser1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
-    public javax.swing.JLabel jLabel12;
-    public javax.swing.JLabel jLabel13;
-    public javax.swing.JLabel jLabel14;
     public javax.swing.JLabel jLabel15;
     public javax.swing.JLabel jLabel16;
     public javax.swing.JLabel jLabel17;
     public javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel20;
     public javax.swing.JLabel jLabel21;
     public javax.swing.JLabel jLabel22;
@@ -1392,7 +1052,7 @@ public class venta extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel37;
     public javax.swing.JLabel jLabel38;
     public javax.swing.JLabel jLabel39;
-    public javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel40;
     public javax.swing.JLabel jLabel41;
     public javax.swing.JLabel jLabel42;
     public javax.swing.JLabel jLabel43;
@@ -1402,31 +1062,24 @@ public class venta extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel47;
     public javax.swing.JLabel jLabel48;
     public javax.swing.JLabel jLabel49;
-    public javax.swing.JLabel jLabel50;
-    public javax.swing.JLabel jLabel51;
-    public javax.swing.JLabel jLabel52;
     public javax.swing.JLabel jLabel53;
-    public javax.swing.JLabel jLabel54;
-    public javax.swing.JLabel jLabel55;
-    public javax.swing.JLabel jLabel56;
-    public javax.swing.JLabel jLabel57;
-    public javax.swing.JLabel jLabel58;
-    public javax.swing.JLabel jLabel59;
-    public javax.swing.JLabel jLabel60;
     public javax.swing.JLabel jLabel61;
-    public javax.swing.JLabel jLabel62;
     public javax.swing.JLabel jLabel63;
-    public javax.swing.JLabel jLabel64;
-    public javax.swing.JLabel jLabel65;
-    public javax.swing.JLabel jLabel66;
-    public javax.swing.JLabel jLabel67;
     public javax.swing.JLabel jLabel68;
     public javax.swing.JLabel jLabel69;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JPanel ooccPendTerm;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JSeparator jSeparator1;
+    public com.toedter.calendar.JDateChooser pDespBusqDia;
+    public javax.swing.JButton pDespExpBtn;
+    public javax.swing.JButton pDespPrintBtn;
+    public javax.swing.JTable pDespTabla;
+    public javax.swing.JPanel pedidosDespacho;
     private javax.swing.JLabel ventaFondo;
     private javax.swing.JLabel ventaFondo1;
     private javax.swing.JLabel ventaFondo2;
+    private javax.swing.JLabel ventaFondo3;
     public javax.swing.JTabbedPane ventaPestañas;
     // End of variables declaration//GEN-END:variables
 }
