@@ -26,15 +26,22 @@ public  class LoginC {
         String password = login.getLoginPassword().getText();
         var SQL = "SELECT usuario_nombre, usuario_clave from usuarios where(usuario_nombre='"+usuario+"' && usuario_clave='"+password+"')";
         
-        if(consulta.consultaBooleana(SQL)){JOptionPane.showMessageDialog(null, "Bienvenido "+usuario);
-                                    login.dispose();
-                                    SuperAdmC.SAVisible();}
-        else{JOptionPane.showMessageDialog(null, "La contraseña que ingresaste es incorrecta");
-                                           login.setLoginUsuarioSetText("Ingresar Usuario");
-                                           login.setLoginUsuarioSetTextSetColor(Color.gray);
-                                           login.setLoginPasswordSetText("IngresarContraseña");
-                                           login.setLoginPasswordSetTextSetColor(Color.gray);
-                                        }
+        if(consulta.consultaBooleana(SQL)){
+            JOptionPane.showMessageDialog(null, "Bienvenido "+usuario);
+            login.dispose();
+            
+            if("admin".equals(usuario))
+                SuperAdmC.SAVisible();
+            else
+                VentasC.ventaVisible();
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "La contraseña que ingresaste es incorrecta");
+            login.setLoginUsuarioSetText("Ingresar Usuario");
+            login.setLoginUsuarioSetTextSetColor(Color.gray);
+            login.setLoginPasswordSetText("IngresarContraseña");
+            login.setLoginPasswordSetTextSetColor(Color.gray);
+        }
         
     }
     

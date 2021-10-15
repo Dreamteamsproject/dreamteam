@@ -5,6 +5,12 @@
  */
 package vista;
 
+import controlador.IngresoVentaC;
+import java.awt.TextField;
+import java.util.Date;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Roberto
@@ -15,6 +21,7 @@ public class venta extends javax.swing.JFrame {
      * Creates new form venta
      */
     public venta() {
+        IngresoVentaC.IngresoVentaC();
         initComponents();
     }
 
@@ -33,53 +40,43 @@ public class venta extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        iVentaTelefono = new java.awt.TextField();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        iVentaValorPack = new java.awt.TextField();
-        iVentaNumeroPedido = new java.awt.TextField();
         iVentaBusquedaRut = new java.awt.TextField();
         iVentaRut = new java.awt.TextField();
         iVentaMail = new java.awt.TextField();
         jLabel32 = new javax.swing.JLabel();
-        iVentaVentasPendList = new javax.swing.JScrollPane();
-        iVentaventasPendList = new javax.swing.JList<>();
         iVentaNombre = new java.awt.TextField();
-        iVentaRrss = new java.awt.TextField();
         iVentaDestinat = new java.awt.TextField();
-        iVentaHoraEnt = new java.awt.TextField();
-        iVentaDireccionEnt = new java.awt.TextField();
+        iVentaCorreo = new java.awt.TextField();
         iVentaSaludo = new java.awt.TextField();
-        iVentaComunaEnt = new java.awt.TextField();
-        iVentaModificarBtn = new javax.swing.JButton();
         iVentaBuscarBtn = new javax.swing.JButton();
         iVentaPacks = new javax.swing.JComboBox<>();
         jLabel34 = new javax.swing.JLabel();
-        iVentaTelefonoDest = new java.awt.TextField();
-        iVentaCelular = new java.awt.TextField();
+        iVentaTelefono = new java.awt.TextField();
         iVentaIngresarBtn = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel33 = new javax.swing.JLabel();
-        iVentaIva = new java.awt.TextField();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        iVentaTotal = new java.awt.TextField();
-        iVentaFechaNac = new com.toedter.calendar.JDateChooser();
+        iVentaTotal = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
         iVentaFechaEnt = new com.toedter.calendar.JDateChooser();
+        iVentaDireccion = new java.awt.TextField();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        iVentaHoraFinal = new javax.swing.JComboBox<>();
+        iVentaHoraInicial = new javax.swing.JComboBox<>();
+        iVentaComuna = new javax.swing.JComboBox<>();
+        iVentaRedSocial = new javax.swing.JComboBox<>();
+        iVentaTotLabel = new javax.swing.JLabel();
         ventaFondo = new javax.swing.JLabel();
         consultaVentas = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
@@ -89,7 +86,6 @@ public class venta extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         cVentaNumeroPedido = new java.awt.TextField();
         cVentaBusquedaRut1 = new java.awt.TextField();
@@ -107,6 +103,7 @@ public class venta extends javax.swing.JFrame {
         cVentaTabla = new javax.swing.JTable();
         cVentaIngresarBtn = new javax.swing.JButton();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jLabel62 = new javax.swing.JLabel();
         ventaFondo2 = new javax.swing.JLabel();
         pedidosDespacho = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
@@ -153,116 +150,57 @@ public class venta extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Nombre");
-        iVenta.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        iVenta.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Rut");
-        iVenta.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        iVenta.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Destinatario");
-        iVenta.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
-
-        iVentaTelefono.setName(""); // NOI18N
-        iVentaTelefono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaTelefonoActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 220, -1));
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Valor Pack");
-        iVenta.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, -1, -1));
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("Ventas Pendientes");
-        iVenta.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 140, -1));
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Telefono");
-        iVenta.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, -1, -1));
+        iVenta.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("RRSS");
-        iVenta.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 40, -1));
+        iVenta.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 40, -1));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Mail");
-        iVenta.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Fecha Nac.");
-        iVenta.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, -1));
+        iVenta.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Telefono");
-        iVenta.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
-
-        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("Celular");
-        iVenta.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
+        iVenta.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Fecha Entrega");
-        iVenta.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
-
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Direccion Entrega");
-        iVenta.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
+        iVenta.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("Destinatario");
-        iVenta.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+        jLabel27.setText("Nombre");
+        iVenta.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Comuna Entrega");
-        iVenta.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
+        iVenta.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
 
-        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel29.setText("Numero Pedido");
-        iVenta.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
-
-        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel30.setText("Hora Entrega");
-        iVenta.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, -1));
+        jLabel30.setText("-");
+        iVenta.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 280, 20, 40));
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("Saludo");
-        iVenta.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
-
-        iVentaValorPack.setName(""); // NOI18N
-        iVentaValorPack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaValorPackActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaValorPack, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, 110, -1));
-
-        iVentaNumeroPedido.setName(""); // NOI18N
-        iVentaNumeroPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaNumeroPedidoActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaNumeroPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 90, -1));
+        iVenta.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
         iVentaBusquedaRut.setName(""); // NOI18N
         iVentaBusquedaRut.setText("12345678-9");
@@ -271,53 +209,39 @@ public class venta extends javax.swing.JFrame {
                 iVentaBusquedaRutActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaBusquedaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 90, -1));
+        iVenta.add(iVentaBusquedaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 90, -1));
 
+        iVentaRut.setEditable(false);
         iVentaRut.setName(""); // NOI18N
         iVentaRut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iVentaRutActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, -1));
+        iVenta.add(iVentaRut, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 230, -1));
 
+        iVentaMail.setEditable(false);
         iVentaMail.setName(""); // NOI18N
         iVentaMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iVentaMailActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, -1));
+        iVenta.add(iVentaMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 230, -1));
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Seleccion de Pack");
-        iVenta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 110, -1));
+        iVenta.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 110, -1));
 
-        iVentaventasPendList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item6", "Item7", "Item8", "Item9" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        iVentaVentasPendList.setViewportView(iVentaventasPendList);
-
-        iVenta.add(iVentaVentasPendList, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 160, 120));
-
+        iVentaNombre.setEditable(false);
         iVentaNombre.setName(""); // NOI18N
         iVentaNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iVentaNombreActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 230, -1));
-
-        iVentaRrss.setName(""); // NOI18N
-        iVentaRrss.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaRrssActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaRrss, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 220, -1));
+        iVenta.add(iVentaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 230, -1));
 
         iVentaDestinat.setName(""); // NOI18N
         iVentaDestinat.addActionListener(new java.awt.event.ActionListener() {
@@ -325,23 +249,15 @@ public class venta extends javax.swing.JFrame {
                 iVentaDestinatActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaDestinat, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 220, -1));
+        iVenta.add(iVentaDestinat, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 220, -1));
 
-        iVentaHoraEnt.setName(""); // NOI18N
-        iVentaHoraEnt.addActionListener(new java.awt.event.ActionListener() {
+        iVentaCorreo.setName(""); // NOI18N
+        iVentaCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaHoraEntActionPerformed(evt);
+                iVentaCorreoActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaHoraEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 220, -1));
-
-        iVentaDireccionEnt.setName(""); // NOI18N
-        iVentaDireccionEnt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaDireccionEntActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaDireccionEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 220, -1));
+        iVenta.add(iVentaCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 220, -1));
 
         iVentaSaludo.setName(""); // NOI18N
         iVentaSaludo.addActionListener(new java.awt.event.ActionListener() {
@@ -349,105 +265,127 @@ public class venta extends javax.swing.JFrame {
                 iVentaSaludoActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 480, 40));
-
-        iVentaComunaEnt.setName(""); // NOI18N
-        iVentaComunaEnt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaComunaEntActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaComunaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 220, -1));
-
-        iVentaModificarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        iVentaModificarBtn.setText("Modificar");
-        iVentaModificarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaModificarBtnActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaModificarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 104, 30));
+        iVenta.add(iVentaSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 220, 80));
 
         iVentaBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         iVentaBuscarBtn.setText("Buscar");
+        iVentaBuscarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iVentaBuscarBtnMouseClicked(evt);
+            }
+        });
         iVentaBuscarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iVentaBuscarBtnActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, 20));
+        iVenta.add(iVentaBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, -1, 20));
 
-        iVentaPacks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aniversario  $19.990", "Cumpleaños   $21.990", "Navidad   $25.990", "Matrimonio   $35.990" }));
-        iVenta.add(iVentaPacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 210, -1));
+        iVentaPacks.setModel(new javax.swing.DefaultComboBoxModel<>(IngresoVentaC.packs));
+        iVentaPacks.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                iVentaPacksItemStateChanged(evt);
+            }
+        });
+        iVenta.add(iVentaPacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 220, -1));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText(" Ingrese Rut");
-        iVenta.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        iVenta.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
 
-        iVentaTelefonoDest.setName(""); // NOI18N
-        iVentaTelefonoDest.addActionListener(new java.awt.event.ActionListener() {
+        iVentaTelefono.setName(""); // NOI18N
+        iVentaTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaTelefonoDestActionPerformed(evt);
+                iVentaTelefonoActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaTelefonoDest, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 220, -1));
-
-        iVentaCelular.setName(""); // NOI18N
-        iVentaCelular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaCelularActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 220, -1));
+        iVenta.add(iVentaTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 220, -1));
 
         iVentaIngresarBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         iVentaIngresarBtn.setText("Ingresar");
+        iVentaIngresarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iVentaIngresarBtnMouseClicked(evt);
+            }
+        });
         iVentaIngresarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iVentaIngresarBtnActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaIngresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 104, 30));
+        iVenta.add(iVentaIngresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 104, 30));
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 4, 4));
         jLabel47.setText("(12345678-9)");
-        iVenta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
-        iVenta.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 720, 10));
+        iVenta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, -1, -1));
+        iVenta.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 720, 10));
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Ingreso Venta");
         iVenta.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
 
-        iVentaIva.setName(""); // NOI18N
-        iVentaIva.addActionListener(new java.awt.event.ActionListener() {
+        iVentaTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        iVentaTotal.setText(IngresoVentaC.precios[0]);
+        iVentaTotal.setForeground(new java.awt.Color(255, 255, 255));
+        iVentaTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        iVentaTotal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        iVenta.add(iVentaTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, 110, 20));
+
+        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setText("Mail");
+        iVenta.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, -1));
+
+        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setText("Direccion");
+        iVenta.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        iVentaFechaEnt.setDate(new Date());
+        iVenta.add(iVentaFechaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 220, -1));
+
+        iVentaDireccion.setName(""); // NOI18N
+        iVentaDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaIvaActionPerformed(evt);
+                iVentaDireccionActionPerformed(evt);
             }
         });
-        iVenta.add(iVentaIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, 110, -1));
+        iVenta.add(iVentaDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 220, -1));
 
-        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel46.setText("IVA");
-        iVenta.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, -1, -1));
+        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setText("Final");
+        iVenta.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, -1, -1));
 
-        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel49.setText("Total a pagar");
-        iVenta.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, -1, -1));
+        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setText("Hora Entrega");
+        iVenta.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
-        iVentaTotal.setName(""); // NOI18N
-        iVentaTotal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iVentaTotalActionPerformed(evt);
-            }
-        });
-        iVenta.add(iVentaTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, 110, -1));
-        iVenta.add(iVentaFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 220, -1));
-        iVenta.add(iVentaFechaEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 220, -1));
+        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setText("Inicial");
+        iVenta.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, -1, -1));
+
+        iVentaHoraFinal.setModel(new javax.swing.DefaultComboBoxModel<>(IngresoVentaC.horarios));
+        iVenta.add(iVentaHoraFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, -1, -1));
+
+        iVentaHoraInicial.setModel(new javax.swing.DefaultComboBoxModel<>(IngresoVentaC.horarios));
+        iVenta.add(iVentaHoraInicial, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, -1));
+
+        iVentaComuna.setModel(new javax.swing.DefaultComboBoxModel<>(IngresoVentaC.comunas));
+        iVenta.add(iVentaComuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 220, -1));
+
+        iVentaRedSocial.setModel(new javax.swing.DefaultComboBoxModel<>(IngresoVentaC.redesSociales));
+        iVenta.add(iVentaRedSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 220, -1));
+
+        iVentaTotLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        iVentaTotLabel.setForeground(new java.awt.Color(255, 255, 255));
+        iVentaTotLabel.setText("Total a pagar: $");
+        iVenta.add(iVentaTotLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, -1, 20));
 
         ventaFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         iVenta.add(ventaFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
@@ -488,11 +426,6 @@ public class venta extends javax.swing.JFrame {
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setText("Fecha Pago");
         consultaVentas.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
-
-        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setText("Codigo transaccion");
-        consultaVentas.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         jLabel63.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
@@ -625,6 +558,11 @@ public class venta extends javax.swing.JFrame {
         });
         consultaVentas.add(cVentaIngresarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 100, 20));
         consultaVentas.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 140, -1));
+
+        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel62.setText("Codigo transaccion");
+        consultaVentas.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         ventaFondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         consultaVentas.add(ventaFondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
@@ -851,57 +789,29 @@ public class venta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cVentaNumeroPedidoActionPerformed
 
-    private void iVentaTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTotalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaTotalActionPerformed
-
-    private void iVentaIvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaIvaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaIvaActionPerformed
-
     private void iVentaIngresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaIngresarBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_iVentaIngresarBtnActionPerformed
 
-    private void iVentaCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaCelularActionPerformed
+    private void iVentaTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaCelularActionPerformed
-
-    private void iVentaTelefonoDestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoDestActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaTelefonoDestActionPerformed
+    }//GEN-LAST:event_iVentaTelefonoActionPerformed
 
     private void iVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaBuscarBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_iVentaBuscarBtnActionPerformed
 
-    private void iVentaModificarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaModificarBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaModificarBtnActionPerformed
-
-    private void iVentaComunaEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaComunaEntActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaComunaEntActionPerformed
-
     private void iVentaSaludoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaSaludoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_iVentaSaludoActionPerformed
 
-    private void iVentaDireccionEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionEntActionPerformed
+    private void iVentaCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaCorreoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaDireccionEntActionPerformed
-
-    private void iVentaHoraEntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaHoraEntActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaHoraEntActionPerformed
+    }//GEN-LAST:event_iVentaCorreoActionPerformed
 
     private void iVentaDestinatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDestinatActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_iVentaDestinatActionPerformed
-
-    private void iVentaRrssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaRrssActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaRrssActionPerformed
 
     private void iVentaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNombreActionPerformed
         // TODO add your handling code here:
@@ -919,18 +829,6 @@ public class venta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_iVentaBusquedaRutActionPerformed
 
-    private void iVentaNumeroPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaNumeroPedidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaNumeroPedidoActionPerformed
-
-    private void iVentaValorPackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaValorPackActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaValorPackActionPerformed
-
-    private void iVentaTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaTelefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_iVentaTelefonoActionPerformed
-
     private void estDespPrintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespPrintBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_estDespPrintBtnActionPerformed
@@ -943,6 +841,47 @@ public class venta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_estDespExpBtnActionPerformed
 
+    private void iVentaDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iVentaDireccionActionPerformed
+
+    private void iVentaBuscarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iVentaBuscarBtnMouseClicked
+        IngresoVentaC.buscar(iVentaBusquedaRut.getText());
+    }//GEN-LAST:event_iVentaBuscarBtnMouseClicked
+
+    private void iVentaPacksItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_iVentaPacksItemStateChanged
+        IngresoVentaC.setTotalCost(this.iVentaPacks.getSelectedIndex());
+    }//GEN-LAST:event_iVentaPacksItemStateChanged
+
+    private void iVentaIngresarBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iVentaIngresarBtnMouseClicked
+        IngresoVentaC.ingresarVenta();
+    }//GEN-LAST:event_iVentaIngresarBtnMouseClicked
+
+    public JLabel getiVentaTotal() {
+        return iVentaTotal;
+    }
+
+    public String getiVentaHoraFinal() {
+        return iVentaHoraFinal.getSelectedItem().toString();
+    }
+
+    public String getiVentaHoraInicial() {
+        return iVentaHoraInicial.getSelectedItem().toString();
+    }
+
+    public String getiVentaComuna() {
+        return iVentaComuna.getSelectedItem().toString();
+    }
+
+    public String getiVentaRedSocial() {
+        return iVentaRedSocial.getSelectedItem().toString();
+    }
+
+    public String getiVentaPacks() {
+        return iVentaPacks.getSelectedItem().toString();
+    }
+
+    
     /**
      * @param args the command line arguments
      */
@@ -1001,47 +940,34 @@ public class venta extends javax.swing.JFrame {
     public javax.swing.JPanel iVenta;
     public javax.swing.JButton iVentaBuscarBtn;
     public java.awt.TextField iVentaBusquedaRut;
-    public java.awt.TextField iVentaCelular;
-    public java.awt.TextField iVentaComunaEnt;
+    private javax.swing.JComboBox<String> iVentaComuna;
+    public java.awt.TextField iVentaCorreo;
     public java.awt.TextField iVentaDestinat;
-    public java.awt.TextField iVentaDireccionEnt;
+    public java.awt.TextField iVentaDireccion;
     public com.toedter.calendar.JDateChooser iVentaFechaEnt;
-    public com.toedter.calendar.JDateChooser iVentaFechaNac;
-    public java.awt.TextField iVentaHoraEnt;
+    private javax.swing.JComboBox<String> iVentaHoraFinal;
+    private javax.swing.JComboBox<String> iVentaHoraInicial;
     public javax.swing.JButton iVentaIngresarBtn;
-    public java.awt.TextField iVentaIva;
     public java.awt.TextField iVentaMail;
-    public javax.swing.JButton iVentaModificarBtn;
     public java.awt.TextField iVentaNombre;
-    public java.awt.TextField iVentaNumeroPedido;
     public javax.swing.JComboBox<String> iVentaPacks;
-    public java.awt.TextField iVentaRrss;
+    private javax.swing.JComboBox<String> iVentaRedSocial;
     public java.awt.TextField iVentaRut;
     public java.awt.TextField iVentaSaludo;
     public java.awt.TextField iVentaTelefono;
-    public java.awt.TextField iVentaTelefonoDest;
-    public java.awt.TextField iVentaTotal;
-    public java.awt.TextField iVentaValorPack;
-    private javax.swing.JScrollPane iVentaVentasPendList;
-    public javax.swing.JList<String> iVentaventasPendList;
+    public javax.swing.JLabel iVentaTotLabel;
+    public javax.swing.JLabel iVentaTotal;
     public com.toedter.calendar.JDateChooser jDateChooser1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
     public javax.swing.JLabel jLabel15;
-    public javax.swing.JLabel jLabel16;
-    public javax.swing.JLabel jLabel17;
-    public javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     public javax.swing.JLabel jLabel20;
     public javax.swing.JLabel jLabel21;
-    public javax.swing.JLabel jLabel22;
     public javax.swing.JLabel jLabel23;
-    public javax.swing.JLabel jLabel24;
     public javax.swing.JLabel jLabel25;
-    public javax.swing.JLabel jLabel26;
     public javax.swing.JLabel jLabel27;
     public javax.swing.JLabel jLabel28;
-    public javax.swing.JLabel jLabel29;
     public javax.swing.JLabel jLabel30;
     public javax.swing.JLabel jLabel31;
     public javax.swing.JLabel jLabel32;
@@ -1058,12 +984,15 @@ public class venta extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel43;
     public javax.swing.JLabel jLabel44;
     public javax.swing.JLabel jLabel45;
-    public javax.swing.JLabel jLabel46;
     public javax.swing.JLabel jLabel47;
     public javax.swing.JLabel jLabel48;
-    public javax.swing.JLabel jLabel49;
+    public javax.swing.JLabel jLabel50;
+    public javax.swing.JLabel jLabel51;
+    public javax.swing.JLabel jLabel52;
     public javax.swing.JLabel jLabel53;
-    public javax.swing.JLabel jLabel61;
+    public javax.swing.JLabel jLabel54;
+    public javax.swing.JLabel jLabel55;
+    public javax.swing.JLabel jLabel62;
     public javax.swing.JLabel jLabel63;
     public javax.swing.JLabel jLabel68;
     public javax.swing.JLabel jLabel69;

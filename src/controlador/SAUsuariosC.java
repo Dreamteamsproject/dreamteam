@@ -26,7 +26,7 @@ public class SAUsuariosC {
         if(!SuperAdmC.superAdm.getSAUsuarioNuevoGetText().equals("Añadir un usuario") && !SuperAdmC.superAdm.getSAContraseñaNuevaGetText().equals("Añadirunpass")){
         var usuario     = SuperAdmC.superAdm.getSAUsuarioNuevoGetText();
         var contraseña  = SuperAdmC.superAdm.getSAContraseñaNuevaGetText();
-        String SQL = "insert into usuarios (usuario_nombre,usuario_clave)VALUES('"+usuario+"','"+contraseña+"');";
+        String SQL = "insert into usuarios (usuario_nombre,usuario_clave, usuario_estado)VALUES('"+usuario+"','"+contraseña+"', 1);";
         //insert into usuarios (usuario_nombre,usuario_clave) VALUES('asdad','asdasd')
         if(consultaSQL.doQueryPost(SQL)){JOptionPane.showMessageDialog(null, "Usuario "+usuario+ " añadido a la base de datos");}
                                          SuperAdmC.superAdm.setSAUsuarioNuevosSetText("Añadir un usuario");

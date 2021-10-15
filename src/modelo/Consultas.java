@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Consultas {
     
-    private final Conexion cc = new Conexion("jdbc:mysql://50.62.141.188/dg?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","deamgifttest","rooot");
+    private final Conexion cc = new Conexion("jdbc:mysql://50.62.141.188/dg?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true","deamgifttest","rooot");
     private final java.sql.Connection   conexionSQL   = cc.connect();
     
     

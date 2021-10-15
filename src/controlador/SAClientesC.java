@@ -2,6 +2,7 @@
 package controlador;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -113,6 +114,34 @@ public class SAClientesC {
     
     
         return mesNum;
+    }
+    
+    public static ArrayList<String> consultarCliente(String busqueda) {
+        ArrayList<String> resultado;
+        String Query = "SELECT * FROM `clientes` WHERE `RUT` = '" + busqueda + "'";
+        
+        resultado = SAClientesC.extraerDatos(Query);
+        return resultado;
+    }
+    
+    private static ArrayList<String> extraerDatos(String SQL) {
+        ArrayList<String> resultado = new ArrayList<>();
+        var response = consultaSQL.doQueryGet(SQL);
+
+        try {
+            for (boolean hayMasDatos = response.next(); hayMasDatos; hayMasDatos = response.next()) {
+                resultado.add(response.getString("RUT"));
+                resultado.add(response.getString("cliente_nombre"));
+                resultado.add(response.getString("cliente_apellido"));
+                resultado.add(response.getString("cliente_email"));
+            }
+
+            return resultado;
+        } catch (SQLException e) {
+            System.out.println("extraerDatos Clientes Error: " + e.getLocalizedMessage());
+        }
+        
+        return null;
     }
     
 }
