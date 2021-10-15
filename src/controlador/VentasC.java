@@ -21,6 +21,7 @@ public class VentasC {
     public static void desplegarInfo(int pestana) {
         switch(pestana) {
             case 1 -> ConsultaVentaC.buscarTodos();
+            case 2 -> EstadoDespachoC.buscarTodos();
             case 3 -> EstadoDespachoC.buscarTodos();
         }
     }

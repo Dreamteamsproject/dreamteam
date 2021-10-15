@@ -125,6 +125,7 @@ public class venta extends javax.swing.JFrame {
         pDespTabla = new javax.swing.JTable();
         pDespBusqDia = new com.toedter.calendar.JDateChooser();
         pDespExpBtn = new javax.swing.JButton();
+        pedidosDespBuscar = new javax.swing.JButton();
         ventaFondo1 = new javax.swing.JLabel();
         estadoDespacho = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
@@ -626,42 +627,12 @@ public class venta extends javax.swing.JFrame {
         });
         pedidosDespacho.add(pDespPrintBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 104, 30));
 
-        pDespTabla.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nro Pedido", "Destinatario", "Direccion", "Comuna", "Fecha Entrega", "Hora Entrega"
-            }
-        ));
+        pDespTabla.setModel(iVentasTable);
         jScrollPane3.setViewportView(pDespTabla);
 
         pedidosDespacho.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
+
+        pDespBusqDia.setDate(new Date());
         pedidosDespacho.add(pDespBusqDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 220, -1));
 
         pDespExpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -672,6 +643,14 @@ public class venta extends javax.swing.JFrame {
             }
         });
         pedidosDespacho.add(pDespExpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 104, 30));
+
+        pedidosDespBuscar.setText("Buscar");
+        pedidosDespBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pedidosDespBuscarMouseClicked(evt);
+            }
+        });
+        pedidosDespacho.add(pedidosDespBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
 
         ventaFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         pedidosDespacho.add(ventaFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
@@ -696,6 +675,8 @@ public class venta extends javax.swing.JFrame {
         jScrollPane4.setViewportView(estDespTabla);
 
         estadoDespacho.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
+
+        estDespBuscar.setDate(new Date());
         estadoDespacho.add(estDespBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 220, -1));
 
         estDespCamEstadBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -865,6 +846,10 @@ public class venta extends javax.swing.JFrame {
     private void estDespCamEstadBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_estDespCamEstadBtnMouseClicked
         EstadoDespachoC.modificar();
     }//GEN-LAST:event_estDespCamEstadBtnMouseClicked
+
+    private void pedidosDespBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedidosDespBuscarMouseClicked
+        EstadoDespachoC.buscar(pDespBusqDia.getDate());
+    }//GEN-LAST:event_pedidosDespBuscarMouseClicked
 
     public JLabel getiVentaTotal() {
         return iVentaTotal;
@@ -1055,6 +1040,7 @@ public class venta extends javax.swing.JFrame {
     public javax.swing.JButton pDespExpBtn;
     public javax.swing.JButton pDespPrintBtn;
     public javax.swing.JTable pDespTabla;
+    private javax.swing.JButton pedidosDespBuscar;
     public javax.swing.JPanel pedidosDespacho;
     private javax.swing.JLabel ventaFondo;
     private javax.swing.JLabel ventaFondo1;
