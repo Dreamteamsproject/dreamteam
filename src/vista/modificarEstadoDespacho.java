@@ -4,10 +4,8 @@
  */
 package vista;
 
-import controlador.EstadosVentaC;
-import static controlador.EstadosVentaC.EstadosVentaC;
+import controlador.EstadoDespachoC;
 import controlador.RedesC;
-import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -15,11 +13,11 @@ import javax.swing.JTextField;
  *
  * @author Mauro
  */
-public class modificarEstados extends javax.swing.JFrame {
+public class modificarEstadoDespacho extends javax.swing.JFrame {
     /**
      * Creates new form modificarBanco
      */
-    public modificarEstados() {
+    public modificarEstadoDespacho() {
         setUndecorated(true);
         initComponents();
     }
@@ -34,14 +32,12 @@ public class modificarEstados extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         idLabel = new javax.swing.JLabel();
-        estadoNameTF = new javax.swing.JTextField();
         saveButton = new javax.swing.JButton();
         closeButton = new javax.swing.JButton();
         resultMessage = new javax.swing.JLabel();
-        estadoStatusCB = new javax.swing.JComboBox<>();
+        ventaStatusCB = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,20 +45,17 @@ public class modificarEstados extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ID");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nombre");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        jLabel1.setText("Numero Pedido");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estado");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 71, -1, -1));
-        getContentPane().add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 11, -1, -1));
-        getContentPane().add(estadoNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 36, 134, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        idLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        idLabel.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 60, 20));
 
         saveButton.setText("Guardar");
         saveButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,10 +74,10 @@ public class modificarEstados extends javax.swing.JFrame {
         getContentPane().add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 160, 73, -1));
 
         resultMessage.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(resultMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 134, 185, 15));
+        getContentPane().add(resultMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 99, 185, 50));
 
-        estadoStatusCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inactivo", "Activo" }));
-        getContentPane().add(estadoStatusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 67, 105, -1));
+        ventaStatusCB.setModel(new javax.swing.DefaultComboBoxModel<>(EstadoDespachoC.estados));
+        getContentPane().add(ventaStatusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 140, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/spiral205x212.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
@@ -95,16 +88,16 @@ public class modificarEstados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveButtonMouseClicked
-        var response = EstadosVentaC.modificarEstado(this.idLabel.getText(), this.estadoNameTF.getText(), this.estadoStatusCB.getSelectedIndex());
+        var response = EstadoDespachoC.modificarEstadoDespacho(this.idLabel.getText(), this.ventaStatusCB.getSelectedItem().toString());
         if( response )
-            this.resultMessage.setText("Estado modificado exitosamente");
+            this.resultMessage.setText("Modificado exitosamente");
         else
-            this.resultMessage.setText("No fue posible modificar el estado");
+            this.resultMessage.setText("No fue posible modificar");
     }//GEN-LAST:event_saveButtonMouseClicked
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
         setVisible(false);
-        EstadosVentaC.buscar("1");
+        EstadoDespachoC.buscarTodos();
     }//GEN-LAST:event_closeButtonMouseClicked
 
     /**
@@ -142,20 +135,12 @@ public class modificarEstados extends javax.swing.JFrame {
         });
     }
 
-    public JTextField getRedNameTF() {
-        return estadoNameTF;
+    public javax.swing.JComboBox<String> getVentaStatusCB() {
+        return ventaStatusCB;
     }
 
-    public void setEstadoNameTF(JTextField bankNameTF) {
-        this.estadoNameTF = bankNameTF;
-    }
-
-    public javax.swing.JComboBox<String> getRedStatusCB() {
-        return estadoStatusCB;
-    }
-
-    public void setEstadoStatusTF(javax.swing.JComboBox<String> redStatusCB) {
-        this.estadoStatusCB = redStatusCB;
+    public void setVentaStatusTF(javax.swing.JComboBox<String> redStatusCB) {
+        this.ventaStatusCB = redStatusCB;
     }
 
     public JLabel getIdLabel() {
@@ -166,24 +151,14 @@ public class modificarEstados extends javax.swing.JFrame {
         this.idLabel = idLabel;
     }
 
-    public JTextField getEstadoNameTF() {
-        return estadoNameTF;
-    }
-
-    public JComboBox<String> getEstadoStatusCB() {
-        return estadoStatusCB;
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton closeButton;
-    private javax.swing.JTextField estadoNameTF;
-    private javax.swing.JComboBox<String> estadoStatusCB;
     private javax.swing.JLabel idLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel resultMessage;
     private javax.swing.JButton saveButton;
+    private javax.swing.JComboBox<String> ventaStatusCB;
     // End of variables declaration//GEN-END:variables
 }

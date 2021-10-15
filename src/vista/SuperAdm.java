@@ -1747,7 +1747,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_rrssBuscarBtn1ActionPerformed
 
     private void rrssModifBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rrssModifBtn1MouseClicked
-        // TODO add your handling code here:
+       EstadosVentaC.modificar();
     }//GEN-LAST:event_rrssModifBtn1MouseClicked
 
     private void rrssModifBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssModifBtn1ActionPerformed

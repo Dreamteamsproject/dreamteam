@@ -9,6 +9,7 @@ import com.toedter.calendar.JDateChooser;
 import controlador.ConsultaVentaC;
 import controlador.IngresoVentaC;
 import controlador.VentasC;
+import controlador.EstadoDespachoC;
 import java.awt.TextField;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,6 +31,7 @@ public class venta extends javax.swing.JFrame {
     public venta() {
         IngresoVentaC.IngresoVentaC();
         ConsultaVentaC.ConsultaVentaC();
+        EstadoDespachoC.EstadoDespachoC();
         initComponents();
     }
 
@@ -128,12 +130,11 @@ public class venta extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        estDespPrintBtn = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         estDespTabla = new javax.swing.JTable();
-        estDespBusqDia = new com.toedter.calendar.JDateChooser();
+        estDespBuscar = new com.toedter.calendar.JDateChooser();
         estDespCamEstadBtn = new javax.swing.JButton();
-        estDespExpBtn = new javax.swing.JButton();
+        estDespachoBuscar = new javax.swing.JButton();
         ventaFondo3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -691,70 +692,33 @@ public class venta extends javax.swing.JFrame {
         jLabel45.setText("Busqueda por dia");
         estadoDespacho.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 140, -1));
 
-        estDespPrintBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        estDespPrintBtn.setText("Imprimir");
-        estDespPrintBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estDespPrintBtnActionPerformed(evt);
-            }
-        });
-        estadoDespacho.add(estDespPrintBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 104, 30));
-
-        estDespTabla.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nro Pedido", "Destinatario", "Direccion", "Comuna", "Fecha Entrega", "Hora Entrega", "Estado Entrega"
-            }
-        ));
+        estDespTabla.setModel(iVentasTable);
         jScrollPane4.setViewportView(estDespTabla);
 
         estadoDespacho.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
-        estadoDespacho.add(estDespBusqDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 220, -1));
+        estadoDespacho.add(estDespBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 220, -1));
 
         estDespCamEstadBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         estDespCamEstadBtn.setText("Cambiar Estado");
+        estDespCamEstadBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                estDespCamEstadBtnMouseClicked(evt);
+            }
+        });
         estDespCamEstadBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estDespCamEstadBtnActionPerformed(evt);
             }
         });
-        estadoDespacho.add(estDespCamEstadBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 150, 30));
+        estadoDespacho.add(estDespCamEstadBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, 150, 30));
 
-        estDespExpBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        estDespExpBtn.setText("Exportar");
-        estDespExpBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estDespExpBtnActionPerformed(evt);
+        estDespachoBuscar.setText("Buscar");
+        estDespachoBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                estDespachoBuscarMouseClicked(evt);
             }
         });
-        estadoDespacho.add(estDespExpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 104, 30));
+        estadoDespacho.add(estDespachoBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
 
         ventaFondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral730x570 green.jpg"))); // NOI18N
         estadoDespacho.add(ventaFondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
@@ -858,17 +822,9 @@ public class venta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_iVentaBusquedaRutActionPerformed
 
-    private void estDespPrintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespPrintBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_estDespPrintBtnActionPerformed
-
     private void estDespCamEstadBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespCamEstadBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_estDespCamEstadBtnActionPerformed
-
-    private void estDespExpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estDespExpBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_estDespExpBtnActionPerformed
 
     private void iVentaDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iVentaDireccionActionPerformed
         // TODO add your handling code here:
@@ -901,6 +857,14 @@ public class venta extends javax.swing.JFrame {
     private void cVentaBuscarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cVentaBuscarBtn2MouseClicked
         ConsultaVentaC.buscarPedidoRUT(cVentaBusquedaRut1.getText());
     }//GEN-LAST:event_cVentaBuscarBtn2MouseClicked
+
+    private void estDespachoBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_estDespachoBuscarMouseClicked
+        EstadoDespachoC.buscar(estDespBuscar.getDate());
+    }//GEN-LAST:event_estDespachoBuscarMouseClicked
+
+    private void estDespCamEstadBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_estDespCamEstadBtnMouseClicked
+        EstadoDespachoC.modificar();
+    }//GEN-LAST:event_estDespCamEstadBtnMouseClicked
 
     public JLabel getiVentaTotal() {
         return iVentaTotal;
@@ -963,6 +927,12 @@ public class venta extends javax.swing.JFrame {
         return cVentaTabla;
     }
 
+    public JTable getEstDespTabla() {
+        return estDespTabla;
+    }
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -1013,11 +983,10 @@ public class venta extends javax.swing.JFrame {
     public java.awt.TextField cVentaRut;
     public javax.swing.JTable cVentaTabla;
     public javax.swing.JPanel consultaVentas;
-    public com.toedter.calendar.JDateChooser estDespBusqDia;
+    public com.toedter.calendar.JDateChooser estDespBuscar;
     public javax.swing.JButton estDespCamEstadBtn;
-    public javax.swing.JButton estDespExpBtn;
-    public javax.swing.JButton estDespPrintBtn;
     public javax.swing.JTable estDespTabla;
+    private javax.swing.JButton estDespachoBuscar;
     public javax.swing.JPanel estadoDespacho;
     public javax.swing.JPanel iVenta;
     public javax.swing.JButton iVentaBuscarBtn;
