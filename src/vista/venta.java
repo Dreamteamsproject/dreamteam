@@ -8,12 +8,15 @@ package vista;
 import com.toedter.calendar.JDateChooser;
 import controlador.ConsultaVentaC;
 import controlador.IngresoVentaC;
+import controlador.VentasC;
 import java.awt.TextField;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -26,6 +29,7 @@ public class venta extends javax.swing.JFrame {
      */
     public venta() {
         IngresoVentaC.IngresoVentaC();
+        ConsultaVentaC.ConsultaVentaC();
         initComponents();
     }
 
@@ -99,7 +103,6 @@ public class venta extends javax.swing.JFrame {
         cVentaCancelBtn = new javax.swing.JButton();
         cVentaBuscarBtn = new javax.swing.JButton();
         jLabel68 = new javax.swing.JLabel();
-        cVentaIngresar1 = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
         cVentaBuscarBtn2 = new javax.swing.JButton();
         cVentaBanco = new javax.swing.JComboBox<>();
@@ -508,15 +511,6 @@ public class venta extends javax.swing.JFrame {
         jLabel68.setText(" Ingrese Rut");
         consultaVentas.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, -1, -1));
 
-        cVentaIngresar1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        cVentaIngresar1.setText("Editar");
-        cVentaIngresar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cVentaIngresar1ActionPerformed(evt);
-            }
-        });
-        consultaVentas.add(cVentaIngresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, 100, 20));
-
         jLabel69.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel69.setForeground(new java.awt.Color(255, 4, 4));
         jLabel69.setText("(12345678-9)");
@@ -524,6 +518,11 @@ public class venta extends javax.swing.JFrame {
 
         cVentaBuscarBtn2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cVentaBuscarBtn2.setText("Buscar");
+        cVentaBuscarBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cVentaBuscarBtn2MouseClicked(evt);
+            }
+        });
         cVentaBuscarBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cVentaBuscarBtn2ActionPerformed(evt);
@@ -534,28 +533,27 @@ public class venta extends javax.swing.JFrame {
         cVentaBanco.setModel(new javax.swing.DefaultComboBoxModel<>(ConsultaVentaC.bancos));
         consultaVentas.add(cVentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 140, -1));
 
-        cVentaTabla.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Numero Pedido", "Fecha Pedido", "Nombre Cliente", "Numero Telefono", "Monto", "Pack", "Seleccion"
-            }
-        ));
+        DefaultTableModel iVentasTable = new DefaultTableModel();
+        iVentasTable.addColumn("Numero Pedido");
+        iVentasTable.addColumn("Total");
+        iVentasTable.addColumn("Fecha Venta");
+        iVentasTable.addColumn("Fecha Pago");
+        iVentasTable.addColumn("Codigo Transferencia");
+        iVentasTable.addColumn("Nombre Destinatario");
+        iVentasTable.addColumn("Direccion Destino");
+        iVentasTable.addColumn("Telefono");
+        iVentasTable.addColumn("Correo");
+        iVentasTable.addColumn("Fecha Entrega");
+        iVentasTable.addColumn("Hora Entrega Inicial");
+        iVentasTable.addColumn("Hora Entrega Final");
+        iVentasTable.addColumn("Saludo");
+        iVentasTable.addColumn("Red Social");
+        iVentasTable.addColumn("Comuna");
+        iVentasTable.addColumn("Banco");
+        iVentasTable.addColumn("RUT Cliente");
+        iVentasTable.addColumn("Estado de Venta");
+        iVentasTable.addColumn("Pack");
+        cVentaTabla.setModel(iVentasTable);
         cVentaTabla.setToolTipText("");
         cVentaTabla.setShowGrid(true);
         jScrollPane1.setViewportView(cVentaTabla);
@@ -773,7 +771,7 @@ public class venta extends javax.swing.JFrame {
     }//GEN-LAST:event_ventaPestañasMouseClicked
 
     private void ventaPestañasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_ventaPestañasStateChanged
-
+        VentasC.desplegarInfo(this.ventaPestañas.getSelectedIndex());
     }//GEN-LAST:event_ventaPestañasStateChanged
 
     private void pDespExpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pDespExpBtnActionPerformed
@@ -791,10 +789,6 @@ public class venta extends javax.swing.JFrame {
     private void cVentaBuscarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBuscarBtn2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cVentaBuscarBtn2ActionPerformed
-
-    private void cVentaIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaIngresar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cVentaIngresar1ActionPerformed
 
     private void cVentaBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cVentaBuscarBtnActionPerformed
         // TODO add your handling code here:
@@ -904,6 +898,10 @@ public class venta extends javax.swing.JFrame {
         ConsultaVentaC.agregarPago();
     }//GEN-LAST:event_cVentaIngresarBtnMouseClicked
 
+    private void cVentaBuscarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cVentaBuscarBtn2MouseClicked
+        ConsultaVentaC.buscarPedidoRUT(cVentaBusquedaRut1.getText());
+    }//GEN-LAST:event_cVentaBuscarBtn2MouseClicked
+
     public JLabel getiVentaTotal() {
         return iVentaTotal;
     }
@@ -961,6 +959,10 @@ public class venta extends javax.swing.JFrame {
         return cVentaIngresarBtn;
     }
 
+    public JTable getcVentaTabla() {
+        return cVentaTabla;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -1004,7 +1006,6 @@ public class venta extends javax.swing.JFrame {
     public javax.swing.JButton cVentaCancelBtn;
     public java.awt.TextField cVentaCodigo;
     public com.toedter.calendar.JDateChooser cVentaFechaPago;
-    public javax.swing.JButton cVentaIngresar1;
     public javax.swing.JButton cVentaIngresarBtn;
     public java.awt.TextField cVentaNPedido;
     public java.awt.TextField cVentaNombre;

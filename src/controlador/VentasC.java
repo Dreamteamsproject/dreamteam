@@ -17,4 +17,10 @@ public class VentasC {
         pestanaVenta.setVisible(true);
         pestanaVenta.setLocationRelativeTo(null);
     }
+    
+    public static void desplegarInfo(int pestana) {
+        switch(pestana) {
+            case 1 -> ConsultaVentaC.buscarTodos();
+        }
+    }
 }

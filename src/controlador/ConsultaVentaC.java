@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import modelo.Consultas;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +23,8 @@ public class ConsultaVentaC {
     static Consultas queries = new Consultas();
     
     public static String[] bancos = obtenerLista("SELECT `banco_descripcion` FROM `bancos` ORDER BY `banco_id`", "banco_descripcion");
+    
+    public static void ConsultaVentaC() {}
     
     public static void buscar(String Pedido) {
         var response = ConsultaVentaC.buscarPedido(Pedido);
@@ -72,7 +75,6 @@ public class ConsultaVentaC {
                     setDatosCliente(codigoTransferencia, fechaTransferencia, idBanco);
                     VentasC.pestanaVenta.getcVentaIngresarBtn().setEnabled(false);
                 } else {
-                    System.out.println("Entro aqui");
                     VentasC.pestanaVenta.getcVentaIngresarBtn().setEnabled(true);
                 }
 
@@ -153,19 +155,73 @@ public class ConsultaVentaC {
             JOptionPane.showMessageDialog(null, "No se pudo ingresar el pago");
     }
     
-    //Extrae los datos de una petición GET
-//    private static ArrayList<String> extraerDatos(String SQL) {
-//        ArrayList<String> resultado = new ArrayList<>();
-//        var response = queries.doQueryGet(SQL);
-//
-//        try {
-////            extraerRutCliente();
-//
-//            return resultado;
-//        } catch (SQLException e) {
-//            System.out.println("extraerDatos Clientes Error: " + e.getLocalizedMessage());
-//        }
-//        
-//        return null;
-//    }
+    public static void buscarPedidoRUT(String RUT) {
+        String Query = "SELECT * FROM `ventas` WHERE `rut_cliente` = '" + RUT + "'";
+        var data = extraerDatos(Query);
+        insertarDatosTabla(data);
+    }
+    
+    public static void buscarTodos() {
+        String Query = "SELECT * FROM `ventas`";
+        var data = extraerDatos(Query);
+        insertarDatosTabla(data);
+    }
+    
+     private static ArrayList<String> extraerDatos(String SQL) {
+        ArrayList<String> resultado = new ArrayList<>();
+        ResultSet response = queries.doQueryGet(SQL);
+
+        try {
+            for (boolean hayMasDatos = response.next(); hayMasDatos; hayMasDatos = response.next()) {
+                resultado.add(response.getString("venta_id")); //0
+                resultado.add(response.getString("venta_total")); //1
+                resultado.add(response.getString("venta_fechaventa")); //2
+                resultado.add(response.getString("venta_fechatransferencia"));//3
+                resultado.add(response.getString("venta_codigotransferencia")); //4
+                resultado.add(response.getString("venta_nombredestinatario")); //5
+                resultado.add(response.getString("venta_direcciondestinatario")); //6
+                resultado.add(response.getString("venta_telefono"));//7
+                resultado.add(response.getString("venta_email")); //8
+                resultado.add(response.getString("venta_fechaentrega")); //9
+                resultado.add(response.getString("venta_horaentrega_inicial")); //10
+                resultado.add(response.getString("venta_horaentrega_final")); //11
+                resultado.add(response.getString("venta_saludo")); //12
+                resultado.add(response.getString("id_redsocial"));//13
+                resultado.add(response.getString("id_comuna"));//14
+                resultado.add(response.getString("id_banco"));//15
+                resultado.add(response.getString("rut_cliente"));//16
+                resultado.add(response.getString("id_estadoventa"));//17
+                resultado.add(response.getString("id_pack"));//18
+            }
+
+            return resultado;
+        } catch (SQLException e) {
+            System.out.println("consultarBanco Error: " + e.getLocalizedMessage());
+        }
+        
+        return null;
+    }
+     
+     private static void insertarDatosTabla(ArrayList<String> datos) {
+         var table = VentasC.pestanaVenta.getcVentaTabla();
+        var model = (DefaultTableModel) table.getModel();
+        int n;
+        String estado;
+        
+        //Se limpia la tabla.
+        model.setRowCount(0);
+        
+        //Si existen elementos en el  Array, se agregan a la tabla
+        if (datos != null ){
+            for(int i =0; (i * 19) < datos.size() ; i++){
+                n = i * 19;
+                
+                model.addRow(new Object[] { datos.get( n ), datos.get( n + 1 ), datos.get( n + 2 ), datos.get( n + 3 ), datos.get( n + 4 ), datos.get( n + 5 ), datos.get( n + 6 ), datos.get( n + 7 ), datos.get( n + 8 ), datos.get( n + 9 ), datos.get( n + 10 ), datos.get( n + 11 ),
+                datos.get( n + 12 ), datos.get( n + 13 ), datos.get( n + 14 ), datos.get( n + 15 ), datos.get( n + 16 ), datos.get( n + 17 ), datos.get( n + 18 )} );
+            }
+           //Si el Array está vacío
+        } else {
+            JOptionPane.showMessageDialog(null, "No se hallaron resultados :(");
+        }
+     }
 }
