@@ -111,7 +111,7 @@ public class IngresoVentaC {
     }
     
     public static String getIdOf(String Query, String dataRequired) {
-         var response = ArticulosC.queries.doQueryGet(Query);
+         var response = IngresoVentaC.queries.doQueryGet(Query);
         try {
             if(response.next())
                 return response.getString(dataRequired);
@@ -122,16 +122,4 @@ public class IngresoVentaC {
         return null;
      }
      
-     private static String getNameOf(String id) {
-         String Query = "SELECT `categoria_descripcion` FROM `categorias_articulo` WHERE `categoria_id` = '" + id + "'";
-         var response = ArticulosC.queries.doQueryGet(Query);
-        try {
-            if(response.next())
-                return response.getString("categoria_descripcion");
-        } catch (SQLException ex) {
-            Logger.getLogger(ArticulosC.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        return null;
-     }
 }
