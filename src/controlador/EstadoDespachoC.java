@@ -43,13 +43,16 @@ public class EstadoDespachoC {
     
     public static void modificar() {
         String[] parametros = EstadoDespachoC.selectedRowInfo();
+        System.out.println("1");
         var editWindow = new modificarEstadoDespacho();
+        System.out.println("2");
         editWindow.setVisible(true);
+        System.out.println("3");
         editWindow.setLocationRelativeTo(SuperAdmC.superAdm);
-        
+        System.out.println("4");
         
         EstadoDespachoC.datosModificar(editWindow, parametros);
-        
+        System.out.println("5");
     }
     
      public static String[] selectedRowInfo() {
@@ -137,9 +140,14 @@ public class EstadoDespachoC {
             for(int i =0; (i * 19) < datos.size() ; i++){
                 n = i * 19;
                 estado = getIdOf("SELECT `estados_descripcion` FROM `estados_venta` WHERE `estados_id` = '" + datos.get( n + 17 ) + "'", "estados_descripcion"); 
+                String redSocial = getIdOf("SELECT `rs_nombre` FROM `rrss` WHERE `rs_id` = '" + datos.get( n + 13) + "'", "rs_nombre");
+                String comuna = getIdOf("SELECT `comuna_nombre` FROM `comunas` WHERE `comuna_id` = '" + datos.get( n + 14) + "'", "comuna_nombre");
+                String banco = getIdOf("SELECT `banco_descripcion` FROM `bancos` WHERE `banco_id` = '" + datos.get( n + 15) + "'", "banco_descripcion");
+                String pack = getIdOf("SELECT `pack_nombre` FROM `packs` WHERE `pack_id` = '" + datos.get( n + 18) + "'", "pack_nombre");
+                
                 
                 model.addRow(new Object[] { datos.get( n ), datos.get( n + 1 ), datos.get( n + 2 ), datos.get( n + 3 ), datos.get( n + 4 ), datos.get( n + 5 ), datos.get( n + 6 ), datos.get( n + 7 ), datos.get( n + 8 ), datos.get( n + 9 ), datos.get( n + 10 ), datos.get( n + 11 ),
-                datos.get( n + 12 ), datos.get( n + 13 ), datos.get( n + 14 ), datos.get( n + 15 ), datos.get( n + 16 ), estado, datos.get( n + 18 )} );
+                datos.get( n + 12 ), redSocial, comuna, banco, datos.get( n + 16 ), estado, pack} );
             }
            //Si el Array está vacío
         } else {

@@ -535,6 +535,9 @@ public class venta extends javax.swing.JFrame {
         cVentaBanco.setModel(new javax.swing.DefaultComboBoxModel<>(ConsultaVentaC.bancos));
         consultaVentas.add(cVentaBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 140, -1));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setToolTipText("");
+
         DefaultTableModel iVentasTable = new DefaultTableModel();
         iVentasTable.addColumn("Numero Pedido");
         iVentasTable.addColumn("Total");
@@ -557,6 +560,7 @@ public class venta extends javax.swing.JFrame {
         iVentasTable.addColumn("Pack");
         cVentaTabla.setModel(iVentasTable);
         cVentaTabla.setToolTipText("");
+        cVentaTabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         cVentaTabla.setShowGrid(true);
         jScrollPane1.setViewportView(cVentaTabla);
 
@@ -627,7 +631,10 @@ public class venta extends javax.swing.JFrame {
         });
         pedidosDespacho.add(pDespPrintBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 490, 104, 30));
 
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
         pDespTabla.setModel(iVentasTable);
+        pDespTabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         jScrollPane3.setViewportView(pDespTabla);
 
         pedidosDespacho.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
@@ -671,7 +678,10 @@ public class venta extends javax.swing.JFrame {
         jLabel45.setText("Busqueda por dia");
         estadoDespacho.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 140, -1));
 
+        jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
         estDespTabla.setModel(iVentasTable);
+        estDespTabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         jScrollPane4.setViewportView(estDespTabla);
 
         estadoDespacho.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 700, 290));
