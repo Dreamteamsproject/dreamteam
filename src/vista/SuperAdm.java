@@ -1689,7 +1689,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void packModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packModificarActionPerformed
-        // TODO add your handling code here:
+        SAPackC.ModificarBoton();
     }//GEN-LAST:event_packModificarActionPerformed
 
     private void packValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packValorActionPerformed
