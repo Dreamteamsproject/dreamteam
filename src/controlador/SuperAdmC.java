@@ -22,6 +22,7 @@ public class SuperAdmC {
             case 5 -> ProveedoresC.buscar();
             case 6 -> SAUsuariosC.RellenarUsuario();
             case 7 -> SAClientesC.RellenarCliente();
+            case 8 -> {SAPackC.rellenarArt(); SAPackC.añadirCat();SAPackC.rellenarPacks();}
             case 9 -> EstadosVentaC.buscar("1");
             default -> {}
         }

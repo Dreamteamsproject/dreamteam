@@ -187,15 +187,12 @@ public class SuperAdm extends javax.swing.JFrame {
         bcoAgregarBcoBtn1 = new javax.swing.JButton();
         jLabel68 = new javax.swing.JLabel();
         superAdmlClientes1 = new javax.swing.JPanel();
-        packInactivar = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
         Cantidad = new javax.swing.JLabel();
         packModificar = new javax.swing.JButton();
         packValor = new java.awt.TextField();
         jLabel89 = new javax.swing.JLabel();
         packBuscarBtn = new javax.swing.JButton();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        packCreaListado = new javax.swing.JList<>();
         packquitarArtBtn = new javax.swing.JButton();
         jScrollPane13 = new javax.swing.JScrollPane();
         packArtListado = new javax.swing.JList<>();
@@ -206,7 +203,11 @@ public class SuperAdm extends javax.swing.JFrame {
         jScrollPane14 = new javax.swing.JScrollPane();
         packTabla = new javax.swing.JTable();
         packNombrePack = new java.awt.TextField();
+        categoriaPack = new javax.swing.JComboBox<>();
+        PackCrearBotton = new javax.swing.JButton();
         jLabel92 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        packCreaListado = new javax.swing.JTable();
         jLabel93 = new javax.swing.JLabel();
         packsFondo = new javax.swing.JLabel();
         superAdmEstadoVenta = new javax.swing.JPanel();
@@ -1137,19 +1138,15 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmlClientes1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        packInactivar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        packInactivar.setText("Inactivar");
-        superAdmlClientes1.add(packInactivar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 110, -1));
-
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setText("Creacion Packs");
-        superAdmlClientes1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+        superAdmlClientes1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, -1, -1));
 
         Cantidad.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Cantidad.setForeground(new java.awt.Color(255, 255, 255));
         Cantidad.setText("Cantidad");
-        superAdmlClientes1.add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, -1, -1));
+        superAdmlClientes1.add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, -1));
 
         packModificar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         packModificar.setText("Modificar");
@@ -1158,7 +1155,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 packModificarActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, 110, 30));
+        superAdmlClientes1.add(packModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, 110, 30));
 
         packValor.setName(""); // NOI18N
         packValor.addActionListener(new java.awt.event.ActionListener() {
@@ -1166,12 +1163,12 @@ public class SuperAdm extends javax.swing.JFrame {
                 packValorActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 130, -1));
+        superAdmlClientes1.add(packValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 130, -1));
 
         jLabel89.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel89.setForeground(new java.awt.Color(255, 255, 255));
         jLabel89.setText("Pack");
-        superAdmlClientes1.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 30, -1));
+        superAdmlClientes1.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, 30, -1));
 
         packBuscarBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         packBuscarBtn.setText("Buscar");
@@ -1180,12 +1177,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 packBuscarBtnActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, -1, 20));
-
-        packCreaListado.setToolTipText("");
-        jScrollPane11.setViewportView(packCreaListado);
-
-        superAdmlClientes1.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 210, 170));
+        superAdmlClientes1.add(packBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, -1, 20));
 
         packquitarArtBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         packquitarArtBtn.setForeground(new java.awt.Color(195, 8, 26));
@@ -1195,12 +1187,12 @@ public class SuperAdm extends javax.swing.JFrame {
                 packquitarArtBtnActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packquitarArtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 50, 30));
+        superAdmlClientes1.add(packquitarArtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 50, 30));
 
         packArtListado.setToolTipText("");
         jScrollPane13.setViewportView(packArtListado);
 
-        superAdmlClientes1.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 210, 170));
+        superAdmlClientes1.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 210, 170));
 
         PackBuscar.setName(""); // NOI18N
         PackBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -1208,7 +1200,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 PackBuscarActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(PackBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 200, -1));
+        superAdmlClientes1.add(PackBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 200, -1));
 
         packCantAdd.setName(""); // NOI18N
         packCantAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -1216,7 +1208,7 @@ public class SuperAdm extends javax.swing.JFrame {
                 packCantAddActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packCantAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 30, -1));
+        superAdmlClientes1.add(packCantAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 30, -1));
 
         packAddArtBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         packAddArtBtn.setForeground(new java.awt.Color(18, 13, 158));
@@ -1226,26 +1218,20 @@ public class SuperAdm extends javax.swing.JFrame {
                 packAddArtBtnActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packAddArtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 50, 30));
+        superAdmlClientes1.add(packAddArtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 50, 30));
 
         jLabel91.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel91.setForeground(new java.awt.Color(255, 255, 255));
         jLabel91.setText("Valor Pack $");
-        superAdmlClientes1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
+        superAdmlClientes1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, -1, -1));
 
         packTabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Id", "Nombre pack", "Existencias", "sel"
+                "Id", "Nombre pack", "Existencias", "Categoria", "Costo"
             }
         ));
         jScrollPane14.setViewportView(packTabla);
@@ -1261,17 +1247,39 @@ public class SuperAdm extends javax.swing.JFrame {
                 packNombrePackActionPerformed(evt);
             }
         });
-        superAdmlClientes1.add(packNombrePack, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 150, -1));
+        superAdmlClientes1.add(packNombrePack, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 130, -1));
+
+        superAdmlClientes1.add(categoriaPack, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, 130, 20));
+
+        PackCrearBotton.setText("Crear");
+        PackCrearBotton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PackCrearBottonActionPerformed(evt);
+            }
+        });
+        superAdmlClientes1.add(PackCrearBotton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, 100, -1));
 
         jLabel92.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel92.setForeground(new java.awt.Color(255, 255, 255));
         jLabel92.setText("Nombre del Pack");
-        superAdmlClientes1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 110, -1));
+        superAdmlClientes1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 110, -1));
+
+        packCreaListado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Cantidad", "Producto"
+            }
+        ));
+        jScrollPane3.setViewportView(packCreaListado);
+
+        superAdmlClientes1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 210, 170));
 
         jLabel93.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel93.setForeground(new java.awt.Color(255, 255, 255));
         jLabel93.setText("Articulos");
-        superAdmlClientes1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 60, -1));
+        superAdmlClientes1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 60, -1));
 
         packsFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         packsFondo.setText("jLabel68");
@@ -1689,11 +1697,11 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_packValorActionPerformed
 
     private void packBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packBuscarBtnActionPerformed
-        // TODO add your handling code here:
+        SAPackC.BuscarPack();
     }//GEN-LAST:event_packBuscarBtnActionPerformed
 
     private void packquitarArtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packquitarArtBtnActionPerformed
-        // TODO add your handling code here:
+        SAPackC.eleminarArt();
     }//GEN-LAST:event_packquitarArtBtnActionPerformed
 
     private void PackBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PackBuscarActionPerformed
@@ -1705,7 +1713,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_packCantAddActionPerformed
 
     private void packAddArtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packAddArtBtnActionPerformed
-        // TODO add your handling code here:
+        SAPackC.añadirArt();
     }//GEN-LAST:event_packAddArtBtnActionPerformed
 
     private void packNombrePackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packNombrePackActionPerformed
@@ -1757,6 +1765,10 @@ public class SuperAdm extends javax.swing.JFrame {
     private void rrssDescripcion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrssDescripcion1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rrssDescripcion1ActionPerformed
+
+    private void PackCrearBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PackCrearBottonActionPerformed
+      SAPackC.crearPack();
+    }//GEN-LAST:event_PackCrearBottonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1885,6 +1897,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton ArticulosModificar1;
     private javax.swing.JLabel Cantidad;
     public java.awt.TextField PackBuscar;
+    private javax.swing.JButton PackCrearBotton;
     public java.awt.TextField ProveeBuscar;
     public javax.swing.JButton ProveeBuscarBtn;
     public javax.swing.JTextField ProveeDireccion;
@@ -1919,6 +1932,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton catArtBuscarBtn1;
     public javax.swing.JButton catArtModifBtn1;
     private javax.swing.JTable catArtTabla;
+    public javax.swing.JComboBox<String> categoriaPack;
     public javax.swing.JList<String> clienteListado;
     public javax.swing.JTextField clientesApellido;
     private javax.swing.JTextField clientesBuscar;
@@ -2008,11 +2022,11 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel94;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
@@ -2025,8 +2039,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JList<String> packArtListado;
     public javax.swing.JButton packBuscarBtn;
     public java.awt.TextField packCantAdd;
-    public javax.swing.JList<String> packCreaListado;
-    public javax.swing.JButton packInactivar;
+    public javax.swing.JTable packCreaListado;
     public javax.swing.JButton packModificar;
     public java.awt.TextField packNombrePack;
     public javax.swing.JTable packTabla;
