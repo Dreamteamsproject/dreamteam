@@ -126,6 +126,7 @@ public class ModificarPack extends javax.swing.JFrame {
         getContentPane().add(costoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 30, 38, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, 710, 100));
 
         pack();

@@ -222,6 +222,18 @@ public class SuperAdm extends javax.swing.JFrame {
         jScrollPane12 = new javax.swing.JScrollPane();
         estadosTabla = new javax.swing.JTable();
         jLabel94 = new javax.swing.JLabel();
+        superAdmCatPack = new javax.swing.JPanel();
+        catPackBuscar2 = new javax.swing.JTextField();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        catPackAgregarBtn1 = new javax.swing.JButton();
+        catPackBuscarBtn2 = new javax.swing.JButton();
+        catPackModifBtn2 = new javax.swing.JButton();
+        jLabel97 = new javax.swing.JLabel();
+        catpackAgregarTF1 = new javax.swing.JTextField();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        catPackTabla1 = new javax.swing.JTable();
+        jLabel98 = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -1375,6 +1387,99 @@ public class SuperAdm extends javax.swing.JFrame {
 
         superAdmPestañas.addTab("Estados Venta", superAdmEstadoVenta);
 
+        superAdmCatPack.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        catPackBuscar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catPackBuscar2ActionPerformed(evt);
+            }
+        });
+        superAdmCatPack.add(catPackBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
+
+        jLabel95.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel95.setText("Categoria Pack");
+        superAdmCatPack.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
+
+        jLabel96.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel96.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel96.setText("Busqueda Categoria");
+        superAdmCatPack.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
+
+        catPackAgregarBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        catPackAgregarBtn1.setText("Agregar");
+        catPackAgregarBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                catPackAgregarBtn1MouseClicked(evt);
+            }
+        });
+        catPackAgregarBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catPackAgregarBtn1ActionPerformed(evt);
+            }
+        });
+        superAdmCatPack.add(catPackAgregarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 100, 20));
+
+        catPackBuscarBtn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        catPackBuscarBtn2.setText("Buscar");
+        catPackBuscarBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                catPackBuscarBtn2MouseClicked(evt);
+            }
+        });
+        catPackBuscarBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catPackBuscarBtn2ActionPerformed(evt);
+            }
+        });
+        superAdmCatPack.add(catPackBuscarBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 100, 20));
+
+        catPackModifBtn2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        catPackModifBtn2.setText("Modificar");
+        catPackModifBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                catPackModifBtn2MouseClicked(evt);
+            }
+        });
+        catPackModifBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catPackModifBtn2ActionPerformed(evt);
+            }
+        });
+        superAdmCatPack.add(catPackModifBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 120, 30));
+
+        jLabel97.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel97.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel97.setText("Nombre Categoria");
+        superAdmCatPack.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
+
+        catpackAgregarTF1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catpackAgregarTF1ActionPerformed(evt);
+            }
+        });
+        superAdmCatPack.add(catpackAgregarTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 162, -1));
+
+        DefaultTableModel catArtModel = (DefaultTableModel) new DefaultTableModel();
+        catArtModel.addColumn("ID");
+        catArtModel.addColumn("Descripción");
+        catArtModel.addColumn("Estado");
+        catPackTabla1.setModel(catArtModel);
+        jScrollPane11.setViewportView(catPackTabla1);
+
+        superAdmCatPack.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, 170));
+
+        jLabel98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel98.setText("jLabel58");
+        jLabel98.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jLabel98FocusGained(evt);
+            }
+        });
+        superAdmCatPack.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 570));
+
+        superAdmPestañas.addTab("Categoria Pack", superAdmCatPack);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1770,6 +1875,42 @@ public class SuperAdm extends javax.swing.JFrame {
       SAPackC.crearPack();
     }//GEN-LAST:event_PackCrearBottonActionPerformed
 
+    private void catPackBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackBuscar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackBuscar2ActionPerformed
+
+    private void catPackAgregarBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catPackAgregarBtn1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackAgregarBtn1MouseClicked
+
+    private void catPackAgregarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackAgregarBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackAgregarBtn1ActionPerformed
+
+    private void catPackBuscarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catPackBuscarBtn2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackBuscarBtn2MouseClicked
+
+    private void catPackBuscarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackBuscarBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackBuscarBtn2ActionPerformed
+
+    private void catPackModifBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catPackModifBtn2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackModifBtn2MouseClicked
+
+    private void catPackModifBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackModifBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catPackModifBtn2ActionPerformed
+
+    private void catpackAgregarTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catpackAgregarTF1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catpackAgregarTF1ActionPerformed
+
+    private void jLabel98FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel98FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel98FocusGained
+
     /**
      * @param args the command line arguments
      */
@@ -1932,7 +2073,13 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JButton catArtBuscarBtn1;
     public javax.swing.JButton catArtModifBtn1;
     private javax.swing.JTable catArtTabla;
+    public javax.swing.JButton catPackAgregarBtn1;
+    public javax.swing.JTextField catPackBuscar2;
+    public javax.swing.JButton catPackBuscarBtn2;
+    public javax.swing.JButton catPackModifBtn2;
+    private javax.swing.JTable catPackTabla1;
     public javax.swing.JComboBox<String> categoriaPack;
+    public javax.swing.JTextField catpackAgregarTF1;
     public javax.swing.JList<String> clienteListado;
     public javax.swing.JTextField clientesApellido;
     private javax.swing.JTextField clientesBuscar;
@@ -2020,8 +2167,13 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel92;
     public javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
+    public javax.swing.JLabel jLabel95;
+    public javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
@@ -2060,6 +2212,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JTable rrssTabla;
     private javax.swing.JPanel superAdmBancos;
     private javax.swing.JPanel superAdmCatArt;
+    private javax.swing.JPanel superAdmCatPack;
     private javax.swing.JPanel superAdmComunas;
     private javax.swing.JPanel superAdmEstadoVenta;
     public javax.swing.JTabbedPane superAdmPestañas;
