@@ -48,18 +48,40 @@ public class ModificarProveedor extends javax.swing.JFrame {
         resultLabel = new javax.swing.JLabel();
         estadoCB = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("RUT");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 16, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 10));
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Telefono");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Direccion");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Correo");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        getContentPane().add(rutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 11, 156, 19));
+        getContentPane().add(nombreTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 36, 114, -1));
+        getContentPane().add(telefonoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 62, 114, -1));
+        getContentPane().add(correoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 88, 114, -1));
+        getContentPane().add(direccionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 114, 114, -1));
 
         saveButton.setText("Guardar");
         saveButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,6 +89,7 @@ public class ModificarProveedor extends javax.swing.JFrame {
                 saveButtonMouseClicked(evt);
             }
         });
+        getContentPane().add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 200, -1, -1));
 
         closeButton.setText("Cerrar");
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -74,83 +97,19 @@ public class ModificarProveedor extends javax.swing.JFrame {
                 closeButtonMouseClicked(evt);
             }
         });
+        getContentPane().add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 200, -1, -1));
+        getContentPane().add(resultLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 172, 221, 22));
 
         estadoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inactivo", "Activo" }));
+        getContentPane().add(estadoCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 140, 114, -1));
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Estado");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(saveButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(closeButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel2)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel1))
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(estadoCB, javax.swing.GroupLayout.Alignment.LEADING, 0, 114, Short.MAX_VALUE)
-                                        .addComponent(nombreTF, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(telefonoTF, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(correoTF, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(direccionTF, javax.swing.GroupLayout.Alignment.LEADING)))
-                                .addGap(0, 7, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(resultLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(rutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(telefonoTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(correoTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(direccionTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(resultLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(saveButton)
-                    .addComponent(closeButton))
-                .addContainerGap())
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/256x287.jpg"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 230));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -262,20 +221,21 @@ public class ModificarProveedor extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton closeButton;
-    private javax.swing.JTextField correoTF;
-    private javax.swing.JTextField direccionTF;
-    private javax.swing.JComboBox<String> estadoCB;
+    public javax.swing.JButton closeButton;
+    public javax.swing.JTextField correoTF;
+    public javax.swing.JTextField direccionTF;
+    public javax.swing.JComboBox<String> estadoCB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField nombreTF;
+    private javax.swing.JLabel jLabel7;
+    public javax.swing.JTextField nombreTF;
     private javax.swing.JLabel resultLabel;
     private javax.swing.JLabel rutLabel;
-    private javax.swing.JButton saveButton;
-    private javax.swing.JTextField telefonoTF;
+    public javax.swing.JButton saveButton;
+    public javax.swing.JTextField telefonoTF;
     // End of variables declaration//GEN-END:variables
 }

@@ -1181,7 +1181,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
         packquitarArtBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         packquitarArtBtn.setForeground(new java.awt.Color(195, 8, 26));
-        packquitarArtBtn.setText("<");
+        packquitarArtBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/flecha izq.png"))); // NOI18N
         packquitarArtBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 packquitarArtBtnActionPerformed(evt);
@@ -1212,7 +1212,7 @@ public class SuperAdm extends javax.swing.JFrame {
 
         packAddArtBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         packAddArtBtn.setForeground(new java.awt.Color(18, 13, 158));
-        packAddArtBtn.setText(">");
+        packAddArtBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/flecha der.png"))); // NOI18N
         packAddArtBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 packAddArtBtnActionPerformed(evt);
