@@ -86,12 +86,12 @@ public class modificarUser extends javax.swing.JFrame {
                 cancelarUserActionPerformed(evt);
             }
         });
-        getContentPane().add(cancelarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 80, 20));
+        getContentPane().add(cancelarUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 90, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/spiral380.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/578x103blue2.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 100));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 0, 580, 100));
 
         idUser.setText("jLabel2");
         idUser.setEnabled(false);

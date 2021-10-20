@@ -41,7 +41,6 @@ public class ModificarPack extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
         IdField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         nombreField = new javax.swing.JTextField();
@@ -51,6 +50,7 @@ public class ModificarPack extends javax.swing.JFrame {
         categoriaBox = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         costoField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -60,48 +60,45 @@ public class ModificarPack extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setText("ID:");
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
         IdField.setEditable(false);
         IdField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IdFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(IdField, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 30, 94, -1));
+        getContentPane().add(IdField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 50, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
         nombreField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(nombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 30, 68, -1));
+        getContentPane().add(nombreField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 68, -1));
 
         stockField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stockFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(stockField, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 30, 35, -1));
+        getContentPane().add(stockField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 35, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Stock");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(357, 33, 33, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 33, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Categoria");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 33, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
 
-        getContentPane().add(categoriaBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 29, -1, -1));
+        getContentPane().add(categoriaBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 80, -1));
 
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -119,15 +116,18 @@ public class ModificarPack extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(539, 0, -1, -1));
 
+        jLabel6.setText("ID");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, -1, -1));
+
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Costo");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
-        getContentPane().add(costoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 30, 38, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+        getContentPane().add(costoField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 38, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/578x103blue2.jpg"))); // NOI18N
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, 710, 100));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 100));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -200,7 +200,7 @@ public class ModificarPack extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel6;
     public javax.swing.JTextField nombreField;
     public javax.swing.JTextField stockField;
     // End of variables declaration//GEN-END:variables

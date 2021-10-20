@@ -119,9 +119,9 @@ public class SuperAdm extends javax.swing.JFrame {
         catArtBuscarBtn1 = new javax.swing.JButton();
         catArtModifBtn1 = new javax.swing.JButton();
         jLabel81 = new javax.swing.JLabel();
-        catArtAgregarTF = new javax.swing.JTextField();
-        jScrollPane10 = new javax.swing.JScrollPane();
+        jScrollPane15 = new javax.swing.JScrollPane();
         catArtTabla = new javax.swing.JTable();
+        catArtAgregarTF = new javax.swing.JTextField();
         jLabel82 = new javax.swing.JLabel();
         superAdmProveedores = new javax.swing.JPanel();
         ProveeRazonSoc = new javax.swing.JTextField();
@@ -747,21 +747,24 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel81.setText("Nombre Categoria");
         superAdmCatArt.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
 
+        catArtTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Categoria", "Estado"
+            }
+        ));
+        jScrollPane15.setViewportView(catArtTabla);
+
+        superAdmCatArt.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 287, 380, 170));
+
         catArtAgregarTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 catArtAgregarTFActionPerformed(evt);
             }
         });
         superAdmCatArt.add(catArtAgregarTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 162, -1));
-
-        DefaultTableModel catArtModel = (DefaultTableModel) new DefaultTableModel();
-        catArtModel.addColumn("ID");
-        catArtModel.addColumn("Descripción");
-        catArtModel.addColumn("Estado");
-        catArtTabla.setModel(catArtModel);
-        jScrollPane10.setViewportView(catArtTabla);
-
-        superAdmCatArt.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, 170));
 
         jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel82.setText("jLabel58");
@@ -1460,11 +1463,11 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmCatPack.add(catpackAgregarTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 162, -1));
 
-        DefaultTableModel catArtModel = (DefaultTableModel) new DefaultTableModel();
-        catArtModel.addColumn("ID");
-        catArtModel.addColumn("Descripción");
-        catArtModel.addColumn("Estado");
-        catPackTabla1.setModel(catArtModel);
+        DefaultTableModel catArtTabla = (DefaultTableModel) new DefaultTableModel();
+        catArtTabla.addColumn("ID");
+        catArtTabla.addColumn("Descripción");
+        catArtTabla.addColumn("Estado");
+        catPackTabla1.setModel(catArtTabla);
         jScrollPane11.setViewportView(catPackTabla1);
 
         superAdmCatPack.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, 170));
@@ -2172,11 +2175,11 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;

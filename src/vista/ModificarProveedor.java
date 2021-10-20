@@ -56,32 +56,32 @@ public class ModificarProveedor extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("RUT");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 16, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 10));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 10));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Telefono");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Direccion");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Correo");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
-        getContentPane().add(rutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 11, 156, 19));
-        getContentPane().add(nombreTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 36, 114, -1));
-        getContentPane().add(telefonoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 62, 114, -1));
-        getContentPane().add(correoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 88, 114, -1));
-        getContentPane().add(direccionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 114, 114, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        getContentPane().add(rutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 156, 19));
+        getContentPane().add(nombreTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 114, -1));
+        getContentPane().add(telefonoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 114, -1));
+        getContentPane().add(correoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 114, -1));
+        getContentPane().add(direccionTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 114, -1));
 
         saveButton.setText("Guardar");
         saveButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -89,7 +89,7 @@ public class ModificarProveedor extends javax.swing.JFrame {
                 saveButtonMouseClicked(evt);
             }
         });
-        getContentPane().add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 200, -1, -1));
+        getContentPane().add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         closeButton.setText("Cerrar");
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,20 +97,20 @@ public class ModificarProveedor extends javax.swing.JFrame {
                 closeButtonMouseClicked(evt);
             }
         });
-        getContentPane().add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 200, -1, -1));
+        getContentPane().add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
         getContentPane().add(resultLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 172, 221, 22));
 
         estadoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Inactivo", "Activo" }));
-        getContentPane().add(estadoCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 140, 114, -1));
+        getContentPane().add(estadoCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 114, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Estado");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/256x287.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/256x287blue2.jpg"))); // NOI18N
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 230));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
