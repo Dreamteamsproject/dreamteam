@@ -58,7 +58,7 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel74 = new javax.swing.JLabel();
         comunaDescripcion2 = new javax.swing.JTextField();
         jScrollPane8 = new javax.swing.JScrollPane();
-        comunasTabla = new javax.swing.JTable();
+        ComunaList = new javax.swing.JTable();
         jLabel75 = new javax.swing.JLabel();
         superAdmBancos = new javax.swing.JPanel();
         bcoBuscar = new javax.swing.JTextField();
@@ -182,9 +182,9 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         clientesBuscarBtn = new javax.swing.JButton();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        clienteListado = new javax.swing.JList<>();
         bcoAgregarBcoBtn1 = new javax.swing.JButton();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        clienteListado = new javax.swing.JTable();
         jLabel68 = new javax.swing.JLabel();
         superAdmlClientes1 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
@@ -230,9 +230,9 @@ public class SuperAdm extends javax.swing.JFrame {
         catPackBuscarBtn2 = new javax.swing.JButton();
         catPackModifBtn2 = new javax.swing.JButton();
         jLabel97 = new javax.swing.JLabel();
-        catpackAgregarTF1 = new javax.swing.JTextField();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        catPackTabla1 = new javax.swing.JTable();
+        categoriaText = new javax.swing.JTextField();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        categoriaPackList = new javax.swing.JList<>();
         jLabel98 = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
@@ -349,8 +349,8 @@ public class SuperAdm extends javax.swing.JFrame {
         comunasModel.addColumn("Nombre");
         comunasModel.addColumn("Código");
         comunasModel. addColumn("Estado");
-        comunasTabla.setModel(comunasModel);
-        jScrollPane8.setViewportView(comunasTabla);
+        ComunaList.setModel(comunasModel);
+        jScrollPane8.setViewportView(ComunaList);
 
         superAdmComunas.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, 150));
 
@@ -1131,11 +1131,6 @@ public class SuperAdm extends javax.swing.JFrame {
         });
         superAdmlClientes.add(clientesBuscarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, -1, 20));
 
-        clienteListado.setToolTipText("");
-        jScrollPane7.setViewportView(clienteListado);
-
-        superAdmlClientes.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 380, 120));
-
         bcoAgregarBcoBtn1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         bcoAgregarBcoBtn1.setText("Agregar");
         bcoAgregarBcoBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -1144,6 +1139,18 @@ public class SuperAdm extends javax.swing.JFrame {
             }
         });
         superAdmlClientes.add(bcoAgregarBcoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 104, 30));
+
+        clienteListado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Rut", "Nombre"
+            }
+        ));
+        jScrollPane11.setViewportView(clienteListado);
+
+        superAdmlClientes.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 380, 140));
 
         jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel68.setText("jLabel68");
@@ -1397,6 +1404,11 @@ public class SuperAdm extends javax.swing.JFrame {
                 catPackBuscar2ActionPerformed(evt);
             }
         });
+        catPackBuscar2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                catPackBuscar2KeyReleased(evt);
+            }
+        });
         superAdmCatPack.add(catPackBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 162, -1));
 
         jLabel95.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -1456,21 +1468,16 @@ public class SuperAdm extends javax.swing.JFrame {
         jLabel97.setText("Nombre Categoria");
         superAdmCatPack.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
 
-        catpackAgregarTF1.addActionListener(new java.awt.event.ActionListener() {
+        categoriaText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                catpackAgregarTF1ActionPerformed(evt);
+                categoriaTextActionPerformed(evt);
             }
         });
-        superAdmCatPack.add(catpackAgregarTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 162, -1));
+        superAdmCatPack.add(categoriaText, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 162, -1));
 
-        DefaultTableModel catArtTabla = (DefaultTableModel) new DefaultTableModel();
-        catArtTabla.addColumn("ID");
-        catArtTabla.addColumn("Descripción");
-        catArtTabla.addColumn("Estado");
-        catPackTabla1.setModel(catArtTabla);
-        jScrollPane11.setViewportView(catPackTabla1);
+        jScrollPane10.setViewportView(categoriaPackList);
 
-        superAdmCatPack.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, 170));
+        superAdmCatPack.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 380, -1));
 
         jLabel98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         jLabel98.setText("jLabel58");
@@ -1539,11 +1546,11 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_ProveeRazonSocActionPerformed
 
     private void clientesBuscarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesBuscarBtnActionPerformed
-        // TODO add your handling code here:
+        SAClientesC.BuscarCliente();
     }//GEN-LAST:event_clientesBuscarBtnActionPerformed
 
     private void clientesModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesModificarActionPerformed
-        // TODO add your handling code here:
+        SAClientesC.ModificarCliente();
     }//GEN-LAST:event_clientesModificarActionPerformed
 
     private void clientesMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesMailActionPerformed
@@ -1887,7 +1894,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_catPackAgregarBtn1MouseClicked
 
     private void catPackAgregarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackAgregarBtn1ActionPerformed
-        // TODO add your handling code here:
+       SACategoriaPackC.AgregarCat();
     }//GEN-LAST:event_catPackAgregarBtn1ActionPerformed
 
     private void catPackBuscarBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catPackBuscarBtn2MouseClicked
@@ -1895,7 +1902,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_catPackBuscarBtn2MouseClicked
 
     private void catPackBuscarBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackBuscarBtn2ActionPerformed
-        // TODO add your handling code here:
+       SACategoriaPackC.Buscar();
     }//GEN-LAST:event_catPackBuscarBtn2ActionPerformed
 
     private void catPackModifBtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catPackModifBtn2MouseClicked
@@ -1903,16 +1910,20 @@ public class SuperAdm extends javax.swing.JFrame {
     }//GEN-LAST:event_catPackModifBtn2MouseClicked
 
     private void catPackModifBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catPackModifBtn2ActionPerformed
-        // TODO add your handling code here:
+     SACategoriaPackC.Modificar();
     }//GEN-LAST:event_catPackModifBtn2ActionPerformed
 
-    private void catpackAgregarTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catpackAgregarTF1ActionPerformed
+    private void categoriaTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_catpackAgregarTF1ActionPerformed
+    }//GEN-LAST:event_categoriaTextActionPerformed
 
     private void jLabel98FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel98FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel98FocusGained
+
+    private void catPackBuscar2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_catPackBuscar2KeyReleased
+        SACategoriaPackC.BuscarVacio();
+    }//GEN-LAST:event_catPackBuscar2KeyReleased
 
     /**
      * @param args the command line arguments
@@ -1990,7 +2001,7 @@ public class SuperAdm extends javax.swing.JFrame {
     }
     
     public javax.swing.JTable getComunasTabla() {
-        return this.comunasTabla;
+        return this.ComunaList;
     }
     
     public javax.swing.JTable getCatArtTabla() {
@@ -2040,6 +2051,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ArticuloCatCB;
     public javax.swing.JButton ArticulosModificar1;
     private javax.swing.JLabel Cantidad;
+    public javax.swing.JTable ComunaList;
     public java.awt.TextField PackBuscar;
     private javax.swing.JButton PackCrearBotton;
     public java.awt.TextField ProveeBuscar;
@@ -2080,10 +2092,10 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField catPackBuscar2;
     public javax.swing.JButton catPackBuscarBtn2;
     public javax.swing.JButton catPackModifBtn2;
-    private javax.swing.JTable catPackTabla1;
     public javax.swing.JComboBox<String> categoriaPack;
-    public javax.swing.JTextField catpackAgregarTF1;
-    public javax.swing.JList<String> clienteListado;
+    public javax.swing.JList<String> categoriaPackList;
+    public javax.swing.JTextField categoriaText;
+    public javax.swing.JTable clienteListado;
     public javax.swing.JTextField clientesApellido;
     private javax.swing.JTextField clientesBuscar;
     public javax.swing.JButton clientesBuscarBtn;
@@ -2100,7 +2112,6 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField comunaCodigo1;
     public javax.swing.JTextField comunaDescripcion2;
     public javax.swing.JButton comunaModifBtn1;
-    private javax.swing.JTable comunasTabla;
     private javax.swing.JTextField diaTF;
     private javax.swing.JTable estadosTabla;
     public com.toedter.calendar.JDateChooser fechaCliente;
@@ -2175,6 +2186,7 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
@@ -2185,7 +2197,6 @@ public class SuperAdm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextArea1;

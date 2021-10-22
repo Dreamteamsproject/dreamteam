@@ -15,7 +15,7 @@ import vista.modificarUser;
 public class SAUsuariosC {
    
     static Consultas consultaSQL = new Consultas();
-    static DefaultListModel modelUser = new DefaultListModel();
+  
     
     
     public static void IniciarClase(){}
@@ -46,10 +46,10 @@ public class SAUsuariosC {
     
     public static void RellenarUsuario(){
         
-        
+        DefaultListModel modelUser = new DefaultListModel();
         if(SuperAdmC.superAdm.usuarioBuscarUser.getText().equals("")){
         try{
-            modelUser.removeAllElements();
+            
             var usuariosLista = consultaSQL.doQueryGet("select usuario_nombre from usuarios where usuario_nombre  like '%%'");
             while(usuariosLista.next()){
             modelUser.addElement(usuariosLista.getString("usuario_nombre"));
@@ -62,11 +62,10 @@ public class SAUsuariosC {
     }
     
     public static void FiltrarUsuarios(){
-        
+          DefaultListModel modelUser = new DefaultListModel();
             
             try{
-            
-                modelUser.removeAllElements();
+                
                 var usuariosLista = consultaSQL.doQueryGet("select usuario_nombre from usuarios where usuario_nombre  like '%"+SuperAdmC.superAdm.usuarioBuscarUser.getText()+"%'");
                 while(usuariosLista.next()){
                 modelUser.addElement(usuariosLista.getString("usuario_nombre"));

@@ -8,6 +8,8 @@ import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import modelo.Consultas;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import vista.ModificarCliente;
 
 /**
  *
@@ -16,7 +18,7 @@ import javax.swing.JOptionPane;
 public class SAClientesC {
     
     static Consultas consultaSQL = new Consultas();
-    static DefaultListModel modelClient = new DefaultListModel();
+    
     
     public static void AgregarCliente(){
         
@@ -58,17 +60,20 @@ public class SAClientesC {
         
        
           //  consultaSQL.Connectar();
-            modelClient.removeAllElements();
-            var clienteLista = consultaSQL.doQueryGet("select cliente_nombre,cliente_apellido from clientes where cliente_nombre like '%%'");
+            String datos[] = new String[2];
+            var tabla = (DefaultTableModel) SuperAdmC.superAdm.clienteListado.getModel();
+            tabla.setRowCount(0);
+            var rs = consultaSQL.doQueryGet("select cliente_nombre,cliente_apellido,RUT from clientes where cliente_nombre like '%%'");
             try {
-                while(clienteLista.next()){
-                    String cliente = clienteLista.getString("cliente_nombre")+ "  " + clienteLista.getString("cliente_apellido");
-                    System.out.println(cliente);
-                    modelClient.addElement(cliente);
+                while(rs.next()){
+                    datos[0] = rs.getString("RUT");
+                    datos[1] = rs.getString("cliente_nombre")+ "  " + rs.getString("cliente_apellido");
+                    System.out.println(datos[0] +"  "+  datos[1]);
+                    tabla.addRow(datos);
                 }
-                SuperAdmC.superAdm.clienteListado.setModel(modelClient);
+                SuperAdmC.superAdm.clienteListado.setModel(tabla);
             } catch (SQLException ex) {
-                Logger.getLogger(SAClientesC.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("error " + ex);
             }
             
        
@@ -143,5 +148,54 @@ public class SAClientesC {
         
         return null;
     }
+    
+     public static void ModificarCliente(){
+   
+        try {
+            String rut = (String) SuperAdmC.superAdm.clienteListado.getValueAt(SuperAdmC.superAdm.clienteListado.getSelectedRow(), 0);
+            String SQL = "select * from clientes where RUT='"+rut+"'";
+            var rs = consultaSQL.doQueryGet(SQL);
+           
+                if(rs.next()){
+                    //String rut, String nombre, String apellido, String telefono, String mail,String estado
+                    var modificar = new ModificarCliente(rs.getString("RUT"),rs.getString("cliente_nombre"),rs.getString("cliente_apellido"),rs.getString("cliente_telefono"),rs.getString("cliente_email"),rs.getString("cliente_estado"));
+                    modificar.setVisible(true);
+                } 
+        }catch (SQLException ex) {
+            Logger.getLogger(SAClientesC.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+   
+   }
+    
+     public static void BuscarCliente(){
+       
+       var tabla = (DefaultTableModel) SuperAdmC.superAdm.clienteListado.getModel();
+            String datos[] = new String[2];
+            tabla.setRowCount(0);
+            var clienteLista = consultaSQL.doQueryGet("select cliente_nombre,cliente_apellido,RUT from clientes where RUT like '%"+SuperAdmC.superAdm.clientesBuscarBtn.getText()+"%'");
+            try {
+                
+                while(clienteLista.next()){
+                    
+                    datos[1] = clienteLista.getString("cliente_nombre")+ "  " + clienteLista.getString("cliente_apellido");
+                    datos[0] = clienteLista.getString("RUT");
+                    tabla.addRow(datos);
+  
+                }
+
+            } catch (SQLException ex) {
+                Logger.getLogger(SAClientesC.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+  }
+     
+      public static void GuardarModificar(String rut, String nombre, String apellido, String telefono, String mail,int estado){
+
+       String SQL = "update clientes SET cliente_nombre='"+nombre+"',cliente_apellido='"+apellido+"', cliente_telefono='"+telefono+"',cliente_email='"+mail+"',cliente_estado="+estado+" where RUT='"+rut+"'";
+       if(consultaSQL.doQueryPost(SQL)){JOptionPane.showMessageDialog(null, "cliente Actualizado");}
+       else{JOptionPane.showMessageDialog(null, "error en la actualizacion");}
+       RellenarCliente();
+}
     
 }
