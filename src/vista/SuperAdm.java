@@ -2097,7 +2097,7 @@ public class SuperAdm extends javax.swing.JFrame {
     public javax.swing.JTextField categoriaText;
     public javax.swing.JTable clienteListado;
     public javax.swing.JTextField clientesApellido;
-    private javax.swing.JTextField clientesBuscar;
+    public javax.swing.JTextField clientesBuscar;
     public javax.swing.JButton clientesBuscarBtn;
     public javax.swing.JTextField clientesCelular;
     public javax.swing.JComboBox<String> clientesEstado;

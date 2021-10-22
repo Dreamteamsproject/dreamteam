@@ -173,13 +173,13 @@ public class SAClientesC {
        var tabla = (DefaultTableModel) SuperAdmC.superAdm.clienteListado.getModel();
             String datos[] = new String[2];
             tabla.setRowCount(0);
-            var clienteLista = consultaSQL.doQueryGet("select cliente_nombre,cliente_apellido,RUT from clientes where RUT like '%"+SuperAdmC.superAdm.clientesBuscarBtn.getText()+"%'");
+            var rs = consultaSQL.doQueryGet("select cliente_nombre,cliente_apellido,RUT from clientes where RUT like '%"+SuperAdmC.superAdm.clientesBuscar.getText()+"%' OR cliente_nombre like '%"+SuperAdmC.superAdm.clientesBuscar.getText()+"%' OR cliente_apellido like '%"+SuperAdmC.superAdm.clientesBuscar.getText()+"%'");
             try {
                 
-                while(clienteLista.next()){
+                while(rs.next()){
                     
-                    datos[1] = clienteLista.getString("cliente_nombre")+ "  " + clienteLista.getString("cliente_apellido");
-                    datos[0] = clienteLista.getString("RUT");
+                    datos[1] = rs.getString("cliente_nombre")+ " " + rs.getString("cliente_apellido");
+                    datos[0] = rs.getString("RUT");
                     tabla.addRow(datos);
   
                 }
