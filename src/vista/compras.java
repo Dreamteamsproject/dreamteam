@@ -5,6 +5,8 @@
  */
 package vista;
 
+import controlador.SAPackC;
+
 /**
  *
  * @author Roberto
