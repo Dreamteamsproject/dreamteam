@@ -33,7 +33,7 @@ public  class LoginC {
             if("admin".equals(usuario))
                 SuperAdmC.SAVisible();
             else
-                VentasC.ventaVisible();
+                MainPageController.setVisible();
             
         } else {
             JOptionPane.showMessageDialog(null, "La contraseña que ingresaste es incorrecta");

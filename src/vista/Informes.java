@@ -15,6 +15,7 @@ public class Informes extends javax.swing.JFrame {
      * Creates new form Informs
      */
     public Informes() {
+        this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         initComponents();
     }
 

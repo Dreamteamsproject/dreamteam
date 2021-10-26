@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import vista.venta;
 
 /**
@@ -14,6 +15,7 @@ public class VentasC {
     public static venta pestanaVenta = new venta(); 
     
     public static void ventaVisible() {
+        pestanaVenta.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pestanaVenta.setVisible(true);
         pestanaVenta.setLocationRelativeTo(null);
     }
