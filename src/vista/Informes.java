@@ -5,6 +5,14 @@
  */
 package vista;
 
+import com.toedter.calendar.JDateChooser;
+import controlador.InformesController;
+import controlador.InformesVentasC;
+import java.util.Date;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Roberto
@@ -32,18 +40,18 @@ public class Informes extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         informeVentas = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        infBuscFech = new com.toedter.calendar.JDateChooser();
-        infBuscFech2 = new com.toedter.calendar.JDateChooser();
+        InfVenFechaI = new com.toedter.calendar.JDateChooser();
+        InfVenFechaF = new com.toedter.calendar.JDateChooser();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
-        Infbuscrut = new javax.swing.JTextField();
+        InfVenRUT = new javax.swing.JTextField();
         infBuscBtn = new java.awt.Button();
         label12 = new java.awt.Label();
         jTextField1 = new javax.swing.JTextField();
         button1 = new java.awt.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
-        infTable = new javax.swing.JTable();
+        InformesVentasTabla = new javax.swing.JTable();
         InfVentRealV2 = new java.awt.Button();
         label4 = new java.awt.Label();
         infVentFondo = new javax.swing.JLabel();
@@ -99,6 +107,11 @@ public class Informes extends javax.swing.JFrame {
         infVentFondo3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -107,8 +120,12 @@ public class Informes extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(32, 134, 192));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Busqueda de Ventas"));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel6.add(infBuscFech, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 160, -1));
-        jPanel6.add(infBuscFech2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 160, -1));
+
+        InfVenFechaI.setDate(new Date());
+        jPanel6.add(InfVenFechaI, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 160, -1));
+
+        InfVenFechaF.setDate(new Date());
+        jPanel6.add(InfVenFechaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 160, -1));
 
         label1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         label1.setText("Hasta");
@@ -121,13 +138,18 @@ public class Informes extends javax.swing.JFrame {
         label3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         label3.setText("Desde");
         jPanel6.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, 30));
-        jPanel6.add(Infbuscrut, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 100, -1));
+        jPanel6.add(InfVenRUT, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 100, -1));
 
         infBuscBtn.setActionCommand("Buscar");
         infBuscBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         infBuscBtn.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         infBuscBtn.setLabel("Buscar");
         infBuscBtn.setName(""); // NOI18N
+        infBuscBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                infBuscBtnMouseClicked(evt);
+            }
+        });
         jPanel6.add(infBuscBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, -1, -1));
 
         label12.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -146,30 +168,31 @@ public class Informes extends javax.swing.JFrame {
         button1.setName(""); // NOI18N
         informeVentas.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, 20));
 
-        infTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Numero Pedido", "Rut Cliente", "Fecha Compra", "Fecha Entrega", "Pack Comprado", "Monto Pagado"
-            }
-        ));
-        jScrollPane1.setViewportView(infTable);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        DefaultTableModel InformesVentasTable = new DefaultTableModel();
+        InformesVentasTable.addColumn("Numero Pedido");
+        InformesVentasTable.addColumn("Total");
+        InformesVentasTable.addColumn("Fecha Venta");
+        InformesVentasTable.addColumn("Fecha Pago");
+        InformesVentasTable.addColumn("Codigo Transferencia");
+        InformesVentasTable.addColumn("Nombre Destinatario");
+        InformesVentasTable.addColumn("Direccion Destino");
+        InformesVentasTable.addColumn("Telefono");
+        InformesVentasTable.addColumn("Correo");
+        InformesVentasTable.addColumn("Fecha Entrega");
+        InformesVentasTable.addColumn("Hora Entrega Inicial");
+        InformesVentasTable.addColumn("Hora Entrega Final");
+        InformesVentasTable.addColumn("Saludo");
+        InformesVentasTable.addColumn("Red Social");
+        InformesVentasTable.addColumn("Comuna");
+        InformesVentasTable.addColumn("Banco");
+        InformesVentasTable.addColumn("RUT Cliente");
+        InformesVentasTable.addColumn("Estado de Venta");
+        InformesVentasTable.addColumn("Pack");
+        InformesVentasTabla.setModel(InformesVentasTable);
+        InformesVentasTabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        jScrollPane1.setViewportView(InformesVentasTabla);
 
         informeVentas.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 277, 680, 180));
 
@@ -476,6 +499,14 @@ public class Informes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_button12ActionPerformed
 
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        InformesController.activarTabla(0);
+    }//GEN-LAST:event_formWindowOpened
+
+    private void infBuscBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_infBuscBtnMouseClicked
+        InformesVentasC.buscar();
+    }//GEN-LAST:event_infBuscBtnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -512,9 +543,28 @@ public class Informes extends javax.swing.JFrame {
         });
     }
 
+    public JTable getInformesVentasTabla() {
+        return InformesVentasTabla;
+    }
+
+    public JDateChooser getInfVenFechaF() {
+        return InfVenFechaF;
+    }
+
+    public JDateChooser getInfVenFechaI() {
+        return InfVenFechaI;
+    }
+
+    public JTextField getInfVenRUT() {
+        return InfVenRUT;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public com.toedter.calendar.JDateChooser InfVenFechaF;
+    public com.toedter.calendar.JDateChooser InfVenFechaI;
+    public javax.swing.JTextField InfVenRUT;
     public java.awt.Button InfVentRealV2;
-    public javax.swing.JTextField Infbuscrut;
+    public javax.swing.JTable InformesVentasTabla;
     public java.awt.Button button1;
     public java.awt.Button button10;
     public java.awt.Button button12;
@@ -524,9 +574,6 @@ public class Informes extends javax.swing.JFrame {
     public java.awt.Button button7;
     public java.awt.Button button9;
     public java.awt.Button infBuscBtn;
-    public com.toedter.calendar.JDateChooser infBuscFech;
-    public com.toedter.calendar.JDateChooser infBuscFech2;
-    public javax.swing.JTable infTable;
     private javax.swing.JLabel infVentFondo;
     private javax.swing.JLabel infVentFondo1;
     private javax.swing.JLabel infVentFondo2;

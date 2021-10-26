@@ -8,6 +8,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -96,8 +99,9 @@
                     <Property name="useNullLayout" type="boolean" value="false"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="com.toedter.calendar.JDateChooser" name="infBuscFech">
+                    <Component class="com.toedter.calendar.JDateChooser" name="InfVenFechaI">
                       <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="InfVenFechaI.setDate(new Date());"/>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                       <Constraints>
@@ -106,8 +110,9 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="com.toedter.calendar.JDateChooser" name="infBuscFech2">
+                    <Component class="com.toedter.calendar.JDateChooser" name="InfVenFechaF">
                       <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="InfVenFechaF.setDate(new Date());"/>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                       <Constraints>
@@ -155,7 +160,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="Infbuscrut">
+                    <Component class="javax.swing.JTextField" name="InfVenRUT">
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
@@ -177,6 +182,9 @@
                         <Property name="label" type="java.lang.String" value="Buscar"/>
                         <Property name="name" type="java.lang.String" value="" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="infBuscBtnMouseClicked"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
@@ -240,6 +248,9 @@
                   </Constraints>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <Properties>
+                    <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
+                  </Properties>
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
@@ -251,18 +262,12 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="infTable">
+                    <Component class="javax.swing.JTable" name="InformesVentasTabla">
                       <Properties>
-                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="6" rowCount="16">
-                            <Column editable="true" title="Numero Pedido" type="java.lang.Object"/>
-                            <Column editable="true" title="Rut Cliente" type="java.lang.Object"/>
-                            <Column editable="true" title="Fecha Compra" type="java.lang.Object"/>
-                            <Column editable="true" title="Fecha Entrega" type="java.lang.Object"/>
-                            <Column editable="true" title="Pack Comprado" type="java.lang.Object"/>
-                            <Column editable="true" title="Monto Pagado" type="java.lang.Object"/>
-                          </Table>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="InformesVentasTable" type="code"/>
                         </Property>
+                        <Property name="autoResizeMode" type="int" value="0"/>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                           <TableColumnModel selectionModel="0">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
@@ -302,6 +307,7 @@
                         </Property>
                       </Properties>
                       <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultTableModel InformesVentasTable = new DefaultTableModel();&#xa;InformesVentasTable.addColumn(&quot;Numero Pedido&quot;);&#xa;InformesVentasTable.addColumn(&quot;Total&quot;);&#xa;InformesVentasTable.addColumn(&quot;Fecha Venta&quot;);&#xa;InformesVentasTable.addColumn(&quot;Fecha Pago&quot;);&#xa;InformesVentasTable.addColumn(&quot;Codigo Transferencia&quot;);&#xa;InformesVentasTable.addColumn(&quot;Nombre Destinatario&quot;);&#xa;InformesVentasTable.addColumn(&quot;Direccion Destino&quot;);&#xa;InformesVentasTable.addColumn(&quot;Telefono&quot;);&#xa;InformesVentasTable.addColumn(&quot;Correo&quot;);&#xa;InformesVentasTable.addColumn(&quot;Fecha Entrega&quot;);&#xa;InformesVentasTable.addColumn(&quot;Hora Entrega Inicial&quot;);&#xa;InformesVentasTable.addColumn(&quot;Hora Entrega Final&quot;);&#xa;InformesVentasTable.addColumn(&quot;Saludo&quot;);&#xa;InformesVentasTable.addColumn(&quot;Red Social&quot;);&#xa;InformesVentasTable.addColumn(&quot;Comuna&quot;);&#xa;InformesVentasTable.addColumn(&quot;Banco&quot;);&#xa;InformesVentasTable.addColumn(&quot;RUT Cliente&quot;);&#xa;InformesVentasTable.addColumn(&quot;Estado de Venta&quot;);&#xa;InformesVentasTable.addColumn(&quot;Pack&quot;);"/>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>

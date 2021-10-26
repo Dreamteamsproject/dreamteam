@@ -19,4 +19,9 @@ public class InformesController {
         pestanaInformes.setVisible(true);
         pestanaInformes.setLocationRelativeTo(null);
     }
+    
+    public static void activarTabla(int index) {
+        if(index == 0)
+            InformesVentasC.buscarTodos();
+    }
 }
