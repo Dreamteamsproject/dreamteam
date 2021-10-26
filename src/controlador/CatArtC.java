@@ -10,9 +10,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Consultas;
-import vista.modificarBanco;
 import vista.modificarCatArt;
-import vista.modificarRedes;
 
 /**
  *

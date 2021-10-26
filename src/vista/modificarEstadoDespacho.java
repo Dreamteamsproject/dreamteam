@@ -51,7 +51,7 @@ public class modificarEstadoDespacho extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estado");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
         idLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         idLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,7 +63,7 @@ public class modificarEstadoDespacho extends javax.swing.JFrame {
                 saveButtonMouseClicked(evt);
             }
         });
-        getContentPane().add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
+        getContentPane().add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
         closeButton.setText("Cerrar");
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -71,18 +71,18 @@ public class modificarEstadoDespacho extends javax.swing.JFrame {
                 closeButtonMouseClicked(evt);
             }
         });
-        getContentPane().add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 160, 73, -1));
+        getContentPane().add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 73, -1));
 
         resultMessage.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(resultMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 99, 185, 50));
 
         ventaStatusCB.setModel(new javax.swing.DefaultComboBoxModel<>(EstadoDespachoC.estados));
-        getContentPane().add(ventaStatusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 140, -1));
+        getContentPane().add(ventaStatusCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 140, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/spiral205x212.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/256x287blue2.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 210));
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 280));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
