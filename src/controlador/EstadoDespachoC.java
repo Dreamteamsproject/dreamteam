@@ -43,16 +43,11 @@ public class EstadoDespachoC {
     
     public static void modificar() {
         String[] parametros = EstadoDespachoC.selectedRowInfo();
-        System.out.println("1");
         var editWindow = new modificarEstadoDespacho();
-        System.out.println("2");
         editWindow.setVisible(true);
-        System.out.println("3");
         editWindow.setLocationRelativeTo(SuperAdmC.superAdm);
-        System.out.println("4");
         
         EstadoDespachoC.datosModificar(editWindow, parametros);
-        System.out.println("5");
     }
     
      public static String[] selectedRowInfo() {
