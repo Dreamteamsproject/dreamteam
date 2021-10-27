@@ -46,6 +46,18 @@ public  class LoginC {
     }
     
     
+    public static void IngresarAdm(String clave){
+        
+        var SQL = "SELECT usuario_nombre, usuario_clave from usuarios where(usuario_nombre='admin' && usuario_clave='"+clave+"')";
+        
+         if(consulta.consultaBooleana(SQL)){
+             SuperAdmC.SAVisible();
+             MainPageController.pass.dispose();
+         }
+         else{JOptionPane.showMessageDialog(null, "contraseña invalida");}
+    
+    }
+    
     
     public static void CheckKeyPress(java.awt.event.KeyEvent evt){
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){ConsultarUsuario();}
