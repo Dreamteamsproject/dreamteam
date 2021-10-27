@@ -30,7 +30,8 @@ public class mainPage extends javax.swing.JFrame {
 
         IngresarVentas = new javax.swing.JButton();
         IngresarCompras = new javax.swing.JButton();
-        IngresarInformes = new javax.swing.JButton();
+        IngresarAdmin = new javax.swing.JButton();
+        IngresarInformes1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -43,7 +44,7 @@ public class mainPage extends javax.swing.JFrame {
                 IngresarVentasMouseClicked(evt);
             }
         });
-        getContentPane().add(IngresarVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 75, -1));
+        getContentPane().add(IngresarVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 80, -1));
 
         IngresarCompras.setText("Compras");
         IngresarCompras.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -51,18 +52,36 @@ public class mainPage extends javax.swing.JFrame {
                 IngresarComprasMouseClicked(evt);
             }
         });
-        getContentPane().add(IngresarCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
+        getContentPane().add(IngresarCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 80, -1));
 
-        IngresarInformes.setText("Informes");
-        IngresarInformes.addMouseListener(new java.awt.event.MouseAdapter() {
+        IngresarAdmin.setText("SuperAdm");
+        IngresarAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IngresarInformesMouseClicked(evt);
+                IngresarAdminMouseClicked(evt);
             }
         });
-        getContentPane().add(IngresarInformes, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, -1, -1));
+        IngresarAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IngresarAdminActionPerformed(evt);
+            }
+        });
+        getContentPane().add(IngresarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 80, -1));
+
+        IngresarInformes1.setText("Informes");
+        IngresarInformes1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IngresarInformes1MouseClicked(evt);
+            }
+        });
+        IngresarInformes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IngresarInformes1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(IngresarInformes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 80, -1));
 
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 140, 150));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 140, 180));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/256x287.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 280));
@@ -78,9 +97,21 @@ public class mainPage extends javax.swing.JFrame {
         MainPageController.abrirCompras();
     }//GEN-LAST:event_IngresarComprasMouseClicked
 
-    private void IngresarInformesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarInformesMouseClicked
-        MainPageController.abrirInformes();
-    }//GEN-LAST:event_IngresarInformesMouseClicked
+    private void IngresarAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarAdminMouseClicked
+        MainPageController.abrirAdm();
+    }//GEN-LAST:event_IngresarAdminMouseClicked
+
+    private void IngresarInformes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarInformes1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IngresarInformes1MouseClicked
+
+    private void IngresarInformes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarInformes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IngresarInformes1ActionPerformed
+
+    private void IngresarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IngresarAdminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,8 +149,9 @@ public class mainPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton IngresarAdmin;
     private javax.swing.JButton IngresarCompras;
-    private javax.swing.JButton IngresarInformes;
+    private javax.swing.JButton IngresarInformes1;
     private javax.swing.JButton IngresarVentas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

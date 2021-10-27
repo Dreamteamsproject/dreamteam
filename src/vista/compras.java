@@ -5,7 +5,9 @@
  */
 package vista;
 
+import controlador.ComprasController;
 import controlador.SAPackC;
+import controlador.comparAController;
 
 /**
  *
@@ -29,23 +31,20 @@ public class compras extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        controlSeleccion = new javax.swing.JTabbedPane();
         solicPedido = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         infBuscFech = new com.toedter.calendar.JDateChooser();
         label3 = new java.awt.Label();
-        Infbuscrut = new javax.swing.JTextField();
-        infBuscBtn = new java.awt.Button();
-        label12 = new java.awt.Label();
         jScrollPane13 = new javax.swing.JScrollPane();
         packArtListado = new javax.swing.JList<>();
+        int control = 0;
         packquitarArtBtn = new javax.swing.JButton();
         Cantidad = new javax.swing.JLabel();
         packCantAdd = new java.awt.TextField();
         packAddArtBtn = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         packCreaListado = new javax.swing.JTable();
-        InfVentRealV5 = new java.awt.Button();
         InfVentRealV6 = new java.awt.Button();
         jTextField1 = new javax.swing.JTextField();
         button1 = new java.awt.Button();
@@ -110,6 +109,12 @@ public class compras extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        controlSeleccion.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                controlSeleccionStateChanged(evt);
+            }
+        });
+
         solicPedido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setBackground(new java.awt.Color(32, 134, 192));
@@ -121,27 +126,12 @@ public class compras extends javax.swing.JFrame {
         label3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         label3.setForeground(new java.awt.Color(255, 255, 255));
         label3.setText("Fecha Pedido");
-        jPanel6.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, 30));
-        label3.getAccessibleContext().setAccessibleName("Fecha Pedido");
-
-        jPanel6.add(Infbuscrut, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 100, -1));
-
-        infBuscBtn.setActionCommand("Buscar");
-        infBuscBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        infBuscBtn.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        infBuscBtn.setLabel("Buscar");
-        infBuscBtn.setName(""); // NOI18N
-        jPanel6.add(infBuscBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, -1, 20));
-
-        label12.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        label12.setForeground(new java.awt.Color(255, 255, 255));
-        label12.setText("Numero Pedido");
-        jPanel6.add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+        jPanel6.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, 30));
 
         packArtListado.setToolTipText("");
         jScrollPane13.setViewportView(packArtListado);
 
-        jPanel6.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 190, 120));
+        jPanel6.add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 190, 140));
 
         packquitarArtBtn.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         packquitarArtBtn.setForeground(new java.awt.Color(195, 8, 26));
@@ -188,24 +178,26 @@ public class compras extends javax.swing.JFrame {
 
         jPanel6.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 190, 120));
 
-        InfVentRealV5.setActionCommand("Buscar");
-        InfVentRealV5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        InfVentRealV5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        InfVentRealV5.setLabel("Cancelar");
-        InfVentRealV5.setName(""); // NOI18N
-        jPanel6.add(InfVentRealV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 110, -1));
-
         InfVentRealV6.setActionCommand("Buscar");
         InfVentRealV6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         InfVentRealV6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         InfVentRealV6.setLabel("Guardar");
         InfVentRealV6.setName(""); // NOI18N
-        jPanel6.add(InfVentRealV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 110, -1));
+        InfVentRealV6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InfVentRealV6ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(InfVentRealV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 110, -1));
 
         solicPedido.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 680, 260));
-        jPanel6.getAccessibleContext().setAccessibleName("Solicitud de Pedido");
 
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
         solicPedido.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 100, 20));
 
         button1.setActionCommand("Buscar");
@@ -213,26 +205,16 @@ public class compras extends javax.swing.JFrame {
         button1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         button1.setLabel("Buscar");
         button1.setName(""); // NOI18N
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
         solicPedido.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, 20));
 
         infTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Numero Pedido", "Fecha Pedido", "Cantidad de Articulos", "Seleccion"
@@ -271,7 +253,7 @@ public class compras extends javax.swing.JFrame {
         infVentFondo.setText("Ver");
         solicPedido.add(infVentFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Solicitud de Pedido", solicPedido);
+        controlSeleccion.addTab("Solicitud de Pedido", solicPedido);
 
         regCompras.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -289,8 +271,6 @@ public class compras extends javax.swing.JFrame {
         label7.setForeground(new java.awt.Color(255, 255, 255));
         label7.setText("Rut");
         jPanel8.add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, 20));
-        label7.getAccessibleContext().setAccessibleName("Rut");
-
         jPanel8.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 140, -1));
 
         button4.setActionCommand("Buscar");
@@ -421,7 +401,7 @@ public class compras extends javax.swing.JFrame {
         infVentFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         regCompras.add(infVentFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Registro Compras", regCompras);
+        controlSeleccion.addTab("Registro Compras", regCompras);
 
         revFacturas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -533,7 +513,7 @@ public class compras extends javax.swing.JFrame {
         infVentFondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         revFacturas.add(infVentFondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Registro Compras (No esta listo)", revFacturas);
+        controlSeleccion.addTab("Registro Compras (No esta listo)", revFacturas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -543,7 +523,7 @@ public class compras extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(controlSeleccion, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -552,7 +532,7 @@ public class compras extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(controlSeleccion, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -560,7 +540,7 @@ public class compras extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void packquitarArtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packquitarArtBtnActionPerformed
-        SAPackC.eleminarArt();
+        comparAController.eleminarArt();
     }//GEN-LAST:event_packquitarArtBtnActionPerformed
 
     private void packCantAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packCantAddActionPerformed
@@ -568,8 +548,24 @@ public class compras extends javax.swing.JFrame {
     }//GEN-LAST:event_packCantAddActionPerformed
 
     private void packAddArtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_packAddArtBtnActionPerformed
-        SAPackC.añadirArt();
+        comparAController.añadirArt();
     }//GEN-LAST:event_packAddArtBtnActionPerformed
+
+    private void controlSeleccionStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_controlSeleccionStateChanged
+        ComprasController.desplegarInfo(this.controlSeleccion.getSelectedIndex());
+    }//GEN-LAST:event_controlSeleccionStateChanged
+
+    private void InfVentRealV6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfVentRealV6ActionPerformed
+        comparAController.CreaOrden();
+    }//GEN-LAST:event_InfVentRealV6ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        comparAController.filtrar(jTextField1.getText());
+    }//GEN-LAST:event_button1ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+       comparAController.filtrarVacio(jTextField1.getText());
+    }//GEN-LAST:event_jTextField1KeyReleased
 
     /**
      * @param args the command line arguments
@@ -608,33 +604,31 @@ public class compras extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cantidad;
-    private java.awt.Button InfVentRealV2;
+    public java.awt.Button InfVentRealV2;
     public java.awt.Button InfVentRealV3;
     public java.awt.Button InfVentRealV4;
-    public java.awt.Button InfVentRealV5;
     public java.awt.Button InfVentRealV6;
-    private javax.swing.JTextField Infbuscrut;
-    private java.awt.Button button1;
+    public java.awt.Button button1;
     public java.awt.Button button10;
     public java.awt.Button button11;
     public java.awt.Button button12;
     public java.awt.Button button13;
     public java.awt.Button button14;
     public java.awt.Button button17;
-    private java.awt.Button button4;
+    public java.awt.Button button4;
     public java.awt.Button button5;
-    private java.awt.Button button6;
+    public java.awt.Button button6;
     public java.awt.Button button8;
-    private java.awt.Button infBuscBtn;
-    private com.toedter.calendar.JDateChooser infBuscFech;
-    private javax.swing.JTable infTable;
+    private javax.swing.JTabbedPane controlSeleccion;
+    public com.toedter.calendar.JDateChooser infBuscFech;
+    public javax.swing.JTable infTable;
     private javax.swing.JLabel infVentFondo;
     private javax.swing.JLabel infVentFondo1;
     private javax.swing.JLabel infVentFondo3;
-    private javax.swing.JComboBox<String> jComboBox2;
+    public javax.swing.JComboBox<String> jComboBox2;
     public javax.swing.JComboBox<String> jComboBox3;
     public javax.swing.JComboBox<String> jComboBox4;
-    private com.toedter.calendar.JDateChooser jDateChooser4;
+    public com.toedter.calendar.JDateChooser jDateChooser4;
     public com.toedter.calendar.JDateChooser jDateChooser8;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -646,14 +640,13 @@ public class compras extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    public javax.swing.JTable jTable2;
     public javax.swing.JTable jTable4;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField1;
     public javax.swing.JTextField jTextField10;
     public javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField4;
     public javax.swing.JTextField jTextField6;
     public javax.swing.JTextField jTextField7;
@@ -661,7 +654,6 @@ public class compras extends javax.swing.JFrame {
     public javax.swing.JTextField jTextField9;
     private java.awt.Label label10;
     private java.awt.Label label11;
-    private java.awt.Label label12;
     private java.awt.Label label18;
     private java.awt.Label label19;
     private java.awt.Label label20;

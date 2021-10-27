@@ -4,6 +4,7 @@
  */
 package controlador;
 
+import vista.SolPassAdm;
 import vista.mainPage;
 
 /**
@@ -12,6 +13,7 @@ import vista.mainPage;
  */
 public class MainPageController {
     public static mainPage paginaPrincipal = new mainPage();
+    public static SolPassAdm pass = null;
     
     public static void setVisible() {
         paginaPrincipal.setVisible(true);
@@ -28,5 +30,12 @@ public class MainPageController {
     
     public static void abrirInformes() {
         InformesController.informesVisible();
+    }
+    
+    public static void abrirAdm(){
+        
+        pass = new SolPassAdm();
+        pass.setVisible(true);
+        
     }
 }

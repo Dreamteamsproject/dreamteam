@@ -22,6 +22,7 @@ public class SuperAdm extends javax.swing.JFrame {
      */
     public SuperAdm() {
         
+        initComponents();
         SAUsuariosC.IniciarClase();
         RedesC.RedesC();
         bancosC.bancosC();
@@ -30,7 +31,7 @@ public class SuperAdm extends javax.swing.JFrame {
         ArticulosC.ArticulosC();
         ProveedoresC.ProveedoresC();
         EstadosVentaC.EstadosVentaC();
-        initComponents();
+       
         
     }
 
