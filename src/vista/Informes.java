@@ -6,9 +6,12 @@
 package vista;
 
 import com.toedter.calendar.JDateChooser;
+import controlador.InformeInventarioC;
 import controlador.InformesController;
 import controlador.InformesVentasC;
 import java.util.Date;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -23,7 +26,6 @@ public class Informes extends javax.swing.JFrame {
      * Creates new form Informs
      */
     public Informes() {
-        this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         initComponents();
     }
 
@@ -37,7 +39,7 @@ public class Informes extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        informesPestanas = new javax.swing.JTabbedPane();
         informeVentas = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         InfVenFechaI = new com.toedter.calendar.JDateChooser();
@@ -48,8 +50,6 @@ public class Informes extends javax.swing.JFrame {
         InfVenRUT = new javax.swing.JTextField();
         infBuscBtn = new java.awt.Button();
         label12 = new java.awt.Label();
-        jTextField1 = new javax.swing.JTextField();
-        button1 = new java.awt.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
         InformesVentasTabla = new javax.swing.JTable();
         InfVentRealV2 = new java.awt.Button();
@@ -57,20 +57,18 @@ public class Informes extends javax.swing.JFrame {
         infVentFondo = new javax.swing.JLabel();
         informeInventario = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
+        InfInvFechaI = new com.toedter.calendar.JDateChooser();
+        InfInvFechaF = new com.toedter.calendar.JDateChooser();
         label5 = new java.awt.Label();
         label7 = new java.awt.Label();
-        label8 = new java.awt.Label();
-        jTextField3 = new javax.swing.JTextField();
         button4 = new java.awt.Button();
-        jComboBox1 = new javax.swing.JComboBox<>();
         label9 = new java.awt.Label();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        label10 = new java.awt.Label();
+        InfVentCategoria = new javax.swing.JComboBox<>();
         label11 = new java.awt.Label();
+        InformesDateCheckbox = new javax.swing.JCheckBox();
+        InformesCategoriaCheckbox = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        InfInvTabla = new javax.swing.JTable();
         button6 = new java.awt.Button();
         label6 = new java.awt.Label();
         infVentFondo1 = new javax.swing.JLabel();
@@ -115,6 +113,12 @@ public class Informes extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        informesPestanas.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                informesPestanasStateChanged(evt);
+            }
+        });
+
         informeVentas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setBackground(new java.awt.Color(32, 134, 192));
@@ -158,16 +162,6 @@ public class Informes extends javax.swing.JFrame {
 
         informeVentas.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 680, 210));
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        informeVentas.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 100, 20));
-
-        button1.setActionCommand("Buscar");
-        button1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        button1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        button1.setLabel("Buscar");
-        button1.setName(""); // NOI18N
-        informeVentas.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, 20));
-
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 
         DefaultTableModel InformesVentasTable = new DefaultTableModel();
@@ -210,15 +204,19 @@ public class Informes extends javax.swing.JFrame {
         infVentFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         informeVentas.add(infVentFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Informe de Ventas", informeVentas);
+        informesPestanas.addTab("Informe de Ventas", informeVentas);
 
         informeInventario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel8.setBackground(new java.awt.Color(32, 134, 192));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Informe Inventario"));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel8.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 160, -1));
-        jPanel8.add(jDateChooser4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 160, -1));
+
+        InfInvFechaI.setDate(new Date());
+        jPanel8.add(InfInvFechaI, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 160, -1));
+
+        InfInvFechaF.setDate(new Date());
+        jPanel8.add(InfInvFechaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 160, -1));
 
         label5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         label5.setText("Hasta");
@@ -228,62 +226,42 @@ public class Informes extends javax.swing.JFrame {
         label7.setText("Desde");
         jPanel8.add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, 30));
 
-        label8.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        label8.setText("Proveedor");
-        jPanel8.add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
-        jPanel8.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 170, -1));
-
         button4.setActionCommand("Buscar");
         button4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         button4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         button4.setLabel("Buscar");
         button4.setName(""); // NOI18N
-        jPanel8.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, -1, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel8.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 170, -1));
+        button4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button4MouseClicked(evt);
+            }
+        });
+        jPanel8.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, -1, -1));
 
         label9.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         label9.setText("Categoria Articulo");
-        jPanel8.add(label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
+        jPanel8.add(label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel8.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 170, -1));
-
-        label10.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        label10.setText("Fecha Vencimiento");
-        jPanel8.add(label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, -1, -1));
+        InfVentCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(InformeInventarioC.listaCategorias));
+        jPanel8.add(InfVentCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 170, -1));
 
         label11.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         label11.setText("Busqueda por Rango de Fecha");
         jPanel8.add(label11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
+        jPanel8.add(InformesDateCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+        jPanel8.add(InformesCategoriaCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 20, 20));
 
         informeInventario.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 680, 210));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Codigo Articulo", "Nombre Articulo", "Stock", "Fecha de Vencimiento", "Valor Producto", "Rut Proveedor"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
+        DefaultTableModel articulosModel = new DefaultTableModel();
+        articulosModel.addColumn("ID");
+        articulosModel.addColumn("Descripción");
+        articulosModel.addColumn("Stock");
+        articulosModel.addColumn("Fecha Vencimiento");
+        articulosModel.addColumn("Categoria");
+        articulosModel.addColumn("Estado");
+        InfInvTabla.setModel(articulosModel);
+        jScrollPane2.setViewportView(InfInvTabla);
 
         informeInventario.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 277, 680, 180));
 
@@ -301,7 +279,7 @@ public class Informes extends javax.swing.JFrame {
         infVentFondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         informeInventario.add(infVentFondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Informe de Inventario", informeInventario);
+        informesPestanas.addTab("Informe de Inventario", informeInventario);
 
         informeClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -378,7 +356,7 @@ public class Informes extends javax.swing.JFrame {
         infVentFondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         informeClientes.add(infVentFondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Informe de Clientes", informeClientes);
+        informesPestanas.addTab("Informe de Clientes", informeClientes);
 
         informeDevyCamb.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -467,15 +445,15 @@ public class Informes extends javax.swing.JFrame {
         infVentFondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Spiral720x570.jpg"))); // NOI18N
         informeDevyCamb.add(infVentFondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
 
-        jTabbedPane1.addTab("Informe de Clientes", informeDevyCamb);
+        informesPestanas.addTab("Informe de Clientes", informeDevyCamb);
 
-        jPanel2.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+        jPanel2.add(informesPestanas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 710, 540));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 730, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -506,6 +484,16 @@ public class Informes extends javax.swing.JFrame {
     private void infBuscBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_infBuscBtnMouseClicked
         InformesVentasC.buscar();
     }//GEN-LAST:event_infBuscBtnMouseClicked
+
+    private void informesPestanasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_informesPestanasStateChanged
+        int index =  informesPestanas.getSelectedIndex();
+        if(index != 0)
+            InformesController.activarTabla(index);
+    }//GEN-LAST:event_informesPestanasStateChanged
+
+    private void button4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4MouseClicked
+        InformeInventarioC.buscar();
+    }//GEN-LAST:event_button4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -559,13 +547,42 @@ public class Informes extends javax.swing.JFrame {
         return InfVenRUT;
     }
 
+    public JTable getInfInvTabla() {
+        return InfInvTabla;
+    }
+
+    public JDateChooser getInfInvFechaF() {
+        return InfInvFechaF;
+    }
+
+    public JDateChooser getInfInvFechaI() {
+        return InfInvFechaI;
+    }
+
+    public boolean getInformesCategoriaCheckbox() {
+        return InformesCategoriaCheckbox.isSelected();
+    }
+
+    public boolean getInformesDateCheckbox() {
+        return InformesDateCheckbox.isSelected();
+    }
+
+    public String getInfVentCategoria() {
+        return InfVentCategoria.getSelectedItem().toString();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public com.toedter.calendar.JDateChooser InfInvFechaF;
+    public com.toedter.calendar.JDateChooser InfInvFechaI;
+    public javax.swing.JTable InfInvTabla;
     public com.toedter.calendar.JDateChooser InfVenFechaF;
     public com.toedter.calendar.JDateChooser InfVenFechaI;
     public javax.swing.JTextField InfVenRUT;
+    public javax.swing.JComboBox<String> InfVentCategoria;
     public java.awt.Button InfVentRealV2;
+    private javax.swing.JCheckBox InformesCategoriaCheckbox;
+    private javax.swing.JCheckBox InformesDateCheckbox;
     public javax.swing.JTable InformesVentasTabla;
-    public java.awt.Button button1;
     public java.awt.Button button10;
     public java.awt.Button button12;
     public java.awt.Button button13;
@@ -582,10 +599,7 @@ public class Informes extends javax.swing.JFrame {
     private javax.swing.JPanel informeDevyCamb;
     private javax.swing.JPanel informeInventario;
     private javax.swing.JPanel informeVentas;
-    public javax.swing.JComboBox<String> jComboBox1;
-    public javax.swing.JComboBox<String> jComboBox2;
-    public com.toedter.calendar.JDateChooser jDateChooser3;
-    public com.toedter.calendar.JDateChooser jDateChooser4;
+    private javax.swing.JTabbedPane informesPestanas;
     public com.toedter.calendar.JDateChooser jDateChooser5;
     public com.toedter.calendar.JDateChooser jDateChooser6;
     public com.toedter.calendar.JDateChooser jDateChooser7;
@@ -599,16 +613,11 @@ public class Informes extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    public javax.swing.JTable jTable2;
     public javax.swing.JTable jTable3;
     public javax.swing.JTable jTable4;
-    public javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField5;
     public javax.swing.JTextField jTextField7;
     private java.awt.Label label1;
-    private java.awt.Label label10;
     private java.awt.Label label11;
     private java.awt.Label label12;
     private java.awt.Label label13;
@@ -627,7 +636,6 @@ public class Informes extends javax.swing.JFrame {
     private java.awt.Label label5;
     private java.awt.Label label6;
     private java.awt.Label label7;
-    private java.awt.Label label8;
     private java.awt.Label label9;
     // End of variables declaration//GEN-END:variables
 }

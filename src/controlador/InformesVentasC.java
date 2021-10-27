@@ -28,21 +28,20 @@ public class InformesVentasC {
         String fechaInicial = formatter.format(InformesController.pestanaInformes.getInfVenFechaI().getDate());
         String fechaFinal = formatter.format(InformesController.pestanaInformes.getInfVenFechaF().getDate());
         String RUT = InformesController.pestanaInformes.getInfVenRUT().getText();
-        System.out.println("Está vacio RUT: " + RUT);
         
         String Query = "SELECT * FROM `ventas` WHERE ((`venta_fechaventa` >=  '" + fechaInicial + "' AND `venta_fechaventa` <= '"+ fechaFinal + "') OR (`venta_fechaentrega` >=  '" + fechaInicial + "' AND `venta_fechaentrega` <= '" + fechaFinal + "'))";
             
         if(!"".equals(RUT))
             Query = Query + " AND `rut_cliente` = '" + RUT + "'";
         
-        System.out.println(Query);
+        Query = Query + " ORDER BY `venta_fechaentrega`";
         
         var data = extraerDatos(Query);
         insertarDatosTabla(data);
     }
     
     public static void buscarTodos() {
-        String Query = "SELECT * FROM `ventas`";
+        String Query = "SELECT * FROM `ventas` ORDER BY `venta_fechaentrega`";
         var data = extraerDatos(Query);
         insertarDatosTabla(data);
     }
@@ -50,7 +49,6 @@ public class InformesVentasC {
     private static ArrayList<String> extraerDatos(String SQL) {
         ArrayList<String> resultado = new ArrayList<>();
         ResultSet response = queries.doQueryGet(SQL);
-        int numeroDeResultados = 0;
 
         try {
             for (boolean hayMasDatos = response.next(); hayMasDatos; hayMasDatos = response.next()) {
@@ -73,9 +71,7 @@ public class InformesVentasC {
                 resultado.add(response.getString("rut_cliente"));//16
                 resultado.add(response.getString("id_estadoventa"));//17
                 resultado.add(response.getString("id_pack"));//18
-                numeroDeResultados++;
             }
-            System.out.println(numeroDeResultados);
             
             return resultado;
         } catch (SQLException e) {
@@ -86,7 +82,7 @@ public class InformesVentasC {
     }
     
      private static void insertarDatosTabla(ArrayList<String> datos) {
-         var table = InformesController.pestanaInformes.getInformesVentasTabla();
+        var table = InformesController.pestanaInformes.getInformesVentasTabla();
         var model = (DefaultTableModel) table.getModel();
         int n;
         String estado;

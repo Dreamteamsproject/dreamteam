@@ -4,6 +4,7 @@
  */
 package vista;
 
+import controlador.InformesController;
 import controlador.MainPageController;
 
 /**
@@ -16,6 +17,7 @@ public class mainPage extends javax.swing.JFrame {
      * Creates new form mainPage
      */
     public mainPage() {
+        InformesController.InformesController();
         initComponents();
     }
 

@@ -14,6 +14,8 @@ import vista.Informes;
 public class InformesController {
     public static Informes pestanaInformes = new Informes(); 
     
+    public static void InformesController(){}
+    
     public static void informesVisible() {
         pestanaInformes.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pestanaInformes.setVisible(true);
@@ -23,5 +25,7 @@ public class InformesController {
     public static void activarTabla(int index) {
         if(index == 0)
             InformesVentasC.buscarTodos();
+        else if(index == 1)
+            InformeInventarioC.buscarTodo();
     }
 }
