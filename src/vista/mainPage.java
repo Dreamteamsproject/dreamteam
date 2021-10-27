@@ -104,7 +104,7 @@ public class mainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_IngresarAdminMouseClicked
 
     private void IngresarInformes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarInformes1MouseClicked
-        // TODO add your handling code here:
+        MainPageController.abrirInformes();
     }//GEN-LAST:event_IngresarInformes1MouseClicked
 
     private void IngresarInformes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarInformes1ActionPerformed

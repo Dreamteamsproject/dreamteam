@@ -17,6 +17,7 @@ public class InformesController {
     public static void InformesController(){}
     
     public static void informesVisible() {
+        System.out.println("Infomres abierto InformesController");
         pestanaInformes.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pestanaInformes.setVisible(true);
         pestanaInformes.setLocationRelativeTo(null);
